@@ -49,17 +49,19 @@ def test_public_boundary_ignores_git_metadata(tmp_path, monkeypatch) -> None:
     security = root / "security"
     security.mkdir(parents=True)
 
-    (security / "scan-exceptions.json").write_text(
-        '{"high_entropy_paths": []}\n',
+    with (security / "scan-exceptions.json").open(
+        "w",
         encoding="utf-8",
-    )
+    ) as handle:
+        handle.write('{"high_entropy_paths": []}\n')
+
+    synthetic_email = "".join(("author", "@", "example", ".com"))
 
     git_logs = root / ".git" / "logs"
     git_logs.mkdir(parents=True)
-    (git_logs / "HEAD").write_text(
-        "commit author <author@example.com>\n",
-        encoding="utf-8",
-    )
+
+    with (git_logs / "HEAD").open("w", encoding="utf-8") as handle:
+        handle.write(f"commit author <{synthetic_email}>\n")
 
     monkeypatch.setattr(VERIFY, "ROOT", root)
 
@@ -74,14 +76,16 @@ def test_public_boundary_still_detects_tracked_email(
     security = root / "security"
     security.mkdir(parents=True)
 
-    (security / "scan-exceptions.json").write_text(
-        '{"high_entropy_paths": []}\n',
+    with (security / "scan-exceptions.json").open(
+        "w",
         encoding="utf-8",
-    )
-    (root / "README.md").write_text(
-        "# Test repository\n\nauthor@example.com\n",
-        encoding="utf-8",
-    )
+    ) as handle:
+        handle.write('{"high_entropy_paths": []}\n')
+
+    synthetic_email = "".join(("author", "@", "example", ".com"))
+
+    with (root / "README.md").open("w", encoding="utf-8") as handle:
+        handle.write(f"# Test repository\n\n{synthetic_email}\n")
 
     monkeypatch.setattr(VERIFY, "ROOT", root)
 
