@@ -1,0 +1,176 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/gsa/schemas/0.1.0-alpha.1/common.schema.json",
+  "title": "GSA Alpha.1 Common Definitions",
+  "type": "object",
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_-]*:[A-Za-z0-9._:/-]{1,200}$"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "date_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "RFC 3339 date-time with an explicit UTC designator or numeric offset. The pattern is a lexical fail-safe; the repository verifier also applies an explicitly registered RFC 3339 semantic checker.",
+      "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\\.[0-9]+)?(Z|[+-]([01][0-9]|2[0-3]):[0-5][0-9])$"
+    },
+    "shell": {
+      "enum": [
+        "BASH",
+        "POWERSHELL"
+      ]
+    },
+    "platform": {
+      "enum": [
+        "LINUX",
+        "WINDOWS"
+      ]
+    },
+    "privilege": {
+      "enum": [
+        "STANDARD_USER",
+        "ELEVATED",
+        "UNKNOWN"
+      ]
+    },
+    "source_classification": {
+      "enum": [
+        "SYNTHETIC_PUBLIC",
+        "SYNTHETIC_SENSITIVE",
+        "UNKNOWN"
+      ]
+    },
+    "context_status": {
+      "enum": [
+        "COMPLETE",
+        "MISSING_REQUIRED",
+        "CONTRADICTORY"
+      ]
+    },
+    "coverage": {
+      "enum": [
+        "SUPPORTED",
+        "UNSUPPORTED",
+        "INDETERMINATE"
+      ]
+    },
+    "coverage_tier": {
+      "enum": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "intent": {
+      "enum": [
+        "OBSERVATIONAL_INTENT",
+        "CHANGE_INTENT",
+        "UNKNOWN_INTENT"
+      ]
+    },
+    "state_change": {
+      "enum": [
+        "NO_DECLARED_STATE_CHANGE",
+        "POSSIBLE_STATE_CHANGE",
+        "EXPECTED_STATE_CHANGE",
+        "UNKNOWN_STATE_CHANGE"
+      ]
+    },
+    "effect": {
+      "enum": [
+        "FILE_READ",
+        "FILE_CREATE",
+        "FILE_MODIFY",
+        "FILE_DELETE",
+        "FILE_TRUNCATE",
+        "FILE_APPEND",
+        "PERMISSION_CHANGE",
+        "IDENTITY_OBSERVATION",
+        "IDENTITY_CHANGE",
+        "PROCESS_OBSERVATION",
+        "PROCESS_SIGNAL",
+        "SERVICE_OBSERVATION",
+        "SERVICE_CHANGE",
+        "PACKAGE_OBSERVATION",
+        "PACKAGE_CHANGE",
+        "STORAGE_OBSERVATION",
+        "STORAGE_CHANGE",
+        "NETWORK_OBSERVATION",
+        "NETWORK_CHANGE",
+        "REMOTE_ACCESS",
+        "SCHEDULED_EXECUTION_OBSERVATION",
+        "SCHEDULED_EXECUTION_CHANGE",
+        "SYSTEM_POWER_CHANGE",
+        "DYNAMIC_EXECUTION",
+        "DATA_DISCLOSURE_POTENTIAL",
+        "UNKNOWN_EFFECT"
+      ]
+    },
+    "uncertainty": {
+      "enum": [
+        "LOW",
+        "MEDIUM",
+        "HIGH"
+      ]
+    },
+    "target_status": {
+      "enum": [
+        "NOT_APPLICABLE",
+        "RESOLVED_EMPTY",
+        "RESOLVED_WITHIN_LIMIT",
+        "RESOLVED_OVER_LIMIT",
+        "UNRESOLVED"
+      ]
+    },
+    "target_existence": {
+      "enum": [
+        "NOT_APPLICABLE",
+        "TARGET_ABSENT",
+        "TARGET_PRESENT_FILE",
+        "TARGET_PRESENT_NONFILE",
+        "TARGET_UNKNOWN"
+      ]
+    },
+    "authority_status": {
+      "enum": [
+        "NOT_APPLICABLE_HUMAN",
+        "WITHIN_CEILING",
+        "EXCEEDS_CEILING",
+        "MISSING",
+        "UNSUPPORTED",
+        "INVALID",
+        "EXPIRED",
+        "REVOKED",
+        "UNTRUSTED"
+      ]
+    },
+    "disposition": {
+      "enum": [
+        "NO_ESCALATION_REQUIRED_BY_REFERENCE_POLICY",
+        "HUMAN_REVIEW_REQUIRED",
+        "PROHIBITED_BY_REFERENCE_POLICY",
+        "INDETERMINATE"
+      ]
+    },
+    "nonauthorization": {
+      "type": "object",
+      "required": [
+        "authorization_effect",
+        "execution_authorized"
+      ],
+      "properties": {
+        "authorization_effect": {
+          "const": "NONE"
+        },
+        "execution_authorized": {
+          "const": false
+        }
+      }
+    }
+  },
+  "$comment": "Proposed normative; approval status under review; product implementation not started."
+}

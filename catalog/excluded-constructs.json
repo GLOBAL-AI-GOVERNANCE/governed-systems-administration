@@ -1,0 +1,270 @@
+{
+  "version": "0.1.0-alpha.1",
+  "status": "PROPOSED_NORMATIVE",
+  "rules": [
+    {
+      "rule_id": "EX-BASH-SEMICOLON",
+      "shell": "BASH",
+      "example": "pwd; whoami",
+      "reason": "compound command operator"
+    },
+    {
+      "rule_id": "EX-BASH-AND",
+      "shell": "BASH",
+      "example": "pwd && whoami",
+      "reason": "conditional operator"
+    },
+    {
+      "rule_id": "EX-BASH-OR",
+      "shell": "BASH",
+      "example": "pwd || whoami",
+      "reason": "conditional operator"
+    },
+    {
+      "rule_id": "EX-BASH-BACKGROUND",
+      "shell": "BASH",
+      "example": "pwd &",
+      "reason": "background execution"
+    },
+    {
+      "rule_id": "EX-BASH-CMD-SUB",
+      "shell": "BASH",
+      "example": "rm $(cat /tmp/name)",
+      "reason": "command substitution"
+    },
+    {
+      "rule_id": "EX-BASH-BACKTICK",
+      "shell": "BASH",
+      "example": "rm `cat /tmp/name`",
+      "reason": "backtick substitution"
+    },
+    {
+      "rule_id": "EX-BASH-PARAM",
+      "shell": "BASH",
+      "example": "cat $HOME/file",
+      "reason": "parameter expansion"
+    },
+    {
+      "rule_id": "EX-BASH-DOUBLEQUOTE",
+      "shell": "BASH",
+      "example": "cat \"/tmp/file\"",
+      "reason": "double-quoted string"
+    },
+    {
+      "rule_id": "EX-BASH-HEREDOC",
+      "shell": "BASH",
+      "example": "cat <<EOF",
+      "reason": "here-document"
+    },
+    {
+      "rule_id": "EX-BASH-HERESTRING",
+      "shell": "BASH",
+      "example": "cat <<< sample",
+      "reason": "here-string"
+    },
+    {
+      "rule_id": "EX-BASH-SUBSHELL",
+      "shell": "BASH",
+      "example": "(pwd)",
+      "reason": "subshell"
+    },
+    {
+      "rule_id": "EX-BASH-EVAL",
+      "shell": "BASH",
+      "example": "eval pwd",
+      "reason": "dynamic evaluation"
+    },
+    {
+      "rule_id": "EX-BASH-SOURCE",
+      "shell": "BASH",
+      "example": "source /tmp/file",
+      "reason": "sourced file"
+    },
+    {
+      "rule_id": "EX-BASH-DOT-SOURCE",
+      "shell": "BASH",
+      "example": ". /tmp/file",
+      "reason": "sourced file"
+    },
+    {
+      "rule_id": "EX-BASH-FUNCTION",
+      "shell": "BASH",
+      "example": "f(){ pwd; }",
+      "reason": "function"
+    },
+    {
+      "rule_id": "EX-BASH-LOOP",
+      "shell": "BASH",
+      "example": "for x in a; do pwd; done",
+      "reason": "control flow"
+    },
+    {
+      "rule_id": "EX-BASH-PIPE",
+      "shell": "BASH",
+      "example": "pwd | cat",
+      "reason": "Bash pipeline"
+    },
+    {
+      "rule_id": "EX-BASH-ERRREDIR",
+      "shell": "BASH",
+      "example": "pwd 2> err",
+      "reason": "unsupported redirection"
+    },
+    {
+      "rule_id": "EX-BASH-BRACKETGLOB",
+      "shell": "BASH",
+      "example": "ls /tmp/[ab]",
+      "reason": "character-class glob"
+    },
+    {
+      "rule_id": "EX-BASH-RECURSIVEGLOB",
+      "shell": "BASH",
+      "example": "ls /tmp/**",
+      "reason": "recursive glob"
+    },
+    {
+      "rule_id": "EX-BASH-MULTILINE",
+      "shell": "BASH",
+      "example": "pwd\nwhoami",
+      "reason": "multiline input"
+    },
+    {
+      "rule_id": "EX-PS-SEMICOLON",
+      "shell": "POWERSHELL",
+      "example": "Get-Service; Get-Process",
+      "reason": "compound command operator"
+    },
+    {
+      "rule_id": "EX-PS-AND",
+      "shell": "POWERSHELL",
+      "example": "Get-Service && Get-Process",
+      "reason": "conditional operator"
+    },
+    {
+      "rule_id": "EX-PS-OR",
+      "shell": "POWERSHELL",
+      "example": "Get-Service || Get-Process",
+      "reason": "conditional operator"
+    },
+    {
+      "rule_id": "EX-PS-CALL",
+      "shell": "POWERSHELL",
+      "example": "& 'Get-Service'",
+      "reason": "call operator"
+    },
+    {
+      "rule_id": "EX-PS-STOPPARSING",
+      "shell": "POWERSHELL",
+      "example": "Get-Service --% sample",
+      "reason": "stop-parsing"
+    },
+    {
+      "rule_id": "EX-PS-REDIRECTION",
+      "shell": "POWERSHELL",
+      "example": "Get-Service > out.txt",
+      "reason": "redirection"
+    },
+    {
+      "rule_id": "EX-PS-DOUBLEQUOTE",
+      "shell": "POWERSHELL",
+      "example": "Get-Service -Name \"demo\"",
+      "reason": "expandable string"
+    },
+    {
+      "rule_id": "EX-PS-VARIABLE",
+      "shell": "POWERSHELL",
+      "example": "Get-Service -Name $name",
+      "reason": "variable"
+    },
+    {
+      "rule_id": "EX-PS-SUBEXPR",
+      "shell": "POWERSHELL",
+      "example": "Get-Service -Name $($name)",
+      "reason": "subexpression"
+    },
+    {
+      "rule_id": "EX-PS-NATIVE",
+      "shell": "POWERSHELL",
+      "example": "cmd.exe /c dir",
+      "reason": "native executable"
+    },
+    {
+      "rule_id": "EX-PS-ARRAY",
+      "shell": "POWERSHELL",
+      "example": "Get-Service | Select-Object Name,Status",
+      "reason": "array/property list"
+    },
+    {
+      "rule_id": "EX-PS-SCRIPTBLOCK",
+      "shell": "POWERSHELL",
+      "example": "Get-Service | Where-Object {$_.Status}",
+      "reason": "script block"
+    },
+    {
+      "rule_id": "EX-PS-WHERE",
+      "shell": "POWERSHELL",
+      "example": "Get-Service | Where-Object Status",
+      "reason": "Where-Object"
+    },
+    {
+      "rule_id": "EX-PS-FOREACH",
+      "shell": "POWERSHELL",
+      "example": "Get-Service | ForEach-Object Name",
+      "reason": "ForEach-Object"
+    },
+    {
+      "rule_id": "EX-PS-OUTFILE",
+      "shell": "POWERSHELL",
+      "example": "Get-Service | Out-File out.txt",
+      "reason": "Out-File"
+    },
+    {
+      "rule_id": "EX-PS-TEE",
+      "shell": "POWERSHELL",
+      "example": "Get-Service | Tee-Object out.txt",
+      "reason": "Tee-Object"
+    },
+    {
+      "rule_id": "EX-PS-INVOKEEXPR",
+      "shell": "POWERSHELL",
+      "example": "Invoke-Expression 'Get-Service'",
+      "reason": "dynamic expression"
+    },
+    {
+      "rule_id": "EX-PS-SPLATTING",
+      "shell": "POWERSHELL",
+      "example": "Get-Service @params",
+      "reason": "splatting"
+    },
+    {
+      "rule_id": "EX-PS-IMPORT",
+      "shell": "POWERSHELL",
+      "example": "Import-Module demo",
+      "reason": "module import"
+    },
+    {
+      "rule_id": "EX-PS-JOB",
+      "shell": "POWERSHELL",
+      "example": "Start-Job { Get-Service }",
+      "reason": "background job"
+    },
+    {
+      "rule_id": "EX-PS-RUNSPACE",
+      "shell": "POWERSHELL",
+      "example": "[runspacefactory]::CreateRunspace()",
+      "reason": "runspace/reflection"
+    },
+    {
+      "rule_id": "EX-PS-DOTNET",
+      "shell": "POWERSHELL",
+      "example": "[System.IO.File]::ReadAllText('x')",
+      "reason": ".NET call"
+    },
+    {
+      "rule_id": "EX-PS-MULTILINE",
+      "shell": "POWERSHELL",
+      "example": "Get-Service\nGet-Process",
+      "reason": "multiline input"
+    }
+  ]
+}

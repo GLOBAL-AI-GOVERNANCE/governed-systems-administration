@@ -1,0 +1,66 @@
+{
+  "profile": "GSA-CJSON-1",
+  "vectors": [
+    {
+      "vector_id": "CJSON-001",
+      "input": {
+        "b": 2,
+        "a": 1
+      },
+      "canonical_utf8_base64": "eyJhIjoxLCJiIjoyfQ==",
+      "sha256": "43258cff783fe7036d8a43033f830adfc60ec037382473548ac742b888292777"
+    },
+    {
+      "vector_id": "CJSON-002",
+      "input": {
+        "text": "simple",
+        "flag": false,
+        "none": null
+      },
+      "canonical_utf8_base64": "eyJmbGFnIjpmYWxzZSwibm9uZSI6bnVsbCwidGV4dCI6InNpbXBsZSJ9",
+      "sha256": "930031dd1d44c49cabde3399e22ffb878390b11db66ea3f4f2cc17b25ffd1bd9"
+    },
+    {
+      "vector_id": "CJSON-003",
+      "input": {
+        "slash": "/",
+        "quote": "\"",
+        "backslash": "\\"
+      },
+      "canonical_utf8_base64": "eyJiYWNrc2xhc2giOiJcXCIsInF1b3RlIjoiXCIiLCJzbGFzaCI6Ii8ifQ==",
+      "sha256": "ac5a46fc08ea8357dfc16a68b95916430856bbb1dede4fc04b5e951db1ec5ce5"
+    },
+    {
+      "vector_id": "CJSON-004",
+      "input": {
+        "control": "line\nfeed"
+      },
+      "canonical_utf8_base64": "eyJjb250cm9sIjoibGluZVxuZmVlZCJ9",
+      "sha256": "18620fa1cb90a8adde993158bdea842a668f28eaedec144769105ca82eafdab7"
+    },
+    {
+      "vector_id": "CJSON-005",
+      "input": {
+        "unicode": "é"
+      },
+      "canonical_utf8_base64": "eyJ1bmljb2RlIjoiw6kifQ==",
+      "sha256": "386d8a5c6932c054b738b038e380636286c21f8c964a5ec0deb2caa4dca8e6c3"
+    },
+    {
+      "vector_id": "CJSON-006",
+      "input": {
+        "array": [
+          3,
+          2,
+          1
+        ],
+        "object": {
+          "z": 0,
+          "a": 0
+        }
+      },
+      "canonical_utf8_base64": "eyJhcnJheSI6WzMsMiwxXSwib2JqZWN0Ijp7ImEiOjAsInoiOjB9fQ==",
+      "sha256": "d0357433b8a9d09c6705276c9e02cc6b94cfcf411b170e6431bc048868843d7e"
+    }
+  ]
+}

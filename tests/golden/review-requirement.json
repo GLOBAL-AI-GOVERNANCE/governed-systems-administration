@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.1.0-alpha.1",
+  "review_id": "review:golden-001",
+  "analysis_id": "analysis:golden-001",
+  "disposition": "NO_ESCALATION_REQUIRED_BY_REFERENCE_POLICY",
+  "matched_policy_rule": "POL-015",
+  "required_reviewer_role": null,
+  "required_evidence": [],
+  "conditions": [],
+  "prohibited_outcomes": [
+    "Command execution",
+    "Privilege issuance"
+  ],
+  "expires_at": null,
+  "separation_of_duty_required": false,
+  "reasons": [
+    "All no-escalation conditions satisfied"
+  ],
+  "authorization_effect": "NONE",
+  "execution_authorized": false
+}

@@ -1,0 +1,37 @@
+name: Feature request
+description: Propose a bounded improvement within the authorized project scope.
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Product implementation remains gated by ADR-0001. Proposals involving execution, credentials, privilege, live collectors, or system mutation require a separate security-boundary decision.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Intended outcome
+    validations:
+      required: true
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Requirements, threats, and tests
+      description: Identify affected requirement IDs, threat IDs, and proposed acceptance cases.
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope confirmation
+      options:
+        - label: The proposal preserves the non-execution boundary.
+          required: true
+        - label: The proposal uses synthetic, public-safe data.
+          required: true

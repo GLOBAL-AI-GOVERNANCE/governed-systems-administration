@@ -1,0 +1,12 @@
+{
+  "high_entropy_paths": [
+    ".github/workflows/verify.yml",
+    "requirements-dev.lock",
+    "tests/conformance/canonical-json-vectors.json",
+    "tests/fixtures/acceptance-cases.json",
+    "tests/fixtures/repository-cases.json",
+    "tests/golden/hashes.json",
+    "tests/golden/administration-evidence-record.json"
+  ],
+  "note": "Exceptions suppress entropy-only alerts, not credential, email, IP, or optional local private-term detectors."
+}

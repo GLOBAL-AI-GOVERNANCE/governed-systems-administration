@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/gsa/schemas/0.1.0-alpha.1/repository-suite.schema.json",
+  "title": "RepositoryAssuranceSuite",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "suite_version",
+    "cases"
+  ],
+  "properties": {
+    "suite_version": {
+      "const": "0.1.0-alpha.1"
+    },
+    "cases": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "repository-case.schema.json"
+      }
+    }
+  },
+  "$comment": "Proposed normative; approval status under review; product implementation not started."
+}

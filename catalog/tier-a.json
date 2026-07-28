@@ -1,0 +1,228 @@
+{
+  "version": "0.1.0-alpha.1",
+  "status": "PROPOSED_NORMATIVE",
+  "rules": [
+    {
+      "rule_id": "A-BASH-001",
+      "shell": "BASH",
+      "forms": [
+        "pwd",
+        "pwd -P"
+      ],
+      "intent": "OBSERVATIONAL_INTENT",
+      "state_change": "NO_DECLARED_STATE_CHANGE",
+      "effects": [
+        "STORAGE_OBSERVATION",
+        "DATA_DISCLOSURE_POTENTIAL"
+      ],
+      "uncertainty": "LOW"
+    },
+    {
+      "rule_id": "A-BASH-002",
+      "shell": "BASH",
+      "forms": [
+        "whoami"
+      ],
+      "intent": "OBSERVATIONAL_INTENT",
+      "state_change": "NO_DECLARED_STATE_CHANGE",
+      "effects": [
+        "IDENTITY_OBSERVATION",
+        "DATA_DISCLOSURE_POTENTIAL"
+      ],
+      "uncertainty": "LOW"
+    },
+    {
+      "rule_id": "A-BASH-003",
+      "shell": "BASH",
+      "forms": [
+        "id",
+        "id -u",
+        "id -g",
+        "id -un",
+        "id -gn"
+      ],
+      "intent": "OBSERVATIONAL_INTENT",
+      "state_change": "NO_DECLARED_STATE_CHANGE",
+      "effects": [
+        "IDENTITY_OBSERVATION",
+        "DATA_DISCLOSURE_POTENTIAL"
+      ],
+      "uncertainty": "LOW"
+    },
+    {
+      "rule_id": "A-BASH-004",
+      "shell": "BASH",
+      "forms": [
+        "ls",
+        "ls -la /srv/gsa-fixture/logs"
+      ],
+      "intent": "OBSERVATIONAL_INTENT",
+      "state_change": "NO_DECLARED_STATE_CHANGE",
+      "effects": [
+        "STORAGE_OBSERVATION",
+        "DATA_DISCLOSURE_POTENTIAL"
+      ],
+      "uncertainty": "LOW"
+    },
+    {
+      "rule_id": "A-BASH-005",
+      "shell": "BASH",
+      "forms": [
+        "stat /srv/gsa-fixture/file.txt"
+      ],
+      "intent": "OBSERVATIONAL_INTENT",
+      "state_change": "NO_DECLARED_STATE_CHANGE",
+      "effects": [
+        "STORAGE_OBSERVATION",
+        "DATA_DISCLOSURE_POTENTIAL"
+      ],
+      "uncertainty": "LOW"
+    },
+    {
+      "rule_id": "A-BASH-006",
+      "shell": "BASH",
+      "forms": [
+        "cat /srv/gsa-fixture/file.txt"
+      ],
+      "intent": "OBSERVATIONAL_INTENT",
+      "state_change": "NO_DECLARED_STATE_CHANGE",
+      "effects": [
+        "FILE_READ",
+        "DATA_DISCLOSURE_POTENTIAL"
+      ],
+      "uncertainty": "LOW"
+    },
+    {
+      "rule_id": "A-BASH-007",
+      "shell": "BASH",
+      "forms": [
+        "head /srv/gsa-fixture/file.txt",
+        "head -n 10 /srv/gsa-fixture/file.txt"
+      ],
+      "intent": "OBSERVATIONAL_INTENT",
+      "state_change": "NO_DECLARED_STATE_CHANGE",
+      "effects": [
+        "FILE_READ",
+        "DATA_DISCLOSURE_POTENTIAL"
+      ],
+      "uncertainty": "LOW"
+    },
+    {
+      "rule_id": "A-BASH-008",
+      "shell": "BASH",
+      "forms": [
+        "tail /srv/gsa-fixture/file.txt",
+        "tail -n 10 /srv/gsa-fixture/file.txt"
+      ],
+      "intent": "OBSERVATIONAL_INTENT",
+      "state_change": "NO_DECLARED_STATE_CHANGE",
+      "effects": [
+        "FILE_READ",
+        "DATA_DISCLOSURE_POTENTIAL"
+      ],
+      "uncertainty": "LOW"
+    },
+    {
+      "rule_id": "A-BASH-009",
+      "shell": "BASH",
+      "forms": [
+        "grep -F needle /srv/gsa-fixture/file.txt"
+      ],
+      "intent": "OBSERVATIONAL_INTENT",
+      "state_change": "NO_DECLARED_STATE_CHANGE",
+      "effects": [
+        "FILE_READ",
+        "DATA_DISCLOSURE_POTENTIAL"
+      ],
+      "uncertainty": "LOW"
+    },
+    {
+      "rule_id": "A-PS-001",
+      "shell": "POWERSHELL",
+      "forms": [
+        "Get-Process",
+        "Get-Process -Name demo"
+      ],
+      "intent": "OBSERVATIONAL_INTENT",
+      "state_change": "NO_DECLARED_STATE_CHANGE",
+      "effects": [
+        "PROCESS_OBSERVATION",
+        "DATA_DISCLOSURE_POTENTIAL"
+      ],
+      "uncertainty": "LOW"
+    },
+    {
+      "rule_id": "A-PS-002",
+      "shell": "POWERSHELL",
+      "forms": [
+        "Get-Service",
+        "Get-Service -Name demo"
+      ],
+      "intent": "OBSERVATIONAL_INTENT",
+      "state_change": "NO_DECLARED_STATE_CHANGE",
+      "effects": [
+        "SERVICE_OBSERVATION",
+        "DATA_DISCLOSURE_POTENTIAL"
+      ],
+      "uncertainty": "LOW"
+    },
+    {
+      "rule_id": "A-PS-003",
+      "shell": "POWERSHELL",
+      "forms": [
+        "Get-ChildItem -Path '/srv/gsa-fixture'",
+        "Get-ChildItem -Path '/srv/gsa-fixture' -Force"
+      ],
+      "intent": "OBSERVATIONAL_INTENT",
+      "state_change": "NO_DECLARED_STATE_CHANGE",
+      "effects": [
+        "STORAGE_OBSERVATION",
+        "DATA_DISCLOSURE_POTENTIAL"
+      ],
+      "uncertainty": "LOW"
+    },
+    {
+      "rule_id": "A-PS-004",
+      "shell": "POWERSHELL",
+      "forms": [
+        "Get-Item -Path '/srv/gsa-fixture/file.txt'"
+      ],
+      "intent": "OBSERVATIONAL_INTENT",
+      "state_change": "NO_DECLARED_STATE_CHANGE",
+      "effects": [
+        "STORAGE_OBSERVATION",
+        "DATA_DISCLOSURE_POTENTIAL"
+      ],
+      "uncertainty": "LOW"
+    },
+    {
+      "rule_id": "A-PS-005",
+      "shell": "POWERSHELL",
+      "forms": [
+        "Get-Content -Path '/srv/gsa-fixture/file.txt'",
+        "Get-Content -Path '/srv/gsa-fixture/file.txt' -TotalCount 10"
+      ],
+      "intent": "OBSERVATIONAL_INTENT",
+      "state_change": "NO_DECLARED_STATE_CHANGE",
+      "effects": [
+        "FILE_READ",
+        "DATA_DISCLOSURE_POTENTIAL"
+      ],
+      "uncertainty": "LOW"
+    },
+    {
+      "rule_id": "A-PS-006",
+      "shell": "POWERSHELL",
+      "forms": [
+        "Get-Service | Select-Object Name"
+      ],
+      "intent": "OBSERVATIONAL_INTENT",
+      "state_change": "NO_DECLARED_STATE_CHANGE",
+      "effects": [
+        "SERVICE_OBSERVATION",
+        "DATA_DISCLOSURE_POTENTIAL"
+      ],
+      "uncertainty": "LOW"
+    }
+  ]
+}

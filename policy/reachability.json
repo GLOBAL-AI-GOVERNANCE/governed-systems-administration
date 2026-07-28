@@ -1,0 +1,156 @@
+{
+  "policy_version": "0.1.0-alpha.1",
+  "first_match": true,
+  "rules": [
+    {
+      "rule_id": "POL-001",
+      "precedence": 1,
+      "condition": "EXPLICITLY_PROHIBITED_CONSTRUCT_OR_CAPABILITY",
+      "fixture_id": "EX-001",
+      "semantic_signature": "481b27045f19a31df91986a4a8c8aa984084f171bbeb76cef232063a7292c6d1",
+      "expected_outcome_type": "UNSUPPORTED_INPUT",
+      "reachable": true,
+      "shadowed_by": []
+    },
+    {
+      "rule_id": "POL-002",
+      "precedence": 2,
+      "condition": "UNSUPPORTED_COVERAGE",
+      "fixture_id": "ST-010",
+      "semantic_signature": "3800bf86a8dc9c9fb94c978bf31ac5bf9daa4f76cec23bdeffd8c797316e4fb9",
+      "expected_outcome_type": "UNSUPPORTED_INPUT",
+      "reachable": true,
+      "shadowed_by": []
+    },
+    {
+      "rule_id": "POL-004",
+      "precedence": 3,
+      "condition": "MISSING_OR_CONTRADICTORY_CONTEXT",
+      "fixture_id": "CTX-001",
+      "semantic_signature": "60a9b593fb26c2cf5d9ea4ab0b0c195aebb2dea1fb4e2644d04a46178f2901a3",
+      "expected_outcome_type": "INDETERMINATE_ANALYSIS",
+      "reachable": true,
+      "shadowed_by": []
+    },
+    {
+      "rule_id": "POL-005",
+      "precedence": 4,
+      "condition": "UNRESOLVED_OR_UNSUPPORTED_TARGET",
+      "fixture_id": "TGT-004",
+      "semantic_signature": "72819d12ddfb843b737a42761dd996858e2551edd31e94dbe8bd5e8cf8f13c68",
+      "expected_outcome_type": "INDETERMINATE_ANALYSIS",
+      "reachable": true,
+      "shadowed_by": []
+    },
+    {
+      "rule_id": "POL-006",
+      "precedence": 5,
+      "condition": "MISSING_OR_UNSUPPORTED_AGENT_AUTHORITY",
+      "fixture_id": "AUTH-003",
+      "semantic_signature": "a12a789f0ae505574c6d8919192572c24632dbadfe591ba07beec2c8f8aaecdc",
+      "expected_outcome_type": "INDETERMINATE_ANALYSIS",
+      "reachable": true,
+      "shadowed_by": []
+    },
+    {
+      "rule_id": "POL-007",
+      "precedence": 6,
+      "condition": "INVALID_EXPIRED_REVOKED_UNTRUSTED_OR_OVER_CEILING_AUTHORITY",
+      "fixture_id": "AUTH-002",
+      "semantic_signature": "8dcc77eb371d30db3ef5f6c7a320872445a214649507cff0ed8469bcd57df508",
+      "expected_outcome_type": "ANALYSIS_SUCCEEDED",
+      "reachable": true,
+      "shadowed_by": []
+    },
+    {
+      "rule_id": "POL-008",
+      "precedence": 7,
+      "condition": "TIER_B_FAMILY_MARKED_PROHIBITED",
+      "fixture_id": "TB-015",
+      "semantic_signature": "fe88bc5169ef47932222d14fe5f24fc77c22e7886c5fabba0ba928e16cfdf83a",
+      "expected_outcome_type": "ANALYSIS_SUCCEEDED",
+      "reachable": true,
+      "shadowed_by": []
+    },
+    {
+      "rule_id": "POL-009",
+      "precedence": 8,
+      "condition": "OTHER_TIER_B",
+      "fixture_id": "TB-001",
+      "semantic_signature": "343ae1e3087c6a5220c7f8bc2fd99f09352a4924093213a2d9abab4628870105",
+      "expected_outcome_type": "ANALYSIS_SUCCEEDED",
+      "reachable": true,
+      "shadowed_by": []
+    },
+    {
+      "rule_id": "POL-010",
+      "precedence": 9,
+      "condition": "ELEVATED_PRIVILEGE",
+      "fixture_id": "POLC-010",
+      "semantic_signature": "2705241777d68823c3b4793e54a2ed9bdb526ad2d6b825c2c253b993797289e9",
+      "expected_outcome_type": "ANALYSIS_SUCCEEDED",
+      "reachable": true,
+      "shadowed_by": []
+    },
+    {
+      "rule_id": "POL-011",
+      "precedence": 10,
+      "condition": "UNKNOWN_PRIVILEGE",
+      "fixture_id": "POLC-011",
+      "semantic_signature": "91c9deccca7b6df2235a44c8d78b6b5e8e3c95db12df4c6d0d637c37b0f5f94d",
+      "expected_outcome_type": "INDETERMINATE_ANALYSIS",
+      "reachable": true,
+      "shadowed_by": []
+    },
+    {
+      "rule_id": "POL-012",
+      "precedence": 11,
+      "condition": "UNKNOWN_SOURCE_CLASSIFICATION",
+      "fixture_id": "POLC-012",
+      "semantic_signature": "aa0bbba122a3910126a6283e4d3e3e4fbc5f4d80d341ef869f4f2e14aacf7abf",
+      "expected_outcome_type": "INDETERMINATE_ANALYSIS",
+      "reachable": true,
+      "shadowed_by": []
+    },
+    {
+      "rule_id": "POL-013",
+      "precedence": 12,
+      "condition": "SYNTHETIC_SENSITIVE_SOURCE",
+      "fixture_id": "POLC-013",
+      "semantic_signature": "1128242b3bc0acf0999d11c3f3e09a68686cec4bd86a43ad85df46e31eb63d8f",
+      "expected_outcome_type": "ANALYSIS_SUCCEEDED",
+      "reachable": true,
+      "shadowed_by": []
+    },
+    {
+      "rule_id": "POL-014",
+      "precedence": 13,
+      "condition": "RESOLVED_TARGETS_OVER_LIMIT",
+      "fixture_id": "TGT-003",
+      "semantic_signature": "bdcb5f172e6297e0d0dc179462eafb0b407d078575d3eeef1d8a410a7003b36b",
+      "expected_outcome_type": "ANALYSIS_SUCCEEDED",
+      "reachable": true,
+      "shadowed_by": []
+    },
+    {
+      "rule_id": "POL-015",
+      "precedence": 14,
+      "condition": "ALL_NO_ESCALATION_CONDITIONS",
+      "fixture_id": "TA-001",
+      "semantic_signature": "0002c6edd0008c985837b8fbf5eff7b3f494a6e5f66a237751721b302a47b576",
+      "expected_outcome_type": "ANALYSIS_SUCCEEDED",
+      "reachable": true,
+      "shadowed_by": []
+    },
+    {
+      "rule_id": "POL-016",
+      "precedence": 15,
+      "condition": "REMAINING_SUPPORTED_STATE",
+      "fixture_id": "POLC-016",
+      "semantic_signature": "1689a7ea30290c5702f53acb53ef2381741b81d37a5856ffe0d1c92e86cb44b8",
+      "expected_outcome_type": "ANALYSIS_SUCCEEDED",
+      "reachable": true,
+      "shadowed_by": []
+    }
+  ]
+}

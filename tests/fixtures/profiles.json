@@ -1,0 +1,256 @@
+{
+  "schema_version": "0.1.0-alpha.1",
+  "approval_status": "UNDER_REVIEW",
+  "normative_status": "PROPOSED_NORMATIVE",
+  "implementation_status": "NOT_STARTED",
+  "contexts": {
+    "bash-complete": {
+      "platform": "LINUX",
+      "shell": "BASH",
+      "working_directory": "/srv/gsa-fixture",
+      "effective_identity": "synthetic-user",
+      "privilege": "STANDARD_USER",
+      "source_classification": "SYNTHETIC_PUBLIC",
+      "context_status": "COMPLETE",
+      "executable_resolution": {
+        "status": "RESOLVED",
+        "canonical_name": "bash"
+      },
+      "remote_target_declared": false
+    },
+    "ps-complete": {
+      "platform": "WINDOWS",
+      "shell": "POWERSHELL",
+      "working_directory": "C:\\gsa-fixture",
+      "effective_identity": "synthetic-user",
+      "privilege": "STANDARD_USER",
+      "source_classification": "SYNTHETIC_PUBLIC",
+      "context_status": "COMPLETE",
+      "executable_resolution": {
+        "status": "RESOLVED",
+        "canonical_name": "PowerShell"
+      },
+      "remote_target_declared": false
+    },
+    "bash-missing": {
+      "platform": "LINUX",
+      "shell": "BASH",
+      "working_directory": null,
+      "effective_identity": "synthetic-user",
+      "privilege": "STANDARD_USER",
+      "source_classification": "SYNTHETIC_PUBLIC",
+      "context_status": "MISSING_REQUIRED",
+      "executable_resolution": {
+        "status": "RESOLVED",
+        "canonical_name": "bash"
+      },
+      "remote_target_declared": false
+    },
+    "bash-contradictory": {
+      "platform": "WINDOWS",
+      "shell": "BASH",
+      "working_directory": "C:\\gsa-fixture",
+      "effective_identity": "synthetic-user",
+      "privilege": "STANDARD_USER",
+      "source_classification": "SYNTHETIC_PUBLIC",
+      "context_status": "CONTRADICTORY",
+      "executable_resolution": {
+        "status": "RESOLVED",
+        "canonical_name": "bash"
+      },
+      "remote_target_declared": false
+    },
+    "bash-unresolved-executable": {
+      "platform": "LINUX",
+      "shell": "BASH",
+      "working_directory": "/srv/gsa-fixture",
+      "effective_identity": "synthetic-user",
+      "privilege": "STANDARD_USER",
+      "source_classification": "SYNTHETIC_PUBLIC",
+      "context_status": "COMPLETE",
+      "executable_resolution": {
+        "status": "UNRESOLVED",
+        "canonical_name": null
+      },
+      "remote_target_declared": false
+    },
+    "bash-elevated": {
+      "platform": "LINUX",
+      "shell": "BASH",
+      "working_directory": "/srv/gsa-fixture",
+      "effective_identity": "synthetic-root",
+      "privilege": "ELEVATED",
+      "source_classification": "SYNTHETIC_PUBLIC",
+      "context_status": "COMPLETE",
+      "executable_resolution": {
+        "status": "RESOLVED",
+        "canonical_name": "bash"
+      },
+      "remote_target_declared": false
+    },
+    "bash-unknown-privilege": {
+      "platform": "LINUX",
+      "shell": "BASH",
+      "working_directory": "/srv/gsa-fixture",
+      "effective_identity": "synthetic-user",
+      "privilege": "UNKNOWN",
+      "source_classification": "SYNTHETIC_PUBLIC",
+      "context_status": "COMPLETE",
+      "executable_resolution": {
+        "status": "RESOLVED",
+        "canonical_name": "bash"
+      },
+      "remote_target_declared": false
+    },
+    "bash-unknown-source": {
+      "platform": "LINUX",
+      "shell": "BASH",
+      "working_directory": "/srv/gsa-fixture",
+      "effective_identity": "synthetic-user",
+      "privilege": "STANDARD_USER",
+      "source_classification": "UNKNOWN",
+      "context_status": "COMPLETE",
+      "executable_resolution": {
+        "status": "RESOLVED",
+        "canonical_name": "bash"
+      },
+      "remote_target_declared": false
+    },
+    "bash-sensitive": {
+      "platform": "LINUX",
+      "shell": "BASH",
+      "working_directory": "/srv/gsa-fixture",
+      "effective_identity": "synthetic-user",
+      "privilege": "STANDARD_USER",
+      "source_classification": "SYNTHETIC_SENSITIVE",
+      "context_status": "COMPLETE",
+      "executable_resolution": {
+        "status": "RESOLVED",
+        "canonical_name": "bash"
+      },
+      "remote_target_declared": false
+    },
+    "bash-remote": {
+      "platform": "LINUX",
+      "shell": "BASH",
+      "working_directory": "/srv/gsa-fixture",
+      "effective_identity": "synthetic-user",
+      "privilege": "STANDARD_USER",
+      "source_classification": "SYNTHETIC_PUBLIC",
+      "context_status": "COMPLETE",
+      "executable_resolution": {
+        "status": "RESOLVED",
+        "canonical_name": "bash"
+      },
+      "remote_target_declared": true
+    }
+  },
+  "requesters": {
+    "human": {
+      "type": "HUMAN",
+      "subject_id": "human:synthetic-reviewer",
+      "trust_reference": null,
+      "authority_status": "NOT_APPLICABLE_HUMAN"
+    },
+    "agent-within": {
+      "type": "AGENT",
+      "subject_id": "agent:synthetic-within",
+      "trust_reference": "passport:synthetic:within",
+      "authority_status": "WITHIN_CEILING"
+    },
+    "agent-exceeds": {
+      "type": "AGENT",
+      "subject_id": "agent:synthetic-exceeds",
+      "trust_reference": "passport:synthetic:exceeds",
+      "authority_status": "EXCEEDS_CEILING"
+    },
+    "agent-missing": {
+      "type": "AGENT",
+      "subject_id": "agent:synthetic-missing",
+      "trust_reference": "passport:synthetic:missing",
+      "authority_status": "MISSING"
+    },
+    "agent-unsupported": {
+      "type": "AGENT",
+      "subject_id": "agent:synthetic-unsupported",
+      "trust_reference": "passport:synthetic:unsupported",
+      "authority_status": "UNSUPPORTED"
+    },
+    "agent-invalid": {
+      "type": "AGENT",
+      "subject_id": "agent:synthetic-invalid",
+      "trust_reference": "passport:synthetic:invalid",
+      "authority_status": "INVALID"
+    },
+    "agent-expired": {
+      "type": "AGENT",
+      "subject_id": "agent:synthetic-expired",
+      "trust_reference": "passport:synthetic:expired",
+      "authority_status": "EXPIRED"
+    },
+    "agent-revoked": {
+      "type": "AGENT",
+      "subject_id": "agent:synthetic-revoked",
+      "trust_reference": "passport:synthetic:revoked",
+      "authority_status": "REVOKED"
+    },
+    "agent-untrusted": {
+      "type": "AGENT",
+      "subject_id": "agent:synthetic-untrusted",
+      "trust_reference": "passport:synthetic:untrusted",
+      "authority_status": "UNTRUSTED"
+    }
+  },
+  "targets": {
+    "not-applicable": {
+      "status": "NOT_APPLICABLE",
+      "count": 0,
+      "existence": "NOT_APPLICABLE"
+    },
+    "resolved-empty": {
+      "status": "RESOLVED_EMPTY",
+      "count": 0,
+      "existence": "TARGET_ABSENT"
+    },
+    "resolved-one": {
+      "status": "RESOLVED_WITHIN_LIMIT",
+      "count": 1,
+      "existence": "TARGET_PRESENT_FILE"
+    },
+    "resolved-thirty-two": {
+      "status": "RESOLVED_WITHIN_LIMIT",
+      "count": 32,
+      "existence": "TARGET_PRESENT_FILE"
+    },
+    "resolved-over": {
+      "status": "RESOLVED_OVER_LIMIT",
+      "count": 33,
+      "existence": "TARGET_PRESENT_FILE"
+    },
+    "unresolved": {
+      "status": "UNRESOLVED",
+      "count": 0,
+      "existence": "TARGET_UNKNOWN"
+    },
+    "target-absent": {
+      "status": "RESOLVED_WITHIN_LIMIT",
+      "count": 1,
+      "existence": "TARGET_ABSENT"
+    },
+    "target-present-file": {
+      "status": "RESOLVED_WITHIN_LIMIT",
+      "count": 1,
+      "existence": "TARGET_PRESENT_FILE"
+    },
+    "target-present-nonfile": {
+      "status": "UNRESOLVED",
+      "count": 0,
+      "existence": "TARGET_PRESENT_NONFILE"
+    },
+    "target-unknown": {
+      "status": "UNRESOLVED",
+      "count": 0,
+      "existence": "TARGET_UNKNOWN"
+    }
+  }
+}

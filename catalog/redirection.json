@@ -1,0 +1,67 @@
+{
+  "version": "0.1.0-alpha.1",
+  "status": "PROPOSED_NORMATIVE",
+  "rules": [
+    {
+      "rule_id": "REDIR-GT-ABSENT",
+      "operator": ">",
+      "target_existence": "TARGET_ABSENT",
+      "effects": [
+        "FILE_CREATE",
+        "DATA_DISCLOSURE_POTENTIAL"
+      ],
+      "disposition": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "rule_id": "REDIR-GT-PRESENT",
+      "operator": ">",
+      "target_existence": "TARGET_PRESENT_FILE",
+      "effects": [
+        "FILE_MODIFY",
+        "FILE_TRUNCATE",
+        "DATA_DISCLOSURE_POTENTIAL"
+      ],
+      "disposition": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "rule_id": "REDIR-GTGT-ABSENT",
+      "operator": ">>",
+      "target_existence": "TARGET_ABSENT",
+      "effects": [
+        "FILE_CREATE",
+        "FILE_APPEND",
+        "DATA_DISCLOSURE_POTENTIAL"
+      ],
+      "disposition": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "rule_id": "REDIR-GTGT-PRESENT",
+      "operator": ">>",
+      "target_existence": "TARGET_PRESENT_FILE",
+      "effects": [
+        "FILE_MODIFY",
+        "FILE_APPEND",
+        "DATA_DISCLOSURE_POTENTIAL"
+      ],
+      "disposition": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "rule_id": "REDIR-NONFILE",
+      "operator": "EITHER",
+      "target_existence": "TARGET_PRESENT_NONFILE",
+      "effects": [
+        "UNKNOWN_EFFECT"
+      ],
+      "disposition": "INDETERMINATE"
+    },
+    {
+      "rule_id": "REDIR-UNKNOWN",
+      "operator": "EITHER",
+      "target_existence": "TARGET_UNKNOWN",
+      "effects": [
+        "UNKNOWN_EFFECT"
+      ],
+      "disposition": "INDETERMINATE"
+    }
+  ]
+}

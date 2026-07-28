@@ -1,0 +1,423 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/gsa/schemas/0.1.0-alpha.1/profiles.schema.json",
+  "title": "GSA Acceptance Profiles",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "approval_status",
+    "normative_status",
+    "implementation_status",
+    "contexts",
+    "requesters",
+    "targets"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1.0-alpha.1"
+    },
+    "approval_status": {
+      "const": "UNDER_REVIEW"
+    },
+    "normative_status": {
+      "const": "PROPOSED_NORMATIVE"
+    },
+    "implementation_status": {
+      "const": "NOT_STARTED"
+    },
+    "contexts": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "platform",
+          "shell",
+          "working_directory",
+          "effective_identity",
+          "privilege",
+          "source_classification",
+          "context_status",
+          "executable_resolution",
+          "remote_target_declared"
+        ],
+        "properties": {
+          "platform": {
+            "$ref": "common.schema.json#/$defs/platform"
+          },
+          "shell": {
+            "$ref": "common.schema.json#/$defs/shell"
+          },
+          "working_directory": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 1024
+          },
+          "effective_identity": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "privilege": {
+            "$ref": "common.schema.json#/$defs/privilege"
+          },
+          "source_classification": {
+            "$ref": "common.schema.json#/$defs/source_classification"
+          },
+          "context_status": {
+            "$ref": "common.schema.json#/$defs/context_status"
+          },
+          "executable_resolution": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "canonical_name"
+            ],
+            "properties": {
+              "status": {
+                "enum": [
+                  "RESOLVED",
+                  "UNRESOLVED"
+                ]
+              },
+              "canonical_name": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "maxLength": 128
+              }
+            },
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "status": {
+                      "const": "RESOLVED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ]
+                },
+                "then": {
+                  "properties": {
+                    "canonical_name": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "properties": {
+                    "status": {
+                      "const": "UNRESOLVED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ]
+                },
+                "then": {
+                  "properties": {
+                    "canonical_name": {
+                      "type": "null"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "remote_target_declared": {
+            "type": "boolean"
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "context_status": {
+                  "const": "COMPLETE"
+                },
+                "platform": {
+                  "const": "LINUX"
+                }
+              },
+              "required": [
+                "context_status",
+                "platform"
+              ]
+            },
+            "then": {
+              "properties": {
+                "shell": {
+                  "const": "BASH"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "context_status": {
+                  "const": "COMPLETE"
+                },
+                "platform": {
+                  "const": "WINDOWS"
+                }
+              },
+              "required": [
+                "context_status",
+                "platform"
+              ]
+            },
+            "then": {
+              "properties": {
+                "shell": {
+                  "const": "POWERSHELL"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "requesters": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "type",
+          "subject_id",
+          "trust_reference",
+          "authority_status"
+        ],
+        "properties": {
+          "type": {
+            "enum": [
+              "HUMAN",
+              "AGENT"
+            ]
+          },
+          "subject_id": {
+            "$ref": "common.schema.json#/$defs/id"
+          },
+          "trust_reference": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 256
+          },
+          "authority_status": {
+            "$ref": "common.schema.json#/$defs/authority_status"
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "HUMAN"
+                }
+              },
+              "required": [
+                "type"
+              ]
+            },
+            "then": {
+              "properties": {
+                "trust_reference": {
+                  "type": "null"
+                },
+                "authority_status": {
+                  "const": "NOT_APPLICABLE_HUMAN"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "AGENT"
+                }
+              },
+              "required": [
+                "type"
+              ]
+            },
+            "then": {
+              "properties": {
+                "trust_reference": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "authority_status": {
+                  "not": {
+                    "const": "NOT_APPLICABLE_HUMAN"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "targets": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "status",
+          "count",
+          "existence"
+        ],
+        "properties": {
+          "status": {
+            "$ref": "common.schema.json#/$defs/target_status"
+          },
+          "count": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 1000000
+          },
+          "existence": {
+            "$ref": "common.schema.json#/$defs/target_existence"
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "status": {
+                  "const": "NOT_APPLICABLE"
+                }
+              },
+              "required": [
+                "status"
+              ]
+            },
+            "then": {
+              "properties": {
+                "count": {
+                  "const": 0
+                },
+                "existence": {
+                  "const": "NOT_APPLICABLE"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "status": {
+                  "const": "RESOLVED_EMPTY"
+                }
+              },
+              "required": [
+                "status"
+              ]
+            },
+            "then": {
+              "properties": {
+                "count": {
+                  "const": 0
+                },
+                "existence": {
+                  "const": "TARGET_ABSENT"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "status": {
+                  "const": "RESOLVED_WITHIN_LIMIT"
+                }
+              },
+              "required": [
+                "status"
+              ]
+            },
+            "then": {
+              "properties": {
+                "count": {
+                  "minimum": 1,
+                  "maximum": 32
+                },
+                "existence": {
+                  "enum": [
+                    "TARGET_ABSENT",
+                    "TARGET_PRESENT_FILE"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "status": {
+                  "const": "RESOLVED_OVER_LIMIT"
+                }
+              },
+              "required": [
+                "status"
+              ]
+            },
+            "then": {
+              "properties": {
+                "count": {
+                  "minimum": 33
+                },
+                "existence": {
+                  "const": "TARGET_PRESENT_FILE"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "status": {
+                  "const": "UNRESOLVED"
+                }
+              },
+              "required": [
+                "status"
+              ]
+            },
+            "then": {
+              "properties": {
+                "count": {
+                  "const": 0
+                },
+                "existence": {
+                  "enum": [
+                    "TARGET_PRESENT_NONFILE",
+                    "TARGET_UNKNOWN"
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "$comment": "Proposed normative; approval status under review; product implementation not started."
+}

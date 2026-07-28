@@ -1,0 +1,30 @@
+{
+  "schema_version": "0.1.0-alpha.1",
+  "evidence_id": "evidence:golden-001",
+  "created_at": "2026-07-28T00:00:00Z",
+  "artifact_refs": {
+    "request": "request:golden-001",
+    "context": "context:golden-001",
+    "analysis": "analysis:golden-001",
+    "review": "review:golden-001",
+    "validation": "validation:golden-001"
+  },
+  "artifact_hashes": {
+    "request": "940f3f08b1e984c69914c00608472ce6b150992e08a0effa23590a9b42c1b939",
+    "context": "d3759cbb60e385228f42dc1607b778dd2ba4b4515f16622fa50ac0406131ff6f",
+    "analysis": "2784ef093b39b4f3f2d21c7a8d51469c6e954d9fc68a78f591bcb9c91c64fd73",
+    "review": "658303f0bc4d419cf3c2888247f56984e10ca1e26cb0fc476952f4a01fec419b",
+    "validation": "e23e099f35837339fdc4c182294b5d010a71e922569f308dcb3cadcce720ea10"
+  },
+  "canonicalization_profile": "GSA-CJSON-1",
+  "redaction_status": "NOT_REQUIRED_SYNTHETIC",
+  "source_classification": "SYNTHETIC_PUBLIC",
+  "assurance_limitations": [
+    "Hashes show byte equality only",
+    "No command was executed",
+    "No live state was inspected"
+  ],
+  "event_occurrence_claimed": false,
+  "authorization_effect": "NONE",
+  "execution_authorized": false
+}

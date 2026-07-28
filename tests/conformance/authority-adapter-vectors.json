@@ -1,0 +1,157 @@
+{
+  "contract_version": "0.1.0-alpha.1",
+  "vectors": [
+    {
+      "vector_id": "AUTH-AGENT_WITHIN",
+      "input": {
+        "adapter_version": "0.1.0-alpha.1",
+        "trust_profile": "agentic-ai-governance/alpha.1",
+        "trust_reference": "passport:synthetic:within",
+        "requested_effects": [
+          "STORAGE_OBSERVATION"
+        ]
+      },
+      "expected": {
+        "adapter_version": "0.1.0-alpha.1",
+        "authority_status": "WITHIN_CEILING",
+        "supported_profile": true,
+        "reasons": [
+          "Synthetic authority state WITHIN_CEILING"
+        ]
+      }
+    },
+    {
+      "vector_id": "AUTH-AGENT_EXCEEDS",
+      "input": {
+        "adapter_version": "0.1.0-alpha.1",
+        "trust_profile": "agentic-ai-governance/alpha.1",
+        "trust_reference": "passport:synthetic:exceeds",
+        "requested_effects": [
+          "STORAGE_OBSERVATION"
+        ]
+      },
+      "expected": {
+        "adapter_version": "0.1.0-alpha.1",
+        "authority_status": "EXCEEDS_CEILING",
+        "supported_profile": true,
+        "reasons": [
+          "Synthetic authority state EXCEEDS_CEILING"
+        ]
+      }
+    },
+    {
+      "vector_id": "AUTH-AGENT_MISSING",
+      "input": {
+        "adapter_version": "0.1.0-alpha.1",
+        "trust_profile": "agentic-ai-governance/alpha.1",
+        "trust_reference": "passport:synthetic:missing",
+        "requested_effects": [
+          "STORAGE_OBSERVATION"
+        ]
+      },
+      "expected": {
+        "adapter_version": "0.1.0-alpha.1",
+        "authority_status": "MISSING",
+        "supported_profile": true,
+        "reasons": [
+          "Synthetic authority state MISSING"
+        ]
+      }
+    },
+    {
+      "vector_id": "AUTH-AGENT_UNSUPPORTED",
+      "input": {
+        "adapter_version": "0.1.0-alpha.1",
+        "trust_profile": "agentic-ai-governance/alpha.1",
+        "trust_reference": "passport:synthetic:unsupported",
+        "requested_effects": [
+          "STORAGE_OBSERVATION"
+        ]
+      },
+      "expected": {
+        "adapter_version": "0.1.0-alpha.1",
+        "authority_status": "UNSUPPORTED",
+        "supported_profile": false,
+        "reasons": [
+          "Synthetic authority state UNSUPPORTED"
+        ]
+      }
+    },
+    {
+      "vector_id": "AUTH-AGENT_INVALID",
+      "input": {
+        "adapter_version": "0.1.0-alpha.1",
+        "trust_profile": "agentic-ai-governance/alpha.1",
+        "trust_reference": "passport:synthetic:invalid",
+        "requested_effects": [
+          "STORAGE_OBSERVATION"
+        ]
+      },
+      "expected": {
+        "adapter_version": "0.1.0-alpha.1",
+        "authority_status": "INVALID",
+        "supported_profile": true,
+        "reasons": [
+          "Synthetic authority state INVALID"
+        ]
+      }
+    },
+    {
+      "vector_id": "AUTH-AGENT_EXPIRED",
+      "input": {
+        "adapter_version": "0.1.0-alpha.1",
+        "trust_profile": "agentic-ai-governance/alpha.1",
+        "trust_reference": "passport:synthetic:expired",
+        "requested_effects": [
+          "STORAGE_OBSERVATION"
+        ]
+      },
+      "expected": {
+        "adapter_version": "0.1.0-alpha.1",
+        "authority_status": "EXPIRED",
+        "supported_profile": true,
+        "reasons": [
+          "Synthetic authority state EXPIRED"
+        ]
+      }
+    },
+    {
+      "vector_id": "AUTH-AGENT_REVOKED",
+      "input": {
+        "adapter_version": "0.1.0-alpha.1",
+        "trust_profile": "agentic-ai-governance/alpha.1",
+        "trust_reference": "passport:synthetic:revoked",
+        "requested_effects": [
+          "STORAGE_OBSERVATION"
+        ]
+      },
+      "expected": {
+        "adapter_version": "0.1.0-alpha.1",
+        "authority_status": "REVOKED",
+        "supported_profile": true,
+        "reasons": [
+          "Synthetic authority state REVOKED"
+        ]
+      }
+    },
+    {
+      "vector_id": "AUTH-AGENT_UNTRUSTED",
+      "input": {
+        "adapter_version": "0.1.0-alpha.1",
+        "trust_profile": "agentic-ai-governance/alpha.1",
+        "trust_reference": "passport:synthetic:untrusted",
+        "requested_effects": [
+          "STORAGE_OBSERVATION"
+        ]
+      },
+      "expected": {
+        "adapter_version": "0.1.0-alpha.1",
+        "authority_status": "UNTRUSTED",
+        "supported_profile": true,
+        "reasons": [
+          "Synthetic authority state UNTRUSTED"
+        ]
+      }
+    }
+  ]
+}

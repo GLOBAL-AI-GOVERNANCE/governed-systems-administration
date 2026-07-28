@@ -1,0 +1,77 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[codz]
+*$py.class
+
+# Distribution / packaging
+.Python
+/build/
+/dist/
+/.eggs/
+*.egg-info/
+*.egg
+MANIFEST
+
+# Virtual environments and local environment files
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+ENV/
+env/
+
+# Test, coverage, and type-checking output
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.pyre/
+.pytype/
+.ruff_cache/
+hypothesis/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Operating systems
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+/tmp/
+/temp/
+
+# Local secrets and credentials
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+/credentials.*
+/secrets.*
+.local/
+
+# Generated output not approved for source control
+/generated/
+/artifacts/
+/evidence-output/
+
+# Reviewed synthetic fixtures belong under examples/ when introduced.
+
+# Optional maintainer-only private release scan inputs. Never commit.
+/.private-terms.local
+/security/private-terms.local

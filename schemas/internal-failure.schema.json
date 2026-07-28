@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/gsa/schemas/0.1.0-alpha.1/internal-failure.schema.json",
+  "title": "InternalFailure",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "outcome_type",
+    "outcome_version",
+    "error"
+  ],
+  "properties": {
+    "outcome_type": {
+      "const": "INTERNAL_FAILURE"
+    },
+    "outcome_version": {
+      "const": "0.1.0-alpha.1"
+    },
+    "error": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "code",
+        "message",
+        "stage",
+        "authorization_effect",
+        "execution_authorized"
+      ],
+      "properties": {
+        "code": {
+          "enum": [
+            "INTERNAL_INVARIANT_VIOLATION",
+            "CANONICALIZATION_FAILURE",
+            "UNEXPECTED_ERROR"
+          ]
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "stage": {
+          "enum": [
+            "INGEST",
+            "STRUCTURE",
+            "PARSE",
+            "CONTEXT",
+            "TARGET",
+            "AUTHORITY",
+            "POLICY",
+            "INTERNAL"
+          ]
+        },
+        "authorization_effect": {
+          "const": "NONE"
+        },
+        "execution_authorized": {
+          "const": false
+        }
+      }
+    }
+  },
+  "$comment": "Proposed normative; approval status under review; product implementation not started."
+}

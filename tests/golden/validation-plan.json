@@ -1,0 +1,14 @@
+{
+  "schema_version": "0.1.0-alpha.1",
+  "plan_id": "validation:golden-001",
+  "analysis_id": "analysis:golden-001",
+  "preconditions": [
+    "Synthetic context remains unchanged"
+  ],
+  "postconditions": [
+    "No live state was accessed"
+  ],
+  "rollback_expectations": [],
+  "human_authority_required": false,
+  "execution_performed": false
+}

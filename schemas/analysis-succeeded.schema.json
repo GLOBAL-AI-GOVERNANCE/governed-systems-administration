@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/gsa/schemas/0.1.0-alpha.1/analysis-succeeded.schema.json",
+  "title": "AnalysisSucceeded",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "outcome_type",
+    "outcome_version",
+    "analysis",
+    "review_requirement"
+  ],
+  "properties": {
+    "outcome_type": {
+      "const": "ANALYSIS_SUCCEEDED"
+    },
+    "outcome_version": {
+      "const": "0.1.0-alpha.1"
+    },
+    "analysis": {
+      "$ref": "action-analysis.schema.json"
+    },
+    "review_requirement": {
+      "$ref": "review-requirement.schema.json"
+    }
+  },
+  "$comment": "Proposed normative; approval status under review; product implementation not started."
+}

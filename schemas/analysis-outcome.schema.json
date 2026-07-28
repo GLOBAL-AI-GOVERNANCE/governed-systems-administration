@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/gsa/schemas/0.1.0-alpha.1/analysis-outcome.schema.json",
+  "title": "AnalysisOutcome",
+  "oneOf": [
+    {
+      "$ref": "analysis-succeeded.schema.json"
+    },
+    {
+      "$ref": "input-rejected.schema.json"
+    },
+    {
+      "$ref": "unsupported-input.schema.json"
+    },
+    {
+      "$ref": "indeterminate-analysis.schema.json"
+    },
+    {
+      "$ref": "internal-failure.schema.json"
+    }
+  ],
+  "$comment": "Proposed normative; approval status under review; product implementation not started."
+}

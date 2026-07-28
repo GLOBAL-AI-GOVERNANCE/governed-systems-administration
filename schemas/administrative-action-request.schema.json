@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/gsa/schemas/0.1.0-alpha.1/administrative-action-request.schema.json",
+  "title": "AdministrativeActionRequest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "request_id",
+    "created_at",
+    "platform",
+    "shell",
+    "command_text",
+    "requester",
+    "declared_privilege",
+    "source_classification"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1.0-alpha.1"
+    },
+    "request_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "created_at": {
+      "$ref": "common.schema.json#/$defs/date_time"
+    },
+    "platform": {
+      "$ref": "common.schema.json#/$defs/platform"
+    },
+    "shell": {
+      "$ref": "common.schema.json#/$defs/shell"
+    },
+    "command_text": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4096
+    },
+    "requester": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "subject_id",
+        "trust_reference"
+      ],
+      "properties": {
+        "type": {
+          "enum": [
+            "HUMAN",
+            "AGENT"
+          ]
+        },
+        "subject_id": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "trust_reference": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 256
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "HUMAN"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "trust_reference": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "AGENT"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "trust_reference": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "declared_privilege": {
+      "$ref": "common.schema.json#/$defs/privilege"
+    },
+    "source_classification": {
+      "$ref": "common.schema.json#/$defs/source_classification"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "platform": {
+            "const": "LINUX"
+          }
+        },
+        "required": [
+          "platform"
+        ]
+      },
+      "then": {
+        "properties": {
+          "shell": {
+            "const": "BASH"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "platform": {
+            "const": "WINDOWS"
+          }
+        },
+        "required": [
+          "platform"
+        ]
+      },
+      "then": {
+        "properties": {
+          "shell": {
+            "const": "POWERSHELL"
+          }
+        }
+      }
+    }
+  ],
+  "$comment": "Proposed normative; approval status under review; product implementation not started."
+}

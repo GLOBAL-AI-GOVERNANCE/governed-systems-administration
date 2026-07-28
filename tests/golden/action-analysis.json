@@ -1,0 +1,19 @@
+{
+  "schema_version": "0.1.0-alpha.1",
+  "analysis_id": "analysis:golden-001",
+  "request_id": "request:golden-001",
+  "context_id": "context:golden-001",
+  "coverage": "SUPPORTED",
+  "coverage_tier": "A",
+  "matched_rule_id": "A-BASH-001",
+  "intent": "OBSERVATIONAL_INTENT",
+  "state_change": "NO_DECLARED_STATE_CHANGE",
+  "effects": [
+    "STORAGE_OBSERVATION",
+    "DATA_DISCLOSURE_POTENTIAL"
+  ],
+  "uncertainty": "LOW",
+  "target_resolution_status": "NOT_APPLICABLE",
+  "target_count": 0,
+  "authority_status": "NOT_APPLICABLE_HUMAN"
+}

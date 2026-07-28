@@ -1,0 +1,97 @@
+{
+  "version": "0.1.0-alpha.1",
+  "status": "PROPOSED_NORMATIVE",
+  "first_match": true,
+  "rules": [
+    {
+      "rule_id": "POL-001",
+      "condition": "EXPLICITLY_PROHIBITED_CONSTRUCT_OR_CAPABILITY",
+      "disposition": "PROHIBITED_BY_REFERENCE_POLICY",
+      "precedence": 1
+    },
+    {
+      "rule_id": "POL-002",
+      "condition": "UNSUPPORTED_COVERAGE",
+      "disposition": "PROHIBITED_BY_REFERENCE_POLICY",
+      "precedence": 2
+    },
+    {
+      "rule_id": "POL-004",
+      "condition": "MISSING_OR_CONTRADICTORY_CONTEXT",
+      "disposition": "INDETERMINATE",
+      "precedence": 3
+    },
+    {
+      "rule_id": "POL-005",
+      "condition": "UNRESOLVED_OR_UNSUPPORTED_TARGET",
+      "disposition": "INDETERMINATE",
+      "precedence": 4
+    },
+    {
+      "rule_id": "POL-006",
+      "condition": "MISSING_OR_UNSUPPORTED_AGENT_AUTHORITY",
+      "disposition": "INDETERMINATE",
+      "precedence": 5
+    },
+    {
+      "rule_id": "POL-007",
+      "condition": "INVALID_EXPIRED_REVOKED_UNTRUSTED_OR_OVER_CEILING_AUTHORITY",
+      "disposition": "PROHIBITED_BY_REFERENCE_POLICY",
+      "precedence": 6
+    },
+    {
+      "rule_id": "POL-008",
+      "condition": "TIER_B_FAMILY_MARKED_PROHIBITED",
+      "disposition": "PROHIBITED_BY_REFERENCE_POLICY",
+      "precedence": 7
+    },
+    {
+      "rule_id": "POL-009",
+      "condition": "OTHER_TIER_B",
+      "disposition": "HUMAN_REVIEW_REQUIRED",
+      "precedence": 8
+    },
+    {
+      "rule_id": "POL-010",
+      "condition": "ELEVATED_PRIVILEGE",
+      "disposition": "HUMAN_REVIEW_REQUIRED",
+      "precedence": 9
+    },
+    {
+      "rule_id": "POL-011",
+      "condition": "UNKNOWN_PRIVILEGE",
+      "disposition": "INDETERMINATE",
+      "precedence": 10
+    },
+    {
+      "rule_id": "POL-012",
+      "condition": "UNKNOWN_SOURCE_CLASSIFICATION",
+      "disposition": "INDETERMINATE",
+      "precedence": 11
+    },
+    {
+      "rule_id": "POL-013",
+      "condition": "SYNTHETIC_SENSITIVE_SOURCE",
+      "disposition": "HUMAN_REVIEW_REQUIRED",
+      "precedence": 12
+    },
+    {
+      "rule_id": "POL-014",
+      "condition": "RESOLVED_TARGETS_OVER_LIMIT",
+      "disposition": "HUMAN_REVIEW_REQUIRED",
+      "precedence": 13
+    },
+    {
+      "rule_id": "POL-015",
+      "condition": "ALL_NO_ESCALATION_CONDITIONS",
+      "disposition": "NO_ESCALATION_REQUIRED_BY_REFERENCE_POLICY",
+      "precedence": 14
+    },
+    {
+      "rule_id": "POL-016",
+      "condition": "REMAINING_SUPPORTED_STATE",
+      "disposition": "HUMAN_REVIEW_REQUIRED",
+      "precedence": 15
+    }
+  ]
+}

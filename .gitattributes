@@ -1,0 +1,14 @@
+# Normalize text files across platforms.
+* text=auto eol=lf
+
+# Windows command files conventionally use CRLF.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Treat common binary formats as binary.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+*.zip binary

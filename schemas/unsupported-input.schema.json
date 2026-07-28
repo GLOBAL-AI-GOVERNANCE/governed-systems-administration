@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/gsa/schemas/0.1.0-alpha.1/unsupported-input.schema.json",
+  "title": "UnsupportedInput",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "outcome_type",
+    "outcome_version",
+    "error",
+    "matched_policy_rule",
+    "reference_policy_disposition",
+    "authorization_effect",
+    "execution_authorized"
+  ],
+  "properties": {
+    "outcome_type": {
+      "const": "UNSUPPORTED_INPUT"
+    },
+    "outcome_version": {
+      "const": "0.1.0-alpha.1"
+    },
+    "error": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "code",
+        "message",
+        "stage"
+      ],
+      "properties": {
+        "code": {
+          "enum": [
+            "UNSUPPORTED_SYNTAX",
+            "EXCLUDED_CONSTRUCT",
+            "UNKNOWN_COMMAND",
+            "UNSUPPORTED_SHELL"
+          ]
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "stage": {
+          "enum": [
+            "STRUCTURE",
+            "PARSE"
+          ]
+        }
+      }
+    },
+    "matched_policy_rule": {
+      "enum": [
+        "POL-001",
+        "POL-002"
+      ]
+    },
+    "reference_policy_disposition": {
+      "const": "PROHIBITED_BY_REFERENCE_POLICY"
+    },
+    "authorization_effect": {
+      "const": "NONE"
+    },
+    "execution_authorized": {
+      "const": false
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "error": {
+            "properties": {
+              "code": {
+                "const": "EXCLUDED_CONSTRUCT"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "matched_policy_rule": {
+            "const": "POL-001"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "error": {
+            "properties": {
+              "code": {
+                "enum": [
+                  "UNSUPPORTED_SYNTAX",
+                  "UNKNOWN_COMMAND",
+                  "UNSUPPORTED_SHELL"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "matched_policy_rule": {
+            "const": "POL-002"
+          }
+        }
+      }
+    }
+  ],
+  "$comment": "Proposed normative; approval status under review; product implementation not started."
+}

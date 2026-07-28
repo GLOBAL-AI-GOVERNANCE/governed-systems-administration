@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/gsa/schemas/0.1.0-alpha.1/cli-result.schema.json",
+  "title": "CLIResult",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "cli_contract_version",
+    "command",
+    "outcome"
+  ],
+  "properties": {
+    "cli_contract_version": {
+      "const": "0.1.0-alpha.1"
+    },
+    "command": {
+      "enum": [
+        "validate",
+        "analyze",
+        "version"
+      ]
+    },
+    "outcome": {
+      "$ref": "analysis-outcome.schema.json"
+    }
+  },
+  "$comment": "Proposed normative; approval status under review; product implementation not started."
+}

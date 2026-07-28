@@ -1,0 +1,191 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/gsa/schemas/0.1.0-alpha.1/indeterminate-analysis.schema.json",
+  "title": "IndeterminateAnalysis",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "outcome_type",
+    "outcome_version",
+    "error",
+    "matched_policy_rule",
+    "reference_policy_disposition",
+    "authorization_effect",
+    "execution_authorized"
+  ],
+  "properties": {
+    "outcome_type": {
+      "const": "INDETERMINATE_ANALYSIS"
+    },
+    "outcome_version": {
+      "const": "0.1.0-alpha.1"
+    },
+    "error": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "code",
+        "message",
+        "stage"
+      ],
+      "properties": {
+        "code": {
+          "enum": [
+            "MISSING_CONTEXT",
+            "CONTRADICTORY_CONTEXT",
+            "UNRESOLVED_TARGET",
+            "MISSING_AUTHORITY",
+            "UNSUPPORTED_AUTHORITY",
+            "UNKNOWN_PRIVILEGE",
+            "UNKNOWN_SOURCE",
+            "TARGET_UNKNOWN"
+          ]
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "stage": {
+          "enum": [
+            "PARSE",
+            "CONTEXT",
+            "TARGET",
+            "AUTHORITY",
+            "POLICY"
+          ]
+        }
+      }
+    },
+    "matched_policy_rule": {
+      "enum": [
+        "POL-004",
+        "POL-005",
+        "POL-006",
+        "POL-011",
+        "POL-012"
+      ]
+    },
+    "reference_policy_disposition": {
+      "const": "INDETERMINATE"
+    },
+    "authorization_effect": {
+      "const": "NONE"
+    },
+    "execution_authorized": {
+      "const": false
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "error": {
+            "properties": {
+              "code": {
+                "enum": [
+                  "MISSING_CONTEXT",
+                  "CONTRADICTORY_CONTEXT"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "matched_policy_rule": {
+            "const": "POL-004"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "error": {
+            "properties": {
+              "code": {
+                "enum": [
+                  "UNRESOLVED_TARGET",
+                  "TARGET_UNKNOWN"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "matched_policy_rule": {
+            "const": "POL-005"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "error": {
+            "properties": {
+              "code": {
+                "enum": [
+                  "MISSING_AUTHORITY",
+                  "UNSUPPORTED_AUTHORITY"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "matched_policy_rule": {
+            "const": "POL-006"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "error": {
+            "properties": {
+              "code": {
+                "const": "UNKNOWN_PRIVILEGE"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "matched_policy_rule": {
+            "const": "POL-011"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "error": {
+            "properties": {
+              "code": {
+                "const": "UNKNOWN_SOURCE"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "matched_policy_rule": {
+            "const": "POL-012"
+          }
+        }
+      }
+    }
+  ],
+  "$comment": "Proposed normative; approval status under review; product implementation not started."
+}

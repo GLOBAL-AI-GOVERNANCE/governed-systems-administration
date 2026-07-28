@@ -1,0 +1,28 @@
+# Proposed role-based CODEOWNERS mappings.
+# The organization must create or map these teams before branch protection can enforce them.
+
+* @GLOBAL-AI-GOVERNANCE/governed-systems-administration-maintainers
+
+/GOVERNANCE.md @GLOBAL-AI-GOVERNANCE/governed-systems-administration-maintainers @GLOBAL-AI-GOVERNANCE/governed-systems-administration-security-reviewers
+/SECURITY.md @GLOBAL-AI-GOVERNANCE/governed-systems-administration-security-reviewers
+/STATUS.md @GLOBAL-AI-GOVERNANCE/governed-systems-administration-maintainers @GLOBAL-AI-GOVERNANCE/governed-systems-administration-specification-reviewers
+/decisions/ @GLOBAL-AI-GOVERNANCE/governed-systems-administration-specification-reviewers @GLOBAL-AI-GOVERNANCE/governed-systems-administration-security-reviewers
+/docs/ENGINEERING_DOSSIER.md @GLOBAL-AI-GOVERNANCE/governed-systems-administration-specification-reviewers
+/docs/SUPPORTED_SYNTAX.md @GLOBAL-AI-GOVERNANCE/governed-systems-administration-specification-reviewers @GLOBAL-AI-GOVERNANCE/governed-systems-administration-security-reviewers
+/docs/REFERENCE_POLICY.md @GLOBAL-AI-GOVERNANCE/governed-systems-administration-specification-reviewers @GLOBAL-AI-GOVERNANCE/governed-systems-administration-security-reviewers
+/docs/ACCEPTANCE_TEST_PLAN.md @GLOBAL-AI-GOVERNANCE/governed-systems-administration-specification-reviewers @GLOBAL-AI-GOVERNANCE/governed-systems-administration-security-reviewers
+/docs/THREAT_MODEL.md @GLOBAL-AI-GOVERNANCE/governed-systems-administration-security-reviewers
+/docs/PUBLIC_PRIVATE_BOUNDARY.md @GLOBAL-AI-GOVERNANCE/governed-systems-administration-security-reviewers
+/schemas/ @GLOBAL-AI-GOVERNANCE/governed-systems-administration-specification-reviewers
+/tests/ @GLOBAL-AI-GOVERNANCE/governed-systems-administration-specification-reviewers @GLOBAL-AI-GOVERNANCE/governed-systems-administration-security-reviewers
+/traceability/ @GLOBAL-AI-GOVERNANCE/governed-systems-administration-specification-reviewers @GLOBAL-AI-GOVERNANCE/governed-systems-administration-security-reviewers
+/integrations/ @GLOBAL-AI-GOVERNANCE/governed-systems-administration-upstream-compatibility-reviewers
+/.github/workflows/ @GLOBAL-AI-GOVERNANCE/governed-systems-administration-security-reviewers
+/tools/ @GLOBAL-AI-GOVERNANCE/governed-systems-administration-security-reviewers
+
+/catalog/ @GLOBAL-AI-GOVERNANCE/governed-systems-administration-specification-reviewers
+/policy/ @GLOBAL-AI-GOVERNANCE/governed-systems-administration-specification-reviewers @GLOBAL-AI-GOVERNANCE/governed-systems-administration-security-reviewers
+/coverage/ @GLOBAL-AI-GOVERNANCE/governed-systems-administration-specification-reviewers
+/security/ @GLOBAL-AI-GOVERNANCE/governed-systems-administration-security-reviewers
+/requirements-dev.lock @GLOBAL-AI-GOVERNANCE/governed-systems-administration-security-reviewers
+/pyproject.toml @GLOBAL-AI-GOVERNANCE/governed-systems-administration-maintainers

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/gsa/schemas/0.1.0-alpha.1/cli-error.schema.json",
+  "title": "CLIError",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "cli_contract_version",
+    "exit_code",
+    "error"
+  ],
+  "properties": {
+    "cli_contract_version": {
+      "const": "0.1.0-alpha.1"
+    },
+    "exit_code": {
+      "enum": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        70
+      ]
+    },
+    "error": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "code",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 1
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  },
+  "$comment": "Proposed normative; approval status under review; product implementation not started."
+}

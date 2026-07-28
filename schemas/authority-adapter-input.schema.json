@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/gsa/schemas/0.1.0-alpha.1/authority-adapter-input.schema.json",
+  "title": "AuthorityAdapterInput",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "adapter_version",
+    "trust_profile",
+    "trust_reference",
+    "requested_effects"
+  ],
+  "properties": {
+    "adapter_version": {
+      "const": "0.1.0-alpha.1"
+    },
+    "trust_profile": {
+      "const": "agentic-ai-governance/alpha.1"
+    },
+    "trust_reference": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256
+    },
+    "requested_effects": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "common.schema.json#/$defs/effect"
+      }
+    }
+  },
+  "$comment": "Proposed normative; approval status under review; product implementation not started."
+}

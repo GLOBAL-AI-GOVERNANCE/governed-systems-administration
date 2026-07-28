@@ -1,0 +1,22 @@
+{
+  "schema_version": "0.1.0-alpha.1",
+  "context_id": "context:golden-001",
+  "request_id": "request:golden-001",
+  "platform": "LINUX",
+  "shell": "BASH",
+  "working_directory": "/srv/gsa-fixture",
+  "effective_identity": "synthetic-user",
+  "privilege": "STANDARD_USER",
+  "source_classification": "SYNTHETIC_PUBLIC",
+  "context_status": "COMPLETE",
+  "executable_resolution": {
+    "status": "RESOLVED",
+    "canonical_name": "bash"
+  },
+  "remote_target_declared": false,
+  "target_resolution": {
+    "status": "NOT_APPLICABLE",
+    "count": 0,
+    "existence": "NOT_APPLICABLE"
+  }
+}

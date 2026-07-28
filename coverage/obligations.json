@@ -1,0 +1,1492 @@
+{
+  "version": "0.1.0-alpha.1",
+  "generated_from": [
+    "catalog/tier-a.json",
+    "catalog/tier-b.json",
+    "catalog/excluded-constructs.json",
+    "catalog/redirection.json",
+    "policy/rules.json",
+    "tests/fixtures/acceptance-cases.json",
+    "tests/fixtures/repository-cases.json"
+  ],
+  "obligations": [
+    {
+      "obligation_id": "OBL-TA-001",
+      "kind": "TIER_A",
+      "source_id": "A-BASH-001",
+      "test_ids": [
+        "TA-001"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TA-002",
+      "kind": "TIER_A",
+      "source_id": "A-BASH-002",
+      "test_ids": [
+        "TA-002"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TA-003",
+      "kind": "TIER_A",
+      "source_id": "A-BASH-003",
+      "test_ids": [
+        "TA-003"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TA-004",
+      "kind": "TIER_A",
+      "source_id": "A-BASH-004",
+      "test_ids": [
+        "TA-004"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TA-005",
+      "kind": "TIER_A",
+      "source_id": "A-BASH-005",
+      "test_ids": [
+        "TA-005"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TA-006",
+      "kind": "TIER_A",
+      "source_id": "A-BASH-006",
+      "test_ids": [
+        "TA-006"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TA-007",
+      "kind": "TIER_A",
+      "source_id": "A-BASH-007",
+      "test_ids": [
+        "TA-007"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TA-008",
+      "kind": "TIER_A",
+      "source_id": "A-BASH-008",
+      "test_ids": [
+        "TA-008"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TA-009",
+      "kind": "TIER_A",
+      "source_id": "A-BASH-009",
+      "test_ids": [
+        "TA-009"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TA-010",
+      "kind": "TIER_A",
+      "source_id": "A-PS-001",
+      "test_ids": [
+        "TA-010"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TA-011",
+      "kind": "TIER_A",
+      "source_id": "A-PS-002",
+      "test_ids": [
+        "TA-011"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TA-012",
+      "kind": "TIER_A",
+      "source_id": "A-PS-003",
+      "test_ids": [
+        "TA-012"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TA-013",
+      "kind": "TIER_A",
+      "source_id": "A-PS-004",
+      "test_ids": [
+        "TA-013"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TA-014",
+      "kind": "TIER_A",
+      "source_id": "A-PS-005",
+      "test_ids": [
+        "TA-014"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TA-015",
+      "kind": "TIER_A",
+      "source_id": "A-PS-006",
+      "test_ids": [
+        "TA-015"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-001",
+      "kind": "TIER_B",
+      "source_id": "B-BASH-RM",
+      "test_ids": [
+        "TB-001"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-002",
+      "kind": "TIER_B",
+      "source_id": "B-BASH-CHMOD",
+      "test_ids": [
+        "TB-002"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-003",
+      "kind": "TIER_B",
+      "source_id": "B-BASH-CHOWN",
+      "test_ids": [
+        "TB-003"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-004",
+      "kind": "TIER_B",
+      "source_id": "B-BASH-USERADD",
+      "test_ids": [
+        "TB-004"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-005",
+      "kind": "TIER_B",
+      "source_id": "B-BASH-USERMOD",
+      "test_ids": [
+        "TB-005"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-006",
+      "kind": "TIER_B",
+      "source_id": "B-BASH-GROUPADD",
+      "test_ids": [
+        "TB-006"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-007",
+      "kind": "TIER_B",
+      "source_id": "B-BASH-GROUPMOD",
+      "test_ids": [
+        "TB-007"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-008",
+      "kind": "TIER_B",
+      "source_id": "B-BASH-SYSTEMCTL-START",
+      "test_ids": [
+        "TB-008"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-009",
+      "kind": "TIER_B",
+      "source_id": "B-BASH-SYSTEMCTL-STOP",
+      "test_ids": [
+        "TB-009"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-010",
+      "kind": "TIER_B",
+      "source_id": "B-BASH-SYSTEMCTL-RESTART",
+      "test_ids": [
+        "TB-010"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-011",
+      "kind": "TIER_B",
+      "source_id": "B-BASH-APT",
+      "test_ids": [
+        "TB-011"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-012",
+      "kind": "TIER_B",
+      "source_id": "B-BASH-APTGET",
+      "test_ids": [
+        "TB-012"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-013",
+      "kind": "TIER_B",
+      "source_id": "B-BASH-MOUNT",
+      "test_ids": [
+        "TB-013"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-014",
+      "kind": "TIER_B",
+      "source_id": "B-BASH-UMOUNT",
+      "test_ids": [
+        "TB-014"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-015",
+      "kind": "TIER_B",
+      "source_id": "B-BASH-USERDEL",
+      "test_ids": [
+        "TB-015"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-016",
+      "kind": "TIER_B",
+      "source_id": "B-BASH-GROUPDEL",
+      "test_ids": [
+        "TB-016"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-017",
+      "kind": "TIER_B",
+      "source_id": "B-BASH-PASSWD",
+      "test_ids": [
+        "TB-017"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-018",
+      "kind": "TIER_B",
+      "source_id": "B-BASH-MKFS",
+      "test_ids": [
+        "TB-018"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-019",
+      "kind": "TIER_B",
+      "source_id": "B-BASH-DD",
+      "test_ids": [
+        "TB-019"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-020",
+      "kind": "TIER_B",
+      "source_id": "B-BASH-SHUTDOWN",
+      "test_ids": [
+        "TB-020"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-021",
+      "kind": "TIER_B",
+      "source_id": "B-BASH-REBOOT",
+      "test_ids": [
+        "TB-021"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-022",
+      "kind": "TIER_B",
+      "source_id": "B-BASH-POWEROFF",
+      "test_ids": [
+        "TB-022"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-023",
+      "kind": "TIER_B",
+      "source_id": "B-BASH-SSH",
+      "test_ids": [
+        "TB-023"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-024",
+      "kind": "TIER_B",
+      "source_id": "B-BASH-SCP",
+      "test_ids": [
+        "TB-024"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-025",
+      "kind": "TIER_B",
+      "source_id": "B-PS-SET",
+      "test_ids": [
+        "TB-025"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-026",
+      "kind": "TIER_B",
+      "source_id": "B-PS-NEW",
+      "test_ids": [
+        "TB-026"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-027",
+      "kind": "TIER_B",
+      "source_id": "B-PS-REMOVE",
+      "test_ids": [
+        "TB-027"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-028",
+      "kind": "TIER_B",
+      "source_id": "B-PS-START",
+      "test_ids": [
+        "TB-028"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-029",
+      "kind": "TIER_B",
+      "source_id": "B-PS-STOP",
+      "test_ids": [
+        "TB-029"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-030",
+      "kind": "TIER_B",
+      "source_id": "B-PS-RESTART",
+      "test_ids": [
+        "TB-030"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-031",
+      "kind": "TIER_B",
+      "source_id": "B-PS-ENABLE",
+      "test_ids": [
+        "TB-031"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-032",
+      "kind": "TIER_B",
+      "source_id": "B-PS-DISABLE",
+      "test_ids": [
+        "TB-032"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-033",
+      "kind": "TIER_B",
+      "source_id": "B-PS-CLEAR",
+      "test_ids": [
+        "TB-033"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-034",
+      "kind": "TIER_B",
+      "source_id": "B-PS-REGISTER",
+      "test_ids": [
+        "TB-034"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-035",
+      "kind": "TIER_B",
+      "source_id": "B-PS-UNREGISTER",
+      "test_ids": [
+        "TB-035"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-036",
+      "kind": "TIER_B",
+      "source_id": "B-PS-INSTALL",
+      "test_ids": [
+        "TB-036"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-037",
+      "kind": "TIER_B",
+      "source_id": "B-PS-UNINSTALL",
+      "test_ids": [
+        "TB-037"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-038",
+      "kind": "TIER_B",
+      "source_id": "B-PS-ADD",
+      "test_ids": [
+        "TB-038"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-039",
+      "kind": "TIER_B",
+      "source_id": "B-PS-INVOKE-COMMAND",
+      "test_ids": [
+        "TB-039"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-040",
+      "kind": "TIER_B",
+      "source_id": "B-PS-ENTER-PSSSESSION",
+      "test_ids": [
+        "TB-040"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-041",
+      "kind": "TIER_B",
+      "source_id": "B-PS-NEW-PSSSESSION",
+      "test_ids": [
+        "TB-041"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TB-042",
+      "kind": "TIER_B",
+      "source_id": "B-PS-SET-EXECUTIONPOLICY",
+      "test_ids": [
+        "TB-042"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-001",
+      "kind": "EXCLUDED",
+      "source_id": "EX-BASH-SEMICOLON",
+      "test_ids": [
+        "EX-001"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-002",
+      "kind": "EXCLUDED",
+      "source_id": "EX-BASH-AND",
+      "test_ids": [
+        "EX-002"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-003",
+      "kind": "EXCLUDED",
+      "source_id": "EX-BASH-OR",
+      "test_ids": [
+        "EX-003"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-004",
+      "kind": "EXCLUDED",
+      "source_id": "EX-BASH-BACKGROUND",
+      "test_ids": [
+        "EX-004"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-005",
+      "kind": "EXCLUDED",
+      "source_id": "EX-BASH-CMD-SUB",
+      "test_ids": [
+        "EX-005"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-006",
+      "kind": "EXCLUDED",
+      "source_id": "EX-BASH-BACKTICK",
+      "test_ids": [
+        "EX-006"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-007",
+      "kind": "EXCLUDED",
+      "source_id": "EX-BASH-PARAM",
+      "test_ids": [
+        "EX-007"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-008",
+      "kind": "EXCLUDED",
+      "source_id": "EX-BASH-DOUBLEQUOTE",
+      "test_ids": [
+        "EX-008"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-009",
+      "kind": "EXCLUDED",
+      "source_id": "EX-BASH-HEREDOC",
+      "test_ids": [
+        "EX-009"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-010",
+      "kind": "EXCLUDED",
+      "source_id": "EX-BASH-HERESTRING",
+      "test_ids": [
+        "EX-010"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-011",
+      "kind": "EXCLUDED",
+      "source_id": "EX-BASH-SUBSHELL",
+      "test_ids": [
+        "EX-011"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-012",
+      "kind": "EXCLUDED",
+      "source_id": "EX-BASH-EVAL",
+      "test_ids": [
+        "EX-012"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-013",
+      "kind": "EXCLUDED",
+      "source_id": "EX-BASH-SOURCE",
+      "test_ids": [
+        "EX-013"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-014",
+      "kind": "EXCLUDED",
+      "source_id": "EX-BASH-DOT-SOURCE",
+      "test_ids": [
+        "EX-014"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-015",
+      "kind": "EXCLUDED",
+      "source_id": "EX-BASH-FUNCTION",
+      "test_ids": [
+        "EX-015"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-016",
+      "kind": "EXCLUDED",
+      "source_id": "EX-BASH-LOOP",
+      "test_ids": [
+        "EX-016"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-017",
+      "kind": "EXCLUDED",
+      "source_id": "EX-BASH-PIPE",
+      "test_ids": [
+        "EX-017"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-018",
+      "kind": "EXCLUDED",
+      "source_id": "EX-BASH-ERRREDIR",
+      "test_ids": [
+        "EX-018"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-019",
+      "kind": "EXCLUDED",
+      "source_id": "EX-BASH-BRACKETGLOB",
+      "test_ids": [
+        "EX-019"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-020",
+      "kind": "EXCLUDED",
+      "source_id": "EX-BASH-RECURSIVEGLOB",
+      "test_ids": [
+        "EX-020"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-021",
+      "kind": "EXCLUDED",
+      "source_id": "EX-BASH-MULTILINE",
+      "test_ids": [
+        "EX-021"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-022",
+      "kind": "EXCLUDED",
+      "source_id": "EX-PS-SEMICOLON",
+      "test_ids": [
+        "EX-022"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-023",
+      "kind": "EXCLUDED",
+      "source_id": "EX-PS-AND",
+      "test_ids": [
+        "EX-023"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-024",
+      "kind": "EXCLUDED",
+      "source_id": "EX-PS-OR",
+      "test_ids": [
+        "EX-024"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-025",
+      "kind": "EXCLUDED",
+      "source_id": "EX-PS-CALL",
+      "test_ids": [
+        "EX-025"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-026",
+      "kind": "EXCLUDED",
+      "source_id": "EX-PS-STOPPARSING",
+      "test_ids": [
+        "EX-026"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-027",
+      "kind": "EXCLUDED",
+      "source_id": "EX-PS-REDIRECTION",
+      "test_ids": [
+        "EX-027"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-028",
+      "kind": "EXCLUDED",
+      "source_id": "EX-PS-DOUBLEQUOTE",
+      "test_ids": [
+        "EX-028"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-029",
+      "kind": "EXCLUDED",
+      "source_id": "EX-PS-VARIABLE",
+      "test_ids": [
+        "EX-029"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-030",
+      "kind": "EXCLUDED",
+      "source_id": "EX-PS-SUBEXPR",
+      "test_ids": [
+        "EX-030"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-031",
+      "kind": "EXCLUDED",
+      "source_id": "EX-PS-NATIVE",
+      "test_ids": [
+        "EX-031"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-032",
+      "kind": "EXCLUDED",
+      "source_id": "EX-PS-ARRAY",
+      "test_ids": [
+        "EX-032"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-033",
+      "kind": "EXCLUDED",
+      "source_id": "EX-PS-SCRIPTBLOCK",
+      "test_ids": [
+        "EX-033"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-034",
+      "kind": "EXCLUDED",
+      "source_id": "EX-PS-WHERE",
+      "test_ids": [
+        "EX-034"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-035",
+      "kind": "EXCLUDED",
+      "source_id": "EX-PS-FOREACH",
+      "test_ids": [
+        "EX-035"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-036",
+      "kind": "EXCLUDED",
+      "source_id": "EX-PS-OUTFILE",
+      "test_ids": [
+        "EX-036"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-037",
+      "kind": "EXCLUDED",
+      "source_id": "EX-PS-TEE",
+      "test_ids": [
+        "EX-037"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-038",
+      "kind": "EXCLUDED",
+      "source_id": "EX-PS-INVOKEEXPR",
+      "test_ids": [
+        "EX-038"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-039",
+      "kind": "EXCLUDED",
+      "source_id": "EX-PS-SPLATTING",
+      "test_ids": [
+        "EX-039"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-040",
+      "kind": "EXCLUDED",
+      "source_id": "EX-PS-IMPORT",
+      "test_ids": [
+        "EX-040"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-041",
+      "kind": "EXCLUDED",
+      "source_id": "EX-PS-JOB",
+      "test_ids": [
+        "EX-041"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-042",
+      "kind": "EXCLUDED",
+      "source_id": "EX-PS-RUNSPACE",
+      "test_ids": [
+        "EX-042"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-043",
+      "kind": "EXCLUDED",
+      "source_id": "EX-PS-DOTNET",
+      "test_ids": [
+        "EX-043"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-EX-044",
+      "kind": "EXCLUDED",
+      "source_id": "EX-PS-MULTILINE",
+      "test_ids": [
+        "EX-044"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-RD-001",
+      "kind": "REDIRECTION",
+      "source_id": "REDIR-GT-ABSENT",
+      "test_ids": [
+        "RD-001"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-RD-002",
+      "kind": "REDIRECTION",
+      "source_id": "REDIR-GT-PRESENT",
+      "test_ids": [
+        "RD-002"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-RD-003",
+      "kind": "REDIRECTION",
+      "source_id": "REDIR-GTGT-ABSENT",
+      "test_ids": [
+        "RD-003"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-RD-004",
+      "kind": "REDIRECTION",
+      "source_id": "REDIR-GTGT-PRESENT",
+      "test_ids": [
+        "RD-004"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-RD-005",
+      "kind": "REDIRECTION",
+      "source_id": "REDIR-NONFILE",
+      "test_ids": [
+        "RD-005"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-RD-006",
+      "kind": "REDIRECTION",
+      "source_id": "REDIR-UNKNOWN",
+      "test_ids": [
+        "RD-006"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-POL-001",
+      "kind": "POLICY",
+      "source_id": "POL-001",
+      "test_ids": [
+        "EX-001"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-POL-002",
+      "kind": "POLICY",
+      "source_id": "POL-002",
+      "test_ids": [
+        "ST-010"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-POL-004",
+      "kind": "POLICY",
+      "source_id": "POL-004",
+      "test_ids": [
+        "CTX-001"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-POL-005",
+      "kind": "POLICY",
+      "source_id": "POL-005",
+      "test_ids": [
+        "TGT-004"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-POL-006",
+      "kind": "POLICY",
+      "source_id": "POL-006",
+      "test_ids": [
+        "AUTH-003"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-POL-007",
+      "kind": "POLICY",
+      "source_id": "POL-007",
+      "test_ids": [
+        "AUTH-002"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-POL-008",
+      "kind": "POLICY",
+      "source_id": "POL-008",
+      "test_ids": [
+        "TB-015"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-POL-009",
+      "kind": "POLICY",
+      "source_id": "POL-009",
+      "test_ids": [
+        "TB-001"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-POL-010",
+      "kind": "POLICY",
+      "source_id": "POL-010",
+      "test_ids": [
+        "POLC-010"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-POL-011",
+      "kind": "POLICY",
+      "source_id": "POL-011",
+      "test_ids": [
+        "POLC-011"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-POL-012",
+      "kind": "POLICY",
+      "source_id": "POL-012",
+      "test_ids": [
+        "POLC-012"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-POL-013",
+      "kind": "POLICY",
+      "source_id": "POL-013",
+      "test_ids": [
+        "POLC-013"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-POL-014",
+      "kind": "POLICY",
+      "source_id": "POL-014",
+      "test_ids": [
+        "TGT-003"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-POL-015",
+      "kind": "POLICY",
+      "source_id": "POL-015",
+      "test_ids": [
+        "TA-001"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-POL-016",
+      "kind": "POLICY",
+      "source_id": "POL-016",
+      "test_ids": [
+        "POLC-016"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-AUTH-NOT_APPLICABLE_HUMAN",
+      "kind": "AUTHORITY_STATE",
+      "source_id": "NOT_APPLICABLE_HUMAN",
+      "test_ids": [
+        "CTX-001",
+        "CTX-002",
+        "EX-001",
+        "EX-002"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-AUTH-WITHIN_CEILING",
+      "kind": "AUTHORITY_STATE",
+      "source_id": "WITHIN_CEILING",
+      "test_ids": [
+        "AUTH-001"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-AUTH-EXCEEDS_CEILING",
+      "kind": "AUTHORITY_STATE",
+      "source_id": "EXCEEDS_CEILING",
+      "test_ids": [
+        "AUTH-002"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-AUTH-MISSING",
+      "kind": "AUTHORITY_STATE",
+      "source_id": "MISSING",
+      "test_ids": [
+        "AUTH-003"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-AUTH-UNSUPPORTED",
+      "kind": "AUTHORITY_STATE",
+      "source_id": "UNSUPPORTED",
+      "test_ids": [
+        "AUTH-004"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-AUTH-INVALID",
+      "kind": "AUTHORITY_STATE",
+      "source_id": "INVALID",
+      "test_ids": [
+        "AUTH-005"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-AUTH-EXPIRED",
+      "kind": "AUTHORITY_STATE",
+      "source_id": "EXPIRED",
+      "test_ids": [
+        "AUTH-006"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-AUTH-REVOKED",
+      "kind": "AUTHORITY_STATE",
+      "source_id": "REVOKED",
+      "test_ids": [
+        "AUTH-007"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-AUTH-UNTRUSTED",
+      "kind": "AUTHORITY_STATE",
+      "source_id": "UNTRUSTED",
+      "test_ids": [
+        "AUTH-008"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TGT-NOT_APPLICABLE",
+      "kind": "TARGET_STATE",
+      "source_id": "NOT_APPLICABLE",
+      "test_ids": [
+        "AUTH-001",
+        "AUTH-002",
+        "AUTH-003",
+        "AUTH-004",
+        "AUTH-005",
+        "AUTH-006"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TGT-RESOLVED_EMPTY",
+      "kind": "TARGET_STATE",
+      "source_id": "RESOLVED_EMPTY",
+      "test_ids": [
+        "TGT-001"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TGT-RESOLVED_WITHIN_LIMIT",
+      "kind": "TARGET_STATE",
+      "source_id": "RESOLVED_WITHIN_LIMIT",
+      "test_ids": [
+        "POLC-016",
+        "RD-001",
+        "RD-002",
+        "RD-003",
+        "RD-004",
+        "ST-013"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TGT-RESOLVED_OVER_LIMIT",
+      "kind": "TARGET_STATE",
+      "source_id": "RESOLVED_OVER_LIMIT",
+      "test_ids": [
+        "TGT-003"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-TGT-UNRESOLVED",
+      "kind": "TARGET_STATE",
+      "source_id": "UNRESOLVED",
+      "test_ids": [
+        "RD-005",
+        "RD-006",
+        "TGT-004"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-STR-EMPTY_INPUT",
+      "kind": "STRUCTURAL_BOUNDARY",
+      "source_id": "EMPTY_INPUT",
+      "test_ids": [
+        "ST-001"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-STR-LEADING_SPACE",
+      "kind": "STRUCTURAL_BOUNDARY",
+      "source_id": "LEADING_SPACE",
+      "test_ids": [
+        "ST-002"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-STR-TRAILING_SPACE",
+      "kind": "STRUCTURAL_BOUNDARY",
+      "source_id": "TRAILING_SPACE",
+      "test_ids": [
+        "ST-003"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-STR-NUL",
+      "kind": "STRUCTURAL_BOUNDARY",
+      "source_id": "NUL",
+      "test_ids": [
+        "ST-004"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-STR-TAB",
+      "kind": "STRUCTURAL_BOUNDARY",
+      "source_id": "TAB",
+      "test_ids": [
+        "ST-005"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-STR-NEWLINE",
+      "kind": "STRUCTURAL_BOUNDARY",
+      "source_id": "NEWLINE",
+      "test_ids": [
+        "EX-021"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-STR-MAX_4096",
+      "kind": "STRUCTURAL_BOUNDARY",
+      "source_id": "MAX_4096",
+      "test_ids": [
+        "ST-011"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-STR-OVER_4097",
+      "kind": "STRUCTURAL_BOUNDARY",
+      "source_id": "OVER_4097",
+      "test_ids": [
+        "ST-007"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-STR-INVALID_UTF8",
+      "kind": "STRUCTURAL_BOUNDARY",
+      "source_id": "INVALID_UTF8",
+      "test_ids": [
+        "ST-008"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-STR-MALFORMED_BASE64",
+      "kind": "STRUCTURAL_BOUNDARY",
+      "source_id": "MALFORMED_BASE64",
+      "test_ids": [
+        "ST-009"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-STR-INTEGER_MIN",
+      "kind": "STRUCTURAL_BOUNDARY",
+      "source_id": "INTEGER_MIN",
+      "test_ids": [
+        "ST-013"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-STR-INTEGER_MAX",
+      "kind": "STRUCTURAL_BOUNDARY",
+      "source_id": "INTEGER_MAX",
+      "test_ids": [
+        "ST-014"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-STR-INTEGER_ZERO",
+      "kind": "STRUCTURAL_BOUNDARY",
+      "source_id": "INTEGER_ZERO",
+      "test_ids": [
+        "ST-015"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-STR-INTEGER_OVER",
+      "kind": "STRUCTURAL_BOUNDARY",
+      "source_id": "INTEGER_OVER",
+      "test_ids": [
+        "ST-016"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-STR-CAT_MAX_8",
+      "kind": "STRUCTURAL_BOUNDARY",
+      "source_id": "CAT_MAX_8",
+      "test_ids": [
+        "ST-017"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-STR-CAT_OVER_9",
+      "kind": "STRUCTURAL_BOUNDARY",
+      "source_id": "CAT_OVER_9",
+      "test_ids": [
+        "ST-018"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-STR-PROPERTY_MAX_64",
+      "kind": "STRUCTURAL_BOUNDARY",
+      "source_id": "PROPERTY_MAX_64",
+      "test_ids": [
+        "ST-019"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-STR-PROPERTY_OVER_65",
+      "kind": "STRUCTURAL_BOUNDARY",
+      "source_id": "PROPERTY_OVER_65",
+      "test_ids": [
+        "ST-020"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-REPO-EVIDENCE",
+      "kind": "REPOSITORY_ASSURANCE",
+      "source_id": "EVIDENCE",
+      "test_ids": [
+        "R-EVD-001",
+        "R-EVD-002",
+        "R-EVD-003",
+        "R-EVD-004",
+        "R-EVD-005"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-REPO-PRIVACY",
+      "kind": "REPOSITORY_ASSURANCE",
+      "source_id": "PRIVACY",
+      "test_ids": [
+        "R-PRV-001",
+        "R-PRV-002",
+        "R-PRV-003",
+        "R-PRV-004",
+        "R-PRV-005"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-REPO-NO_EXECUTION",
+      "kind": "REPOSITORY_ASSURANCE",
+      "source_id": "NO_EXECUTION",
+      "test_ids": [
+        "R-NOX-001",
+        "R-NOX-002",
+        "R-NOX-003",
+        "R-NOX-004",
+        "R-NOX-005",
+        "R-NOX-006",
+        "R-NOX-007",
+        "R-NOX-008"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-REPO-SCHEMA_NEGATIVE",
+      "kind": "REPOSITORY_ASSURANCE",
+      "source_id": "SCHEMA_NEGATIVE",
+      "test_ids": [
+        "R-SCH-001",
+        "R-SCH-002",
+        "R-SCH-003",
+        "R-SCH-004",
+        "R-SCH-005",
+        "R-SCH-006",
+        "R-SCH-007",
+        "R-SCH-008",
+        "R-SCH-009"
+      ],
+      "status": "COVERED"
+    },
+    {
+      "obligation_id": "OBL-REPO-VERIFIER_NEGATIVE",
+      "kind": "REPOSITORY_ASSURANCE",
+      "source_id": "VERIFIER_NEGATIVE",
+      "test_ids": [
+        "R-VER-001",
+        "R-VER-002",
+        "R-VER-003",
+        "R-VER-004",
+        "R-VER-005"
+      ],
+      "status": "COVERED"
+    }
+  ],
+  "summary": {
+    "total": 159,
+    "covered": 159,
+    "uncovered": 0
+  }
+}

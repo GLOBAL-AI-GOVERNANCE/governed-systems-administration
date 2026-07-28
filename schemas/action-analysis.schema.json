@@ -1,0 +1,214 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/gsa/schemas/0.1.0-alpha.1/action-analysis.schema.json",
+  "title": "ActionAnalysis",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "analysis_id",
+    "request_id",
+    "context_id",
+    "coverage",
+    "coverage_tier",
+    "matched_rule_id",
+    "intent",
+    "state_change",
+    "effects",
+    "uncertainty",
+    "target_resolution_status",
+    "target_count",
+    "authority_status"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1.0-alpha.1"
+    },
+    "analysis_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "request_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "context_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "coverage": {
+      "$ref": "common.schema.json#/$defs/coverage"
+    },
+    "coverage_tier": {
+      "$ref": "common.schema.json#/$defs/coverage_tier"
+    },
+    "matched_rule_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[A-Z0-9-]+$"
+    },
+    "intent": {
+      "$ref": "common.schema.json#/$defs/intent"
+    },
+    "state_change": {
+      "$ref": "common.schema.json#/$defs/state_change"
+    },
+    "effects": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "common.schema.json#/$defs/effect"
+      }
+    },
+    "uncertainty": {
+      "$ref": "common.schema.json#/$defs/uncertainty"
+    },
+    "target_resolution_status": {
+      "$ref": "common.schema.json#/$defs/target_status"
+    },
+    "target_count": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1000000
+    },
+    "authority_status": {
+      "$ref": "common.schema.json#/$defs/authority_status"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "coverage": {
+            "const": "SUPPORTED"
+          }
+        },
+        "required": [
+          "coverage"
+        ]
+      },
+      "then": {
+        "properties": {
+          "coverage_tier": {
+            "enum": [
+              "A",
+              "B"
+            ]
+          },
+          "matched_rule_id": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "coverage": {
+            "enum": [
+              "UNSUPPORTED",
+              "INDETERMINATE"
+            ]
+          }
+        },
+        "required": [
+          "coverage"
+        ]
+      },
+      "then": {
+        "properties": {
+          "coverage_tier": {
+            "const": "C"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "coverage_tier": {
+            "const": "A"
+          }
+        },
+        "required": [
+          "coverage_tier"
+        ]
+      },
+      "then": {
+        "properties": {
+          "intent": {
+            "const": "OBSERVATIONAL_INTENT"
+          },
+          "state_change": {
+            "const": "NO_DECLARED_STATE_CHANGE"
+          },
+          "uncertainty": {
+            "const": "LOW"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "target_resolution_status": {
+            "enum": [
+              "NOT_APPLICABLE",
+              "RESOLVED_EMPTY",
+              "UNRESOLVED"
+            ]
+          }
+        },
+        "required": [
+          "target_resolution_status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "target_count": {
+            "const": 0
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "target_resolution_status": {
+            "const": "RESOLVED_WITHIN_LIMIT"
+          }
+        },
+        "required": [
+          "target_resolution_status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "target_count": {
+            "minimum": 1,
+            "maximum": 32
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "target_resolution_status": {
+            "const": "RESOLVED_OVER_LIMIT"
+          }
+        },
+        "required": [
+          "target_resolution_status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "target_count": {
+            "minimum": 33
+          }
+        }
+      }
+    }
+  ],
+  "$comment": "Proposed normative; approval status under review; product implementation not started."
+}

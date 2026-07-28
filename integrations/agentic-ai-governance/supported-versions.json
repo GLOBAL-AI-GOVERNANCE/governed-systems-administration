@@ -1,0 +1,15 @@
+{
+  "registry_version": "0.1.0-alpha.1",
+  "approval_status": "under-review",
+  "synthetic_only": true,
+  "supported_profiles": [
+    {
+      "profile_id": "agent-trust-passport-alpha1-synthetic",
+      "versions": [
+        "0.1.0-alpha.1"
+      ],
+      "trust_roots": []
+    }
+  ],
+  "unsupported_behavior": "INDETERMINATE"
+}

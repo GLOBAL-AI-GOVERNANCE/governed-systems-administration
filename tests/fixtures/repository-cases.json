@@ -1,0 +1,607 @@
+{
+  "suite_version": "0.1.0-alpha.1",
+  "cases": [
+    {
+      "test_id": "R-EVD-001",
+      "category": "EVIDENCE",
+      "operation": "VALIDATE_EVIDENCE_LINKAGE",
+      "fixture": {
+        "mutation": "NONE"
+      },
+      "expected": {
+        "valid": true
+      },
+      "requirement_ids": [
+        "REQ-EVD-002"
+      ],
+      "threat_ids": [
+        "T-019"
+      ]
+    },
+    {
+      "test_id": "R-EVD-002",
+      "category": "EVIDENCE",
+      "operation": "VALIDATE_EVIDENCE_LINKAGE",
+      "fixture": {
+        "mutation": "BAD_REQUEST_HASH"
+      },
+      "expected": {
+        "valid": false,
+        "error": "HASH_MISMATCH"
+      },
+      "requirement_ids": [
+        "REQ-EVD-002"
+      ],
+      "threat_ids": [
+        "T-019"
+      ]
+    },
+    {
+      "test_id": "R-EVD-003",
+      "category": "EVIDENCE",
+      "operation": "VALIDATE_EVIDENCE_LINKAGE",
+      "fixture": {
+        "mutation": "MISSING_ANALYSIS_HASH"
+      },
+      "expected": {
+        "valid": false,
+        "error": "MISSING_HASH_KEY"
+      },
+      "requirement_ids": [
+        "REQ-EVD-002"
+      ],
+      "threat_ids": [
+        "T-019"
+      ]
+    },
+    {
+      "test_id": "R-EVD-004",
+      "category": "EVIDENCE",
+      "operation": "VALIDATE_EVIDENCE_LINKAGE",
+      "fixture": {
+        "mutation": "EXTRA_HASH_KEY"
+      },
+      "expected": {
+        "valid": false,
+        "error": "UNEXPECTED_HASH_KEY"
+      },
+      "requirement_ids": [
+        "REQ-EVD-002"
+      ],
+      "threat_ids": [
+        "T-019"
+      ]
+    },
+    {
+      "test_id": "R-EVD-005",
+      "category": "EVIDENCE",
+      "operation": "VALIDATE_EVIDENCE_LINKAGE",
+      "fixture": {
+        "mutation": "REFERENCE_ID_MISMATCH"
+      },
+      "expected": {
+        "valid": false,
+        "error": "REFERENCE_MISMATCH"
+      },
+      "requirement_ids": [
+        "REQ-EVD-002"
+      ],
+      "threat_ids": [
+        "T-019"
+      ]
+    },
+    {
+      "test_id": "R-PRV-001",
+      "category": "PRIVACY",
+      "operation": "SCAN_TEXT",
+      "fixture": {
+        "parts": [
+          "AKIA",
+          "1234567890ABCDEF"
+        ],
+        "join": ""
+      },
+      "expected": {
+        "detected": true,
+        "class": "AWS_STYLE_KEY"
+      },
+      "requirement_ids": [
+        "REQ-SEC-001"
+      ],
+      "threat_ids": [
+        "T-026"
+      ]
+    },
+    {
+      "test_id": "R-PRV-002",
+      "category": "PRIVACY",
+      "operation": "SCAN_TEXT",
+      "fixture": {
+        "parts": [
+          "ghp_",
+          "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+        ],
+        "join": ""
+      },
+      "expected": {
+        "detected": true,
+        "class": "GITHUB_STYLE_TOKEN"
+      },
+      "requirement_ids": [
+        "REQ-SEC-001"
+      ],
+      "threat_ids": [
+        "T-026"
+      ]
+    },
+    {
+      "test_id": "R-PRV-003",
+      "category": "PRIVACY",
+      "operation": "SCAN_TEXT",
+      "fixture": {
+        "parts": [
+          "synthetic",
+          "@",
+          "example.invalid"
+        ],
+        "join": ""
+      },
+      "expected": {
+        "detected": true,
+        "class": "EMAIL"
+      },
+      "requirement_ids": [
+        "REQ-SEC-001"
+      ],
+      "threat_ids": [
+        "T-026"
+      ]
+    },
+    {
+      "test_id": "R-PRV-004",
+      "category": "PRIVACY",
+      "operation": "SCAN_TEXT",
+      "fixture": {
+        "parts": [
+          "192",
+          ".",
+          "0",
+          ".",
+          "2",
+          ".",
+          "55"
+        ],
+        "join": ""
+      },
+      "expected": {
+        "detected": true,
+        "class": "IPV4"
+      },
+      "requirement_ids": [
+        "REQ-SEC-001"
+      ],
+      "threat_ids": [
+        "T-026"
+      ]
+    },
+    {
+      "test_id": "R-PRV-005",
+      "category": "PRIVACY",
+      "operation": "SCAN_TEXT",
+      "fixture": {
+        "parts": [
+          "synthetic public fixture"
+        ],
+        "join": ""
+      },
+      "expected": {
+        "detected": false
+      },
+      "requirement_ids": [
+        "REQ-SEC-001"
+      ],
+      "threat_ids": [
+        "T-026"
+      ]
+    },
+    {
+      "test_id": "R-NOX-001",
+      "category": "NO_EXECUTION",
+      "operation": "SCAN_PYTHON_AST",
+      "fixture": {
+        "source": "import subprocess\n"
+      },
+      "expected": {
+        "detected": true,
+        "class": "FORBIDDEN_IMPORT"
+      },
+      "requirement_ids": [
+        "REQ-SEC-002"
+      ],
+      "threat_ids": [
+        "T-012",
+        "T-013"
+      ]
+    },
+    {
+      "test_id": "R-NOX-002",
+      "category": "NO_EXECUTION",
+      "operation": "SCAN_PYTHON_AST",
+      "fixture": {
+        "source": "from socket import socket\n"
+      },
+      "expected": {
+        "detected": true,
+        "class": "FORBIDDEN_IMPORT"
+      },
+      "requirement_ids": [
+        "REQ-SEC-002"
+      ],
+      "threat_ids": [
+        "T-012",
+        "T-013"
+      ]
+    },
+    {
+      "test_id": "R-NOX-003",
+      "category": "NO_EXECUTION",
+      "operation": "SCAN_PYTHON_AST",
+      "fixture": {
+        "source": "import os\nos.system('echo test')\n"
+      },
+      "expected": {
+        "detected": true,
+        "class": "FORBIDDEN_CALL"
+      },
+      "requirement_ids": [
+        "REQ-SEC-002"
+      ],
+      "threat_ids": [
+        "T-012",
+        "T-013"
+      ]
+    },
+    {
+      "test_id": "R-NOX-004",
+      "category": "NO_EXECUTION",
+      "operation": "SCAN_PYTHON_AST",
+      "fixture": {
+        "source": "import importlib\nimportlib.import_module('subprocess')\n"
+      },
+      "expected": {
+        "detected": true,
+        "class": "DYNAMIC_IMPORT"
+      },
+      "requirement_ids": [
+        "REQ-SEC-002"
+      ],
+      "threat_ids": [
+        "T-012",
+        "T-013"
+      ]
+    },
+    {
+      "test_id": "R-NOX-005",
+      "category": "NO_EXECUTION",
+      "operation": "SCAN_PYTHON_AST",
+      "fixture": {
+        "source": "eval('1+1')\n"
+      },
+      "expected": {
+        "detected": true,
+        "class": "DYNAMIC_EXECUTION"
+      },
+      "requirement_ids": [
+        "REQ-SEC-002"
+      ],
+      "threat_ids": [
+        "T-012",
+        "T-013"
+      ]
+    },
+    {
+      "test_id": "R-NOX-006",
+      "category": "NO_EXECUTION",
+      "operation": "SCAN_PYTHON_AST",
+      "fixture": {
+        "source": "from pathlib import Path\nPath('x').write_text('y')\n"
+      },
+      "expected": {
+        "detected": true,
+        "class": "FILESYSTEM_MUTATION"
+      },
+      "requirement_ids": [
+        "REQ-SEC-002"
+      ],
+      "threat_ids": [
+        "T-012",
+        "T-013"
+      ]
+    },
+    {
+      "test_id": "R-NOX-007",
+      "category": "NO_EXECUTION",
+      "operation": "SCAN_PYTHON_AST",
+      "fixture": {
+        "source": "import urllib.request\n"
+      },
+      "expected": {
+        "detected": true,
+        "class": "NETWORK_CLIENT"
+      },
+      "requirement_ids": [
+        "REQ-SEC-002"
+      ],
+      "threat_ids": [
+        "T-012",
+        "T-013"
+      ]
+    },
+    {
+      "test_id": "R-NOX-008",
+      "category": "NO_EXECUTION",
+      "operation": "SCAN_PYTHON_AST",
+      "fixture": {
+        "source": "value = {'command': 'pwd'}\n"
+      },
+      "expected": {
+        "detected": false,
+        "class": null
+      },
+      "requirement_ids": [
+        "REQ-SEC-002"
+      ],
+      "threat_ids": [
+        "T-012",
+        "T-013"
+      ]
+    },
+    {
+      "test_id": "R-SCH-001",
+      "category": "SCHEMA_NEGATIVE",
+      "operation": "VALIDATE_SCHEMA_MUTATION",
+      "fixture": {
+        "schema": "administrative-action-request.schema.json",
+        "mutation": "HUMAN_WITH_TRUST_REFERENCE"
+      },
+      "expected": {
+        "valid": false
+      },
+      "requirement_ids": [
+        "REQ-SCH-002"
+      ],
+      "threat_ids": [
+        "T-029"
+      ]
+    },
+    {
+      "test_id": "R-SCH-002",
+      "category": "SCHEMA_NEGATIVE",
+      "operation": "VALIDATE_SCHEMA_MUTATION",
+      "fixture": {
+        "schema": "administrative-action-request.schema.json",
+        "mutation": "AGENT_WITHOUT_TRUST_REFERENCE"
+      },
+      "expected": {
+        "valid": false
+      },
+      "requirement_ids": [
+        "REQ-SCH-002"
+      ],
+      "threat_ids": [
+        "T-029"
+      ]
+    },
+    {
+      "test_id": "R-SCH-003",
+      "category": "SCHEMA_NEGATIVE",
+      "operation": "VALIDATE_SCHEMA_MUTATION",
+      "fixture": {
+        "schema": "administrative-action-request.schema.json",
+        "mutation": "LINUX_WITH_POWERSHELL"
+      },
+      "expected": {
+        "valid": false
+      },
+      "requirement_ids": [
+        "REQ-SCH-002"
+      ],
+      "threat_ids": [
+        "T-029"
+      ]
+    },
+    {
+      "test_id": "R-SCH-004",
+      "category": "SCHEMA_NEGATIVE",
+      "operation": "VALIDATE_SCHEMA_MUTATION",
+      "fixture": {
+        "schema": "system-context.schema.json",
+        "mutation": "RESOLVED_WITHOUT_CANONICAL_NAME"
+      },
+      "expected": {
+        "valid": false
+      },
+      "requirement_ids": [
+        "REQ-SCH-002"
+      ],
+      "threat_ids": [
+        "T-029"
+      ]
+    },
+    {
+      "test_id": "R-SCH-005",
+      "category": "SCHEMA_NEGATIVE",
+      "operation": "VALIDATE_SCHEMA_MUTATION",
+      "fixture": {
+        "schema": "system-context.schema.json",
+        "mutation": "NOT_APPLICABLE_WITH_NONZERO_TARGET"
+      },
+      "expected": {
+        "valid": false
+      },
+      "requirement_ids": [
+        "REQ-SCH-002"
+      ],
+      "threat_ids": [
+        "T-029"
+      ]
+    },
+    {
+      "test_id": "R-SCH-006",
+      "category": "SCHEMA_NEGATIVE",
+      "operation": "VALIDATE_SCHEMA_MUTATION",
+      "fixture": {
+        "schema": "action-analysis.schema.json",
+        "mutation": "SUPPORTED_TIER_C"
+      },
+      "expected": {
+        "valid": false
+      },
+      "requirement_ids": [
+        "REQ-SCH-002"
+      ],
+      "threat_ids": [
+        "T-029"
+      ]
+    },
+    {
+      "test_id": "R-SCH-007",
+      "category": "SCHEMA_NEGATIVE",
+      "operation": "VALIDATE_SCHEMA_MUTATION",
+      "fixture": {
+        "schema": "review-requirement.schema.json",
+        "mutation": "NO_ESCALATION_WITH_POL001"
+      },
+      "expected": {
+        "valid": false
+      },
+      "requirement_ids": [
+        "REQ-SCH-002"
+      ],
+      "threat_ids": [
+        "T-029"
+      ]
+    },
+    {
+      "test_id": "R-SCH-008",
+      "category": "SCHEMA_NEGATIVE",
+      "operation": "VALIDATE_SCHEMA_MUTATION",
+      "fixture": {
+        "schema": "administration-evidence-record.schema.json",
+        "mutation": "ARBITRARY_HASH_KEY"
+      },
+      "expected": {
+        "valid": false
+      },
+      "requirement_ids": [
+        "REQ-SCH-002"
+      ],
+      "threat_ids": [
+        "T-029"
+      ]
+    },
+    {
+      "test_id": "R-SCH-009",
+      "category": "SCHEMA_NEGATIVE",
+      "operation": "VALIDATE_SCHEMA_MUTATION",
+      "fixture": {
+        "schema": "administrative-action-request.schema.json",
+        "mutation": "INVALID_DATETIME"
+      },
+      "expected": {
+        "valid": false
+      },
+      "requirement_ids": [
+        "REQ-SCH-002"
+      ],
+      "threat_ids": [
+        "T-029"
+      ]
+    },
+    {
+      "test_id": "R-VER-001",
+      "category": "VERIFIER_NEGATIVE",
+      "operation": "VERIFY_SEEDED_REPOSITORY",
+      "fixture": {
+        "seed": "DUPLICATE_SEMANTIC_SIGNATURE"
+      },
+      "expected": {
+        "verifier_exit_nonzero": true
+      },
+      "requirement_ids": [
+        "REQ-TST-002"
+      ],
+      "threat_ids": [
+        "T-030"
+      ]
+    },
+    {
+      "test_id": "R-VER-002",
+      "category": "VERIFIER_NEGATIVE",
+      "operation": "VERIFY_SEEDED_REPOSITORY",
+      "fixture": {
+        "seed": "SHADOWED_POLICY_RULE"
+      },
+      "expected": {
+        "verifier_exit_nonzero": true
+      },
+      "requirement_ids": [
+        "REQ-TST-002"
+      ],
+      "threat_ids": [
+        "T-030"
+      ]
+    },
+    {
+      "test_id": "R-VER-003",
+      "category": "VERIFIER_NEGATIVE",
+      "operation": "VERIFY_SEEDED_REPOSITORY",
+      "fixture": {
+        "seed": "UNKNOWN_PROFILE_REFERENCE"
+      },
+      "expected": {
+        "verifier_exit_nonzero": true
+      },
+      "requirement_ids": [
+        "REQ-TST-002"
+      ],
+      "threat_ids": [
+        "T-030"
+      ]
+    },
+    {
+      "test_id": "R-VER-004",
+      "category": "VERIFIER_NEGATIVE",
+      "operation": "VERIFY_SEEDED_REPOSITORY",
+      "fixture": {
+        "seed": "TRACEABILITY_CSV_DRIFT"
+      },
+      "expected": {
+        "verifier_exit_nonzero": true
+      },
+      "requirement_ids": [
+        "REQ-TST-002"
+      ],
+      "threat_ids": [
+        "T-030"
+      ]
+    },
+    {
+      "test_id": "R-VER-005",
+      "category": "VERIFIER_NEGATIVE",
+      "operation": "VERIFY_SEEDED_REPOSITORY",
+      "fixture": {
+        "seed": "PLACEHOLDER_CATEGORY"
+      },
+      "expected": {
+        "verifier_exit_nonzero": true
+      },
+      "requirement_ids": [
+        "REQ-TST-002"
+      ],
+      "threat_ids": [
+        "T-030"
+      ]
+    }
+  ]
+}

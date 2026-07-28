@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/gsa/schemas/0.1.0-alpha.1/input-rejected.schema.json",
+  "title": "InputRejected",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "outcome_type",
+    "outcome_version",
+    "error"
+  ],
+  "properties": {
+    "outcome_type": {
+      "const": "INPUT_REJECTED"
+    },
+    "outcome_version": {
+      "const": "0.1.0-alpha.1"
+    },
+    "error": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "code",
+        "message",
+        "stage",
+        "authorization_effect",
+        "execution_authorized"
+      ],
+      "properties": {
+        "code": {
+          "enum": [
+            "INVALID_ENCODING",
+            "INPUT_TOO_LARGE",
+            "EMPTY_INPUT",
+            "LEADING_OR_TRAILING_SPACE",
+            "CONTROL_CHARACTER",
+            "INVALID_JSON",
+            "SCHEMA_INVALID"
+          ]
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "stage": {
+          "enum": [
+            "INGEST",
+            "STRUCTURE"
+          ]
+        },
+        "authorization_effect": {
+          "const": "NONE"
+        },
+        "execution_authorized": {
+          "const": false
+        }
+      }
+    }
+  },
+  "$comment": "Proposed normative; approval status under review; product implementation not started."
+}

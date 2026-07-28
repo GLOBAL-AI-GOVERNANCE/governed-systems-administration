@@ -1,0 +1,132 @@
+{
+  "approval_status": "UNDER_REVIEW",
+  "normative_status": "PROPOSED_NORMATIVE",
+  "implementation_status": "NOT_STARTED",
+  "requirements": [
+    {
+      "requirement_id": "REQ-BND-001",
+      "title": "No product implementation before gate",
+      "source": "README.md"
+    },
+    {
+      "requirement_id": "REQ-BND-002",
+      "title": "No execution or live state",
+      "source": "GOVERNANCE.md"
+    },
+    {
+      "requirement_id": "REQ-BND-003",
+      "title": "Nonauthorization fields",
+      "source": "README.md"
+    },
+    {
+      "requirement_id": "REQ-SYN-001",
+      "title": "Input envelope",
+      "source": "docs/SUPPORTED_SYNTAX.md"
+    },
+    {
+      "requirement_id": "REQ-SYN-002",
+      "title": "Whitespace canonicalization",
+      "source": "docs/SUPPORTED_SYNTAX.md"
+    },
+    {
+      "requirement_id": "REQ-SYN-003",
+      "title": "Exclusion precedence",
+      "source": "docs/SUPPORTED_SYNTAX.md"
+    },
+    {
+      "requirement_id": "REQ-SYN-004",
+      "title": "Tier A exactness",
+      "source": "docs/SUPPORTED_SYNTAX.md"
+    },
+    {
+      "requirement_id": "REQ-SYN-005",
+      "title": "Tier B exactness",
+      "source": "docs/SUPPORTED_SYNTAX.md"
+    },
+    {
+      "requirement_id": "REQ-SYN-006",
+      "title": "PowerShell exclusions",
+      "source": "docs/SUPPORTED_SYNTAX.md"
+    },
+    {
+      "requirement_id": "REQ-SYN-007",
+      "title": "Redirection semantics",
+      "source": "docs/SUPPORTED_SYNTAX.md"
+    },
+    {
+      "requirement_id": "REQ-SYN-008",
+      "title": "Synthetic targets only",
+      "source": "docs/SUPPORTED_SYNTAX.md"
+    },
+    {
+      "requirement_id": "REQ-POL-001",
+      "title": "First-match policy",
+      "source": "docs/REFERENCE_POLICY.md"
+    },
+    {
+      "requirement_id": "REQ-POL-002",
+      "title": "No-escalation gate",
+      "source": "docs/REFERENCE_POLICY.md"
+    },
+    {
+      "requirement_id": "REQ-POL-003",
+      "title": "Authority failures",
+      "source": "docs/REFERENCE_POLICY.md"
+    },
+    {
+      "requirement_id": "REQ-SCH-001",
+      "title": "Six schemas",
+      "source": "schemas/README.md"
+    },
+    {
+      "requirement_id": "REQ-SCH-002",
+      "title": "Strict schemas",
+      "source": "schemas/README.md"
+    },
+    {
+      "requirement_id": "REQ-SCH-003",
+      "title": "Canonical JSON",
+      "source": "docs/CANONICAL_JSON.md"
+    },
+    {
+      "requirement_id": "REQ-TST-001",
+      "title": "Fixture coverage",
+      "source": "docs/ACCEPTANCE_TEST_PLAN.md"
+    },
+    {
+      "requirement_id": "REQ-TST-002",
+      "title": "Traceability",
+      "source": "docs/ACCEPTANCE_TEST_PLAN.md"
+    },
+    {
+      "requirement_id": "REQ-SEC-001",
+      "title": "Privacy scans",
+      "source": "docs/PUBLIC_PRIVATE_BOUNDARY.md"
+    },
+    {
+      "requirement_id": "REQ-SEC-002",
+      "title": "No-execution guard",
+      "source": "docs/ACCEPTANCE_TEST_PLAN.md"
+    },
+    {
+      "requirement_id": "REQ-GOV-001",
+      "title": "Monotonic precedence",
+      "source": "GOVERNANCE.md"
+    },
+    {
+      "requirement_id": "REQ-GOV-002",
+      "title": "Explicit ADR acceptance",
+      "source": "GOVERNANCE.md"
+    },
+    {
+      "requirement_id": "REQ-EVD-001",
+      "title": "No occurrence claim",
+      "source": "docs/CANONICAL_JSON.md"
+    },
+    {
+      "requirement_id": "REQ-EVD-002",
+      "title": "Golden hashes",
+      "source": "docs/ACCEPTANCE_TEST_PLAN.md"
+    }
+  ]
+}

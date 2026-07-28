@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/gsa/schemas/0.1.0-alpha.1/acceptance-case.schema.json",
+  "title": "AcceptanceCase",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "test_id",
+    "category",
+    "semantic_signature",
+    "input",
+    "profiles",
+    "expected",
+    "requirement_ids",
+    "threat_ids"
+  ],
+  "properties": {
+    "test_id": {
+      "type": "string",
+      "pattern": "^[A-Z0-9-]{3,80}$"
+    },
+    "category": {
+      "enum": [
+        "STRUCTURAL",
+        "TIER_A",
+        "TIER_B",
+        "EXCLUDED",
+        "REDIRECTION",
+        "CONTEXT",
+        "TARGET",
+        "AUTHORITY",
+        "POLICY"
+      ]
+    },
+    "semantic_signature": {
+      "$ref": "common.schema.json#/$defs/sha256"
+    },
+    "input": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "value"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "TEXT",
+            "BASE64_BYTES"
+          ]
+        },
+        "value": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 8192
+        }
+      }
+    },
+    "profiles": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "context",
+        "requester",
+        "target"
+      ],
+      "properties": {
+        "context": {
+          "type": "string",
+          "minLength": 1
+        },
+        "requester": {
+          "type": "string",
+          "minLength": 1
+        },
+        "target": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "expected": {
+      "$ref": "analysis-outcome.schema.json"
+    },
+    "requirement_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^REQ-[A-Z0-9-]+$"
+      }
+    },
+    "threat_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^T-[0-9]{3}$"
+      }
+    }
+  },
+  "$comment": "Proposed normative; approval status under review; product implementation not started."
+}

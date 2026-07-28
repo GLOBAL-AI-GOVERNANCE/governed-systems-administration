@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/gsa/schemas/0.1.0-alpha.1/authority-adapter-output.schema.json",
+  "title": "AuthorityAdapterOutput",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "adapter_version",
+    "authority_status",
+    "supported_profile",
+    "reasons"
+  ],
+  "properties": {
+    "adapter_version": {
+      "const": "0.1.0-alpha.1"
+    },
+    "authority_status": {
+      "$ref": "common.schema.json#/$defs/authority_status"
+    },
+    "supported_profile": {
+      "type": "boolean"
+    },
+    "reasons": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "authority_status": {
+            "const": "UNSUPPORTED"
+          }
+        },
+        "required": [
+          "authority_status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "supported_profile": {
+            "const": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "authority_status": {
+            "not": {
+              "const": "UNSUPPORTED"
+            }
+          }
+        },
+        "required": [
+          "authority_status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "supported_profile": {
+            "const": true
+          }
+        }
+      }
+    }
+  ],
+  "$comment": "Proposed normative; approval status under review; product implementation not started."
+}

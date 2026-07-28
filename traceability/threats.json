@@ -1,0 +1,127 @@
+{
+  "approval_status": "UNDER_REVIEW",
+  "normative_status": "PROPOSED_NORMATIVE",
+  "implementation_status": "NOT_STARTED",
+  "threats": [
+    {
+      "threat_id": "T-001",
+      "source": "docs/THREAT_MODEL.md"
+    },
+    {
+      "threat_id": "T-002",
+      "source": "docs/THREAT_MODEL.md"
+    },
+    {
+      "threat_id": "T-003",
+      "source": "docs/THREAT_MODEL.md"
+    },
+    {
+      "threat_id": "T-004",
+      "source": "docs/THREAT_MODEL.md"
+    },
+    {
+      "threat_id": "T-005",
+      "source": "docs/THREAT_MODEL.md"
+    },
+    {
+      "threat_id": "T-006",
+      "source": "docs/THREAT_MODEL.md"
+    },
+    {
+      "threat_id": "T-007",
+      "source": "docs/THREAT_MODEL.md"
+    },
+    {
+      "threat_id": "T-008",
+      "source": "docs/THREAT_MODEL.md"
+    },
+    {
+      "threat_id": "T-009",
+      "source": "docs/THREAT_MODEL.md"
+    },
+    {
+      "threat_id": "T-010",
+      "source": "docs/THREAT_MODEL.md"
+    },
+    {
+      "threat_id": "T-011",
+      "source": "docs/THREAT_MODEL.md"
+    },
+    {
+      "threat_id": "T-012",
+      "source": "docs/THREAT_MODEL.md"
+    },
+    {
+      "threat_id": "T-013",
+      "source": "docs/THREAT_MODEL.md"
+    },
+    {
+      "threat_id": "T-014",
+      "source": "docs/THREAT_MODEL.md"
+    },
+    {
+      "threat_id": "T-015",
+      "source": "docs/THREAT_MODEL.md"
+    },
+    {
+      "threat_id": "T-016",
+      "source": "docs/THREAT_MODEL.md"
+    },
+    {
+      "threat_id": "T-017",
+      "source": "docs/THREAT_MODEL.md"
+    },
+    {
+      "threat_id": "T-018",
+      "source": "docs/THREAT_MODEL.md"
+    },
+    {
+      "threat_id": "T-019",
+      "source": "docs/THREAT_MODEL.md"
+    },
+    {
+      "threat_id": "T-020",
+      "source": "docs/THREAT_MODEL.md"
+    },
+    {
+      "threat_id": "T-021",
+      "source": "docs/THREAT_MODEL.md"
+    },
+    {
+      "threat_id": "T-022",
+      "source": "docs/THREAT_MODEL.md"
+    },
+    {
+      "threat_id": "T-023",
+      "source": "docs/THREAT_MODEL.md"
+    },
+    {
+      "threat_id": "T-024",
+      "source": "docs/THREAT_MODEL.md"
+    },
+    {
+      "threat_id": "T-025",
+      "source": "docs/THREAT_MODEL.md"
+    },
+    {
+      "threat_id": "T-026",
+      "source": "docs/THREAT_MODEL.md"
+    },
+    {
+      "threat_id": "T-027",
+      "source": "docs/THREAT_MODEL.md"
+    },
+    {
+      "threat_id": "T-028",
+      "source": "docs/THREAT_MODEL.md"
+    },
+    {
+      "threat_id": "T-029",
+      "source": "docs/THREAT_MODEL.md"
+    },
+    {
+      "threat_id": "T-030",
+      "source": "docs/THREAT_MODEL.md"
+    }
+  ]
+}

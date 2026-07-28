@@ -1,0 +1,533 @@
+{
+  "version": "0.1.0-alpha.1",
+  "status": "PROPOSED_NORMATIVE",
+  "rules": [
+    {
+      "rule_id": "B-BASH-RM",
+      "shell": "BASH",
+      "example": "rm /srv/gsa-fixture/archive/*.tmp",
+      "intent": "CHANGE_INTENT",
+      "state_change": "EXPECTED_STATE_CHANGE",
+      "effects": [
+        "FILE_DELETE"
+      ],
+      "uncertainty": "MEDIUM",
+      "disposition": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "rule_id": "B-BASH-CHMOD",
+      "shell": "BASH",
+      "example": "chmod 640 /srv/gsa-fixture/file.txt",
+      "intent": "CHANGE_INTENT",
+      "state_change": "EXPECTED_STATE_CHANGE",
+      "effects": [
+        "PERMISSION_CHANGE"
+      ],
+      "uncertainty": "MEDIUM",
+      "disposition": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "rule_id": "B-BASH-CHOWN",
+      "shell": "BASH",
+      "example": "chown demo /srv/gsa-fixture/file.txt",
+      "intent": "CHANGE_INTENT",
+      "state_change": "EXPECTED_STATE_CHANGE",
+      "effects": [
+        "PERMISSION_CHANGE"
+      ],
+      "uncertainty": "MEDIUM",
+      "disposition": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "rule_id": "B-BASH-USERADD",
+      "shell": "BASH",
+      "example": "useradd demo",
+      "intent": "CHANGE_INTENT",
+      "state_change": "EXPECTED_STATE_CHANGE",
+      "effects": [
+        "IDENTITY_CHANGE"
+      ],
+      "uncertainty": "MEDIUM",
+      "disposition": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "rule_id": "B-BASH-USERMOD",
+      "shell": "BASH",
+      "example": "usermod -L demo",
+      "intent": "CHANGE_INTENT",
+      "state_change": "EXPECTED_STATE_CHANGE",
+      "effects": [
+        "IDENTITY_CHANGE"
+      ],
+      "uncertainty": "MEDIUM",
+      "disposition": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "rule_id": "B-BASH-GROUPADD",
+      "shell": "BASH",
+      "example": "groupadd demo",
+      "intent": "CHANGE_INTENT",
+      "state_change": "EXPECTED_STATE_CHANGE",
+      "effects": [
+        "IDENTITY_CHANGE"
+      ],
+      "uncertainty": "MEDIUM",
+      "disposition": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "rule_id": "B-BASH-GROUPMOD",
+      "shell": "BASH",
+      "example": "groupmod -n demo2 demo",
+      "intent": "CHANGE_INTENT",
+      "state_change": "EXPECTED_STATE_CHANGE",
+      "effects": [
+        "IDENTITY_CHANGE"
+      ],
+      "uncertainty": "MEDIUM",
+      "disposition": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "rule_id": "B-BASH-SYSTEMCTL-START",
+      "shell": "BASH",
+      "example": "systemctl start demo",
+      "intent": "CHANGE_INTENT",
+      "state_change": "EXPECTED_STATE_CHANGE",
+      "effects": [
+        "SERVICE_CHANGE"
+      ],
+      "uncertainty": "MEDIUM",
+      "disposition": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "rule_id": "B-BASH-SYSTEMCTL-STOP",
+      "shell": "BASH",
+      "example": "systemctl stop demo",
+      "intent": "CHANGE_INTENT",
+      "state_change": "EXPECTED_STATE_CHANGE",
+      "effects": [
+        "SERVICE_CHANGE",
+        "PROCESS_SIGNAL"
+      ],
+      "uncertainty": "MEDIUM",
+      "disposition": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "rule_id": "B-BASH-SYSTEMCTL-RESTART",
+      "shell": "BASH",
+      "example": "systemctl restart demo",
+      "intent": "CHANGE_INTENT",
+      "state_change": "EXPECTED_STATE_CHANGE",
+      "effects": [
+        "SERVICE_CHANGE",
+        "PROCESS_SIGNAL"
+      ],
+      "uncertainty": "MEDIUM",
+      "disposition": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "rule_id": "B-BASH-APT",
+      "shell": "BASH",
+      "example": "apt install demo",
+      "intent": "CHANGE_INTENT",
+      "state_change": "POSSIBLE_STATE_CHANGE",
+      "effects": [
+        "PACKAGE_CHANGE",
+        "UNKNOWN_EFFECT"
+      ],
+      "uncertainty": "HIGH",
+      "disposition": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "rule_id": "B-BASH-APTGET",
+      "shell": "BASH",
+      "example": "apt-get install demo",
+      "intent": "CHANGE_INTENT",
+      "state_change": "POSSIBLE_STATE_CHANGE",
+      "effects": [
+        "PACKAGE_CHANGE",
+        "UNKNOWN_EFFECT"
+      ],
+      "uncertainty": "HIGH",
+      "disposition": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "rule_id": "B-BASH-MOUNT",
+      "shell": "BASH",
+      "example": "mount /dev/demo /srv/gsa-fixture/mnt",
+      "intent": "CHANGE_INTENT",
+      "state_change": "EXPECTED_STATE_CHANGE",
+      "effects": [
+        "STORAGE_CHANGE"
+      ],
+      "uncertainty": "HIGH",
+      "disposition": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "rule_id": "B-BASH-UMOUNT",
+      "shell": "BASH",
+      "example": "umount /srv/gsa-fixture/mnt",
+      "intent": "CHANGE_INTENT",
+      "state_change": "EXPECTED_STATE_CHANGE",
+      "effects": [
+        "STORAGE_CHANGE"
+      ],
+      "uncertainty": "HIGH",
+      "disposition": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "rule_id": "B-BASH-USERDEL",
+      "shell": "BASH",
+      "example": "userdel demo",
+      "intent": "CHANGE_INTENT",
+      "state_change": "EXPECTED_STATE_CHANGE",
+      "effects": [
+        "IDENTITY_CHANGE"
+      ],
+      "uncertainty": "HIGH",
+      "disposition": "PROHIBITED_BY_REFERENCE_POLICY"
+    },
+    {
+      "rule_id": "B-BASH-GROUPDEL",
+      "shell": "BASH",
+      "example": "groupdel demo",
+      "intent": "CHANGE_INTENT",
+      "state_change": "EXPECTED_STATE_CHANGE",
+      "effects": [
+        "IDENTITY_CHANGE"
+      ],
+      "uncertainty": "HIGH",
+      "disposition": "PROHIBITED_BY_REFERENCE_POLICY"
+    },
+    {
+      "rule_id": "B-BASH-PASSWD",
+      "shell": "BASH",
+      "example": "passwd demo",
+      "intent": "CHANGE_INTENT",
+      "state_change": "EXPECTED_STATE_CHANGE",
+      "effects": [
+        "IDENTITY_CHANGE",
+        "PERMISSION_CHANGE"
+      ],
+      "uncertainty": "HIGH",
+      "disposition": "PROHIBITED_BY_REFERENCE_POLICY"
+    },
+    {
+      "rule_id": "B-BASH-MKFS",
+      "shell": "BASH",
+      "example": "mkfs /dev/demo",
+      "intent": "CHANGE_INTENT",
+      "state_change": "EXPECTED_STATE_CHANGE",
+      "effects": [
+        "STORAGE_CHANGE",
+        "FILE_DELETE"
+      ],
+      "uncertainty": "HIGH",
+      "disposition": "PROHIBITED_BY_REFERENCE_POLICY"
+    },
+    {
+      "rule_id": "B-BASH-DD",
+      "shell": "BASH",
+      "example": "dd if=/dev/zero of=/dev/demo",
+      "intent": "CHANGE_INTENT",
+      "state_change": "UNKNOWN_STATE_CHANGE",
+      "effects": [
+        "STORAGE_CHANGE",
+        "FILE_MODIFY",
+        "UNKNOWN_EFFECT"
+      ],
+      "uncertainty": "HIGH",
+      "disposition": "PROHIBITED_BY_REFERENCE_POLICY"
+    },
+    {
+      "rule_id": "B-BASH-SHUTDOWN",
+      "shell": "BASH",
+      "example": "shutdown now",
+      "intent": "CHANGE_INTENT",
+      "state_change": "EXPECTED_STATE_CHANGE",
+      "effects": [
+        "SYSTEM_POWER_CHANGE"
+      ],
+      "uncertainty": "HIGH",
+      "disposition": "PROHIBITED_BY_REFERENCE_POLICY"
+    },
+    {
+      "rule_id": "B-BASH-REBOOT",
+      "shell": "BASH",
+      "example": "reboot",
+      "intent": "CHANGE_INTENT",
+      "state_change": "EXPECTED_STATE_CHANGE",
+      "effects": [
+        "SYSTEM_POWER_CHANGE"
+      ],
+      "uncertainty": "HIGH",
+      "disposition": "PROHIBITED_BY_REFERENCE_POLICY"
+    },
+    {
+      "rule_id": "B-BASH-POWEROFF",
+      "shell": "BASH",
+      "example": "poweroff",
+      "intent": "CHANGE_INTENT",
+      "state_change": "EXPECTED_STATE_CHANGE",
+      "effects": [
+        "SYSTEM_POWER_CHANGE"
+      ],
+      "uncertainty": "HIGH",
+      "disposition": "PROHIBITED_BY_REFERENCE_POLICY"
+    },
+    {
+      "rule_id": "B-BASH-SSH",
+      "shell": "BASH",
+      "example": "ssh example.invalid",
+      "intent": "UNKNOWN_INTENT",
+      "state_change": "POSSIBLE_STATE_CHANGE",
+      "effects": [
+        "REMOTE_ACCESS",
+        "NETWORK_CHANGE",
+        "UNKNOWN_EFFECT"
+      ],
+      "uncertainty": "HIGH",
+      "disposition": "PROHIBITED_BY_REFERENCE_POLICY"
+    },
+    {
+      "rule_id": "B-BASH-SCP",
+      "shell": "BASH",
+      "example": "scp /srv/gsa-fixture/file.txt example.invalid:/tmp/file.txt",
+      "intent": "CHANGE_INTENT",
+      "state_change": "POSSIBLE_STATE_CHANGE",
+      "effects": [
+        "REMOTE_ACCESS",
+        "NETWORK_CHANGE",
+        "FILE_CREATE",
+        "FILE_MODIFY",
+        "UNKNOWN_EFFECT"
+      ],
+      "uncertainty": "HIGH",
+      "disposition": "PROHIBITED_BY_REFERENCE_POLICY"
+    },
+    {
+      "rule_id": "B-PS-SET",
+      "shell": "POWERSHELL",
+      "example": "Set-Service -Name demo",
+      "intent": "CHANGE_INTENT",
+      "state_change": "EXPECTED_STATE_CHANGE",
+      "effects": [
+        "UNKNOWN_EFFECT"
+      ],
+      "uncertainty": "HIGH",
+      "disposition": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "rule_id": "B-PS-NEW",
+      "shell": "POWERSHELL",
+      "example": "New-Item -Path '/srv/gsa-fixture/new'",
+      "intent": "CHANGE_INTENT",
+      "state_change": "EXPECTED_STATE_CHANGE",
+      "effects": [
+        "UNKNOWN_EFFECT"
+      ],
+      "uncertainty": "HIGH",
+      "disposition": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "rule_id": "B-PS-REMOVE",
+      "shell": "POWERSHELL",
+      "example": "Remove-Item -Path '/srv/gsa-fixture/file.txt'",
+      "intent": "CHANGE_INTENT",
+      "state_change": "EXPECTED_STATE_CHANGE",
+      "effects": [
+        "UNKNOWN_EFFECT"
+      ],
+      "uncertainty": "HIGH",
+      "disposition": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "rule_id": "B-PS-START",
+      "shell": "POWERSHELL",
+      "example": "Start-Service -Name demo",
+      "intent": "CHANGE_INTENT",
+      "state_change": "EXPECTED_STATE_CHANGE",
+      "effects": [
+        "UNKNOWN_EFFECT"
+      ],
+      "uncertainty": "HIGH",
+      "disposition": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "rule_id": "B-PS-STOP",
+      "shell": "POWERSHELL",
+      "example": "Stop-Service -Name demo",
+      "intent": "CHANGE_INTENT",
+      "state_change": "EXPECTED_STATE_CHANGE",
+      "effects": [
+        "UNKNOWN_EFFECT"
+      ],
+      "uncertainty": "HIGH",
+      "disposition": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "rule_id": "B-PS-RESTART",
+      "shell": "POWERSHELL",
+      "example": "Restart-Service -Name demo",
+      "intent": "CHANGE_INTENT",
+      "state_change": "EXPECTED_STATE_CHANGE",
+      "effects": [
+        "UNKNOWN_EFFECT"
+      ],
+      "uncertainty": "HIGH",
+      "disposition": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "rule_id": "B-PS-ENABLE",
+      "shell": "POWERSHELL",
+      "example": "Enable-Demo -Name sample",
+      "intent": "CHANGE_INTENT",
+      "state_change": "EXPECTED_STATE_CHANGE",
+      "effects": [
+        "UNKNOWN_EFFECT"
+      ],
+      "uncertainty": "HIGH",
+      "disposition": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "rule_id": "B-PS-DISABLE",
+      "shell": "POWERSHELL",
+      "example": "Disable-Demo -Name sample",
+      "intent": "CHANGE_INTENT",
+      "state_change": "EXPECTED_STATE_CHANGE",
+      "effects": [
+        "UNKNOWN_EFFECT"
+      ],
+      "uncertainty": "HIGH",
+      "disposition": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "rule_id": "B-PS-CLEAR",
+      "shell": "POWERSHELL",
+      "example": "Clear-Content -Path '/srv/gsa-fixture/file.txt'",
+      "intent": "CHANGE_INTENT",
+      "state_change": "EXPECTED_STATE_CHANGE",
+      "effects": [
+        "UNKNOWN_EFFECT"
+      ],
+      "uncertainty": "HIGH",
+      "disposition": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "rule_id": "B-PS-REGISTER",
+      "shell": "POWERSHELL",
+      "example": "Register-Demo -Name sample",
+      "intent": "CHANGE_INTENT",
+      "state_change": "EXPECTED_STATE_CHANGE",
+      "effects": [
+        "UNKNOWN_EFFECT"
+      ],
+      "uncertainty": "HIGH",
+      "disposition": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "rule_id": "B-PS-UNREGISTER",
+      "shell": "POWERSHELL",
+      "example": "Unregister-Demo -Name sample",
+      "intent": "CHANGE_INTENT",
+      "state_change": "EXPECTED_STATE_CHANGE",
+      "effects": [
+        "UNKNOWN_EFFECT"
+      ],
+      "uncertainty": "HIGH",
+      "disposition": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "rule_id": "B-PS-INSTALL",
+      "shell": "POWERSHELL",
+      "example": "Install-Module -Name demo",
+      "intent": "CHANGE_INTENT",
+      "state_change": "EXPECTED_STATE_CHANGE",
+      "effects": [
+        "PACKAGE_CHANGE",
+        "UNKNOWN_EFFECT"
+      ],
+      "uncertainty": "HIGH",
+      "disposition": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "rule_id": "B-PS-UNINSTALL",
+      "shell": "POWERSHELL",
+      "example": "Uninstall-Module -Name demo",
+      "intent": "CHANGE_INTENT",
+      "state_change": "EXPECTED_STATE_CHANGE",
+      "effects": [
+        "PACKAGE_CHANGE",
+        "UNKNOWN_EFFECT"
+      ],
+      "uncertainty": "HIGH",
+      "disposition": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "rule_id": "B-PS-ADD",
+      "shell": "POWERSHELL",
+      "example": "Add-Content -Path '/srv/gsa-fixture/file.txt' -Value sample",
+      "intent": "CHANGE_INTENT",
+      "state_change": "EXPECTED_STATE_CHANGE",
+      "effects": [
+        "UNKNOWN_EFFECT"
+      ],
+      "uncertainty": "HIGH",
+      "disposition": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "rule_id": "B-PS-INVOKE-COMMAND",
+      "shell": "POWERSHELL",
+      "example": "Invoke-Command -ComputerName example.invalid",
+      "intent": "UNKNOWN_INTENT",
+      "state_change": "UNKNOWN_STATE_CHANGE",
+      "effects": [
+        "REMOTE_ACCESS",
+        "DYNAMIC_EXECUTION",
+        "UNKNOWN_EFFECT"
+      ],
+      "uncertainty": "HIGH",
+      "disposition": "PROHIBITED_BY_REFERENCE_POLICY"
+    },
+    {
+      "rule_id": "B-PS-ENTER-PSSSESSION",
+      "shell": "POWERSHELL",
+      "example": "Enter-PSSession -ComputerName example.invalid",
+      "intent": "UNKNOWN_INTENT",
+      "state_change": "POSSIBLE_STATE_CHANGE",
+      "effects": [
+        "REMOTE_ACCESS",
+        "NETWORK_CHANGE",
+        "UNKNOWN_EFFECT"
+      ],
+      "uncertainty": "HIGH",
+      "disposition": "PROHIBITED_BY_REFERENCE_POLICY"
+    },
+    {
+      "rule_id": "B-PS-NEW-PSSSESSION",
+      "shell": "POWERSHELL",
+      "example": "New-PSSession -ComputerName example.invalid",
+      "intent": "UNKNOWN_INTENT",
+      "state_change": "POSSIBLE_STATE_CHANGE",
+      "effects": [
+        "REMOTE_ACCESS",
+        "NETWORK_CHANGE",
+        "UNKNOWN_EFFECT"
+      ],
+      "uncertainty": "HIGH",
+      "disposition": "PROHIBITED_BY_REFERENCE_POLICY"
+    },
+    {
+      "rule_id": "B-PS-SET-EXECUTIONPOLICY",
+      "shell": "POWERSHELL",
+      "example": "Set-ExecutionPolicy RemoteSigned",
+      "intent": "CHANGE_INTENT",
+      "state_change": "EXPECTED_STATE_CHANGE",
+      "effects": [
+        "PERMISSION_CHANGE",
+        "UNKNOWN_EFFECT"
+      ],
+      "uncertainty": "HIGH",
+      "disposition": "PROHIBITED_BY_REFERENCE_POLICY"
+    }
+  ]
+}

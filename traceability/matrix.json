@@ -1,0 +1,918 @@
+{
+  "version": "0.1.0-alpha.1",
+  "repository_test_ids": [
+    "RT-CANONICAL",
+    "RT-CI-PINS",
+    "RT-CLAIMS",
+    "RT-CLI-CONTRACT",
+    "RT-COVERAGE",
+    "RT-EVIDENCE-LINKAGE",
+    "RT-FIXTURE-IDENTITY",
+    "RT-GOLDEN-HASHES",
+    "RT-GOVERNANCE",
+    "RT-MARKDOWN",
+    "RT-NO-EXECUTION",
+    "RT-OUTCOMES",
+    "RT-POLICY-REACHABILITY",
+    "RT-PROFILES",
+    "RT-PROPOSED-LANGUAGE",
+    "RT-PUBLIC-BOUNDARY",
+    "RT-SCHEMAS",
+    "RT-SIX-SCHEMAS",
+    "RT-THREAT-014",
+    "RT-THREAT-015",
+    "RT-THREAT-016",
+    "RT-THREAT-017",
+    "RT-THREAT-021",
+    "RT-THREAT-022",
+    "RT-THREAT-023",
+    "RT-THREAT-024",
+    "RT-THREAT-025",
+    "RT-THREAT-027",
+    "RT-TRACEABILITY",
+    "RT-UPSTREAM-CONTRACT"
+  ],
+  "requirements": [
+    {
+      "requirement_id": "REQ-BND-001",
+      "test_ids": [
+        "RT-NO-EXECUTION"
+      ]
+    },
+    {
+      "requirement_id": "REQ-BND-002",
+      "test_ids": [
+        "RT-NO-EXECUTION"
+      ]
+    },
+    {
+      "requirement_id": "REQ-BND-003",
+      "test_ids": [
+        "RT-OUTCOMES"
+      ]
+    },
+    {
+      "requirement_id": "REQ-EVD-001",
+      "test_ids": [
+        "RT-EVIDENCE-LINKAGE"
+      ]
+    },
+    {
+      "requirement_id": "REQ-EVD-002",
+      "test_ids": [
+        "R-EVD-001",
+        "R-EVD-002",
+        "R-EVD-003",
+        "R-EVD-004",
+        "R-EVD-005"
+      ]
+    },
+    {
+      "requirement_id": "REQ-GOV-001",
+      "test_ids": [
+        "RT-GOVERNANCE"
+      ]
+    },
+    {
+      "requirement_id": "REQ-GOV-002",
+      "test_ids": [
+        "RT-GOVERNANCE"
+      ]
+    },
+    {
+      "requirement_id": "REQ-POL-001",
+      "test_ids": [
+        "CTX-001",
+        "CTX-002",
+        "POLC-010",
+        "POLC-011",
+        "POLC-012",
+        "POLC-013",
+        "POLC-016",
+        "TB-001",
+        "TB-002",
+        "TB-003",
+        "TB-004",
+        "TB-005",
+        "TB-006",
+        "TB-007",
+        "TB-008",
+        "TB-009",
+        "TB-010",
+        "TB-011",
+        "TB-012",
+        "TB-013",
+        "TB-014",
+        "TB-015",
+        "TB-016",
+        "TB-017",
+        "TB-018",
+        "TB-019",
+        "TB-020",
+        "TB-021",
+        "TB-022",
+        "TB-023",
+        "TB-024",
+        "TB-025",
+        "TB-026",
+        "TB-027",
+        "TB-028",
+        "TB-029",
+        "TB-030",
+        "TB-031",
+        "TB-032",
+        "TB-033",
+        "TB-034",
+        "TB-035",
+        "TB-036",
+        "TB-037",
+        "TB-038",
+        "TB-039",
+        "TB-040",
+        "TB-041",
+        "TB-042"
+      ]
+    },
+    {
+      "requirement_id": "REQ-POL-002",
+      "test_ids": [
+        "POLC-010",
+        "POLC-011",
+        "POLC-012",
+        "POLC-013",
+        "POLC-016",
+        "TA-001",
+        "TA-002",
+        "TA-003",
+        "TA-004",
+        "TA-005",
+        "TA-006",
+        "TA-007",
+        "TA-008",
+        "TA-009",
+        "TA-010",
+        "TA-011",
+        "TA-012",
+        "TA-013",
+        "TA-014",
+        "TA-015"
+      ]
+    },
+    {
+      "requirement_id": "REQ-POL-003",
+      "test_ids": [
+        "AUTH-001",
+        "AUTH-002",
+        "AUTH-003",
+        "AUTH-004",
+        "AUTH-005",
+        "AUTH-006",
+        "AUTH-007",
+        "AUTH-008"
+      ]
+    },
+    {
+      "requirement_id": "REQ-SCH-001",
+      "test_ids": [
+        "RT-SIX-SCHEMAS"
+      ]
+    },
+    {
+      "requirement_id": "REQ-SCH-002",
+      "test_ids": [
+        "R-SCH-001",
+        "R-SCH-002",
+        "R-SCH-003",
+        "R-SCH-004",
+        "R-SCH-005",
+        "R-SCH-006",
+        "R-SCH-007",
+        "R-SCH-008",
+        "R-SCH-009"
+      ]
+    },
+    {
+      "requirement_id": "REQ-SCH-003",
+      "test_ids": [
+        "RT-CANONICAL"
+      ]
+    },
+    {
+      "requirement_id": "REQ-SEC-001",
+      "test_ids": [
+        "R-PRV-001",
+        "R-PRV-002",
+        "R-PRV-003",
+        "R-PRV-004",
+        "R-PRV-005"
+      ]
+    },
+    {
+      "requirement_id": "REQ-SEC-002",
+      "test_ids": [
+        "R-NOX-001",
+        "R-NOX-002",
+        "R-NOX-003",
+        "R-NOX-004",
+        "R-NOX-005",
+        "R-NOX-006",
+        "R-NOX-007",
+        "R-NOX-008"
+      ]
+    },
+    {
+      "requirement_id": "REQ-SYN-001",
+      "test_ids": [
+        "ST-001",
+        "ST-002",
+        "ST-003",
+        "ST-004",
+        "ST-005",
+        "ST-007",
+        "ST-008",
+        "ST-009",
+        "ST-010",
+        "ST-011",
+        "ST-012",
+        "ST-013",
+        "ST-014",
+        "ST-015",
+        "ST-016",
+        "ST-017",
+        "ST-018",
+        "ST-019",
+        "ST-020"
+      ]
+    },
+    {
+      "requirement_id": "REQ-SYN-002",
+      "test_ids": [
+        "ST-001",
+        "ST-002",
+        "ST-003",
+        "ST-004",
+        "ST-005",
+        "ST-007",
+        "ST-008",
+        "ST-009",
+        "ST-010",
+        "ST-011",
+        "ST-012",
+        "ST-013",
+        "ST-014",
+        "ST-015",
+        "ST-016",
+        "ST-017",
+        "ST-018",
+        "ST-019",
+        "ST-020"
+      ]
+    },
+    {
+      "requirement_id": "REQ-SYN-003",
+      "test_ids": [
+        "EX-001",
+        "EX-002",
+        "EX-003",
+        "EX-004",
+        "EX-005",
+        "EX-006",
+        "EX-007",
+        "EX-008",
+        "EX-009",
+        "EX-010",
+        "EX-011",
+        "EX-012",
+        "EX-013",
+        "EX-014",
+        "EX-015",
+        "EX-016",
+        "EX-017",
+        "EX-018",
+        "EX-019",
+        "EX-020",
+        "EX-021",
+        "EX-022",
+        "EX-023",
+        "EX-024",
+        "EX-025",
+        "EX-026",
+        "EX-027",
+        "EX-028",
+        "EX-029",
+        "EX-030",
+        "EX-031",
+        "EX-032",
+        "EX-033",
+        "EX-034",
+        "EX-035",
+        "EX-036",
+        "EX-037",
+        "EX-038",
+        "EX-039",
+        "EX-040",
+        "EX-041",
+        "EX-042",
+        "EX-043",
+        "EX-044"
+      ]
+    },
+    {
+      "requirement_id": "REQ-SYN-004",
+      "test_ids": [
+        "TA-001",
+        "TA-002",
+        "TA-003",
+        "TA-004",
+        "TA-005",
+        "TA-006",
+        "TA-007",
+        "TA-008",
+        "TA-009",
+        "TA-010",
+        "TA-011",
+        "TA-012",
+        "TA-013",
+        "TA-014",
+        "TA-015"
+      ]
+    },
+    {
+      "requirement_id": "REQ-SYN-005",
+      "test_ids": [
+        "TB-001",
+        "TB-002",
+        "TB-003",
+        "TB-004",
+        "TB-005",
+        "TB-006",
+        "TB-007",
+        "TB-008",
+        "TB-009",
+        "TB-010",
+        "TB-011",
+        "TB-012",
+        "TB-013",
+        "TB-014",
+        "TB-015",
+        "TB-016",
+        "TB-017",
+        "TB-018",
+        "TB-019",
+        "TB-020",
+        "TB-021",
+        "TB-022",
+        "TB-023",
+        "TB-024",
+        "TB-025",
+        "TB-026",
+        "TB-027",
+        "TB-028",
+        "TB-029",
+        "TB-030",
+        "TB-031",
+        "TB-032",
+        "TB-033",
+        "TB-034",
+        "TB-035",
+        "TB-036",
+        "TB-037",
+        "TB-038",
+        "TB-039",
+        "TB-040",
+        "TB-041",
+        "TB-042"
+      ]
+    },
+    {
+      "requirement_id": "REQ-SYN-006",
+      "test_ids": [
+        "RT-COVERAGE"
+      ]
+    },
+    {
+      "requirement_id": "REQ-SYN-007",
+      "test_ids": [
+        "RD-001",
+        "RD-002",
+        "RD-003",
+        "RD-004",
+        "RD-005",
+        "RD-006"
+      ]
+    },
+    {
+      "requirement_id": "REQ-SYN-008",
+      "test_ids": [
+        "CTX-001",
+        "CTX-002",
+        "TGT-001",
+        "TGT-002",
+        "TGT-003",
+        "TGT-004"
+      ]
+    },
+    {
+      "requirement_id": "REQ-TST-001",
+      "test_ids": [
+        "RT-COVERAGE"
+      ]
+    },
+    {
+      "requirement_id": "REQ-TST-002",
+      "test_ids": [
+        "R-VER-001",
+        "R-VER-002",
+        "R-VER-003",
+        "R-VER-004",
+        "R-VER-005"
+      ]
+    }
+  ],
+  "threats": [
+    {
+      "threat_id": "T-001",
+      "test_ids": [
+        "TA-001",
+        "TA-002",
+        "TA-003",
+        "TA-004",
+        "TA-005",
+        "TA-006",
+        "TA-007",
+        "TA-008",
+        "TA-009",
+        "TA-010",
+        "TA-011",
+        "TA-012",
+        "TA-013",
+        "TA-014",
+        "TA-015"
+      ]
+    },
+    {
+      "threat_id": "T-002",
+      "test_ids": [
+        "TB-001",
+        "TB-002",
+        "TB-003",
+        "TB-004",
+        "TB-005",
+        "TB-006",
+        "TB-007",
+        "TB-008",
+        "TB-009",
+        "TB-010",
+        "TB-011",
+        "TB-012",
+        "TB-013",
+        "TB-014",
+        "TB-015",
+        "TB-016",
+        "TB-017",
+        "TB-018",
+        "TB-019",
+        "TB-020",
+        "TB-021",
+        "TB-022",
+        "TB-023",
+        "TB-024",
+        "TB-025",
+        "TB-026",
+        "TB-027",
+        "TB-028",
+        "TB-029",
+        "TB-030",
+        "TB-031",
+        "TB-032",
+        "TB-033",
+        "TB-034",
+        "TB-035",
+        "TB-036",
+        "TB-037",
+        "TB-038",
+        "TB-039",
+        "TB-040",
+        "TB-041",
+        "TB-042"
+      ]
+    },
+    {
+      "threat_id": "T-003",
+      "test_ids": [
+        "EX-001",
+        "EX-002",
+        "EX-003",
+        "EX-004",
+        "EX-005",
+        "EX-006",
+        "EX-007",
+        "EX-008",
+        "EX-009",
+        "EX-010",
+        "EX-011",
+        "EX-012",
+        "EX-013",
+        "EX-014",
+        "EX-015",
+        "EX-016",
+        "EX-017",
+        "EX-018",
+        "EX-019",
+        "EX-020",
+        "EX-021",
+        "EX-022",
+        "EX-023",
+        "EX-024",
+        "EX-025",
+        "EX-026",
+        "EX-027",
+        "EX-028",
+        "EX-029",
+        "EX-030",
+        "EX-031",
+        "EX-032",
+        "EX-033",
+        "EX-034",
+        "EX-035",
+        "EX-036",
+        "EX-037",
+        "EX-038",
+        "EX-039",
+        "EX-040",
+        "EX-041",
+        "EX-042",
+        "EX-043",
+        "EX-044"
+      ]
+    },
+    {
+      "threat_id": "T-004",
+      "test_ids": [
+        "ST-001",
+        "ST-002",
+        "ST-003",
+        "ST-004",
+        "ST-005",
+        "ST-007",
+        "ST-008",
+        "ST-009",
+        "ST-010",
+        "ST-011",
+        "ST-012",
+        "ST-013",
+        "ST-014",
+        "ST-015",
+        "ST-016",
+        "ST-017",
+        "ST-018",
+        "ST-019",
+        "ST-020"
+      ]
+    },
+    {
+      "threat_id": "T-005",
+      "test_ids": [
+        "RD-001",
+        "RD-002",
+        "RD-003",
+        "RD-004",
+        "RD-005",
+        "RD-006"
+      ]
+    },
+    {
+      "threat_id": "T-006",
+      "test_ids": [
+        "CTX-001",
+        "CTX-002"
+      ]
+    },
+    {
+      "threat_id": "T-007",
+      "test_ids": [
+        "TGT-001",
+        "TGT-002",
+        "TGT-003",
+        "TGT-004"
+      ]
+    },
+    {
+      "threat_id": "T-008",
+      "test_ids": [
+        "AUTH-001",
+        "AUTH-002",
+        "AUTH-003",
+        "AUTH-004",
+        "AUTH-005",
+        "AUTH-006",
+        "AUTH-007",
+        "AUTH-008"
+      ]
+    },
+    {
+      "threat_id": "T-009",
+      "test_ids": [
+        "TA-001",
+        "TA-002",
+        "TA-003",
+        "TA-004",
+        "TA-005",
+        "TA-006",
+        "TA-007",
+        "TA-008",
+        "TA-009",
+        "TA-010",
+        "TA-011",
+        "TA-012",
+        "TA-013",
+        "TA-014",
+        "TA-015"
+      ]
+    },
+    {
+      "threat_id": "T-010",
+      "test_ids": [
+        "TB-001",
+        "TB-002",
+        "TB-003",
+        "TB-004",
+        "TB-005",
+        "TB-006",
+        "TB-007",
+        "TB-008",
+        "TB-009",
+        "TB-010",
+        "TB-011",
+        "TB-012",
+        "TB-013",
+        "TB-014",
+        "TB-015",
+        "TB-016",
+        "TB-017",
+        "TB-018",
+        "TB-019",
+        "TB-020",
+        "TB-021",
+        "TB-022",
+        "TB-023",
+        "TB-024",
+        "TB-025",
+        "TB-026",
+        "TB-027",
+        "TB-028",
+        "TB-029",
+        "TB-030",
+        "TB-031",
+        "TB-032",
+        "TB-033",
+        "TB-034",
+        "TB-035",
+        "TB-036",
+        "TB-037",
+        "TB-038",
+        "TB-039",
+        "TB-040",
+        "TB-041",
+        "TB-042"
+      ]
+    },
+    {
+      "threat_id": "T-011",
+      "test_ids": [
+        "POLC-010",
+        "POLC-011",
+        "POLC-012",
+        "POLC-013",
+        "POLC-016"
+      ]
+    },
+    {
+      "threat_id": "T-012",
+      "test_ids": [
+        "R-NOX-001",
+        "R-NOX-002",
+        "R-NOX-003",
+        "R-NOX-004",
+        "R-NOX-005",
+        "R-NOX-006",
+        "R-NOX-007",
+        "R-NOX-008"
+      ]
+    },
+    {
+      "threat_id": "T-013",
+      "test_ids": [
+        "R-NOX-001",
+        "R-NOX-002",
+        "R-NOX-003",
+        "R-NOX-004",
+        "R-NOX-005",
+        "R-NOX-006",
+        "R-NOX-007",
+        "R-NOX-008"
+      ]
+    },
+    {
+      "threat_id": "T-014",
+      "test_ids": [
+        "RT-THREAT-014"
+      ]
+    },
+    {
+      "threat_id": "T-015",
+      "test_ids": [
+        "RT-THREAT-015"
+      ]
+    },
+    {
+      "threat_id": "T-016",
+      "test_ids": [
+        "RT-THREAT-016"
+      ]
+    },
+    {
+      "threat_id": "T-017",
+      "test_ids": [
+        "RT-THREAT-017"
+      ]
+    },
+    {
+      "threat_id": "T-018",
+      "test_ids": [
+        "AUTH-001",
+        "AUTH-002",
+        "AUTH-003",
+        "AUTH-004",
+        "AUTH-005",
+        "AUTH-006",
+        "AUTH-007",
+        "AUTH-008"
+      ]
+    },
+    {
+      "threat_id": "T-019",
+      "test_ids": [
+        "R-EVD-001",
+        "R-EVD-002",
+        "R-EVD-003",
+        "R-EVD-004",
+        "R-EVD-005"
+      ]
+    },
+    {
+      "threat_id": "T-020",
+      "test_ids": [
+        "RD-001",
+        "RD-002",
+        "RD-003",
+        "RD-004",
+        "RD-005",
+        "RD-006"
+      ]
+    },
+    {
+      "threat_id": "T-021",
+      "test_ids": [
+        "RT-THREAT-021"
+      ]
+    },
+    {
+      "threat_id": "T-022",
+      "test_ids": [
+        "RT-THREAT-022"
+      ]
+    },
+    {
+      "threat_id": "T-023",
+      "test_ids": [
+        "RT-THREAT-023"
+      ]
+    },
+    {
+      "threat_id": "T-024",
+      "test_ids": [
+        "RT-THREAT-024"
+      ]
+    },
+    {
+      "threat_id": "T-025",
+      "test_ids": [
+        "RT-THREAT-025"
+      ]
+    },
+    {
+      "threat_id": "T-026",
+      "test_ids": [
+        "R-PRV-001",
+        "R-PRV-002",
+        "R-PRV-003",
+        "R-PRV-004",
+        "R-PRV-005"
+      ]
+    },
+    {
+      "threat_id": "T-027",
+      "test_ids": [
+        "RT-THREAT-027"
+      ]
+    },
+    {
+      "threat_id": "T-028",
+      "test_ids": [
+        "EX-001",
+        "EX-002",
+        "EX-003",
+        "EX-004",
+        "EX-005",
+        "EX-006",
+        "EX-007",
+        "EX-008",
+        "EX-009",
+        "EX-010",
+        "EX-011",
+        "EX-012",
+        "EX-013",
+        "EX-014",
+        "EX-015",
+        "EX-016",
+        "EX-017",
+        "EX-018",
+        "EX-019",
+        "EX-020",
+        "EX-021",
+        "EX-022",
+        "EX-023",
+        "EX-024",
+        "EX-025",
+        "EX-026",
+        "EX-027",
+        "EX-028",
+        "EX-029",
+        "EX-030",
+        "EX-031",
+        "EX-032",
+        "EX-033",
+        "EX-034",
+        "EX-035",
+        "EX-036",
+        "EX-037",
+        "EX-038",
+        "EX-039",
+        "EX-040",
+        "EX-041",
+        "EX-042",
+        "EX-043",
+        "EX-044"
+      ]
+    },
+    {
+      "threat_id": "T-029",
+      "test_ids": [
+        "R-SCH-001",
+        "R-SCH-002",
+        "R-SCH-003",
+        "R-SCH-004",
+        "R-SCH-005",
+        "R-SCH-006",
+        "R-SCH-007",
+        "R-SCH-008",
+        "R-SCH-009",
+        "ST-001",
+        "ST-002",
+        "ST-003",
+        "ST-004",
+        "ST-005",
+        "ST-007",
+        "ST-008",
+        "ST-009",
+        "ST-010",
+        "ST-011",
+        "ST-012",
+        "ST-013",
+        "ST-014",
+        "ST-015",
+        "ST-016",
+        "ST-017",
+        "ST-018",
+        "ST-019",
+        "ST-020"
+      ]
+    },
+    {
+      "threat_id": "T-030",
+      "test_ids": [
+        "POLC-010",
+        "POLC-011",
+        "POLC-012",
+        "POLC-013",
+        "POLC-016",
+        "R-VER-001",
+        "R-VER-002",
+        "R-VER-003",
+        "R-VER-004",
+        "R-VER-005"
+      ]
+    }
+  ]
+}
