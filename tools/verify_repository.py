@@ -505,7 +505,11 @@ def verify_public_boundary() -> list[str]:
     entropy_exceptions = set(config["high_entropy_paths"])
     private_hashes = load_local_private_term_hashes()
     hex_re = re.compile(r"^[0-9a-fA-F]{40,64}$")
-    for path in sorted(p for p in ROOT.rglob("*") if p.is_file()):
+    for path in sorted(
+        path
+        for path in ROOT.rglob("*")
+        if path.is_file() and ".git" not in path.relative_to(ROOT).parts
+    ):
         rel = path.relative_to(ROOT).as_posix()
         try:
             text = path.read_text(encoding="utf-8")

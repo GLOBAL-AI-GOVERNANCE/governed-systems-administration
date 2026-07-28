@@ -44,6 +44,52 @@ def test_no_execution_boundary() -> None:
 def test_public_boundary() -> None:
     assert VERIFY.verify_public_boundary() == []
 
+def test_public_boundary_ignores_git_metadata(tmp_path, monkeypatch) -> None:
+    root = tmp_path / "repository"
+    security = root / "security"
+    security.mkdir(parents=True)
+
+    (security / "scan-exceptions.json").write_text(
+        '{"high_entropy_paths": []}\n',
+        encoding="utf-8",
+    )
+
+    git_logs = root / ".git" / "logs"
+    git_logs.mkdir(parents=True)
+    (git_logs / "HEAD").write_text(
+        "commit author <author@example.com>\n",
+        encoding="utf-8",
+    )
+
+    monkeypatch.setattr(VERIFY, "ROOT", root)
+
+    assert VERIFY.verify_public_boundary() == []
+
+
+def test_public_boundary_still_detects_tracked_email(
+    tmp_path,
+    monkeypatch,
+) -> None:
+    root = tmp_path / "repository"
+    security = root / "security"
+    security.mkdir(parents=True)
+
+    (security / "scan-exceptions.json").write_text(
+        '{"high_entropy_paths": []}\n',
+        encoding="utf-8",
+    )
+    (root / "README.md").write_text(
+        "# Test repository\n\nauthor@example.com\n",
+        encoding="utf-8",
+    )
+
+    monkeypatch.setattr(VERIFY, "ROOT", root)
+
+    assert VERIFY.verify_public_boundary() == [
+        "README.md: public-boundary detections ['EMAIL']"
+    ]
+
+
 def test_ci_pins_and_claims_state() -> None:
     assert VERIFY.verify_ci_pins() == []
     assert VERIFY.verify_proposed_language() == []
