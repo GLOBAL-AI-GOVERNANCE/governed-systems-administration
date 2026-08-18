@@ -89,6 +89,22 @@ Reference-policy disposition:
 
 These values describe a reference analyzer result. They do not authorize execution.
 
+## Local Verification Setup
+
+Hosted verification uses Python 3.12 and the hash-pinned development lock.
+
+```bash
+python -m venv .venv
+source .venv/Scripts/activate
+python -m pip install --require-hashes -r requirements-dev.lock
+python tools/verify_repository.py
+python -m pytest
+```
+
+On POSIX shells outside Windows Git Bash, activate with `source .venv/bin/activate`.
+
+These commands validate repository contracts and fixtures only. They do not execute submitted administrative command text, access live administrative state, use credentials, elevate privilege, or modify a managed system.
+
 ## Pull Request Checklist
 
 - [ ] The change is within the current authorized scope.
