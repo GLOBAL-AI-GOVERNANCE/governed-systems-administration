@@ -8,9 +8,15 @@ A code path that unexpectedly executes commands, opens a shell, connects to a ho
 
 ## Reporting a Security Issue
 
-Do not disclose sensitive vulnerability details in a public issue.
+Do not disclose suspected vulnerabilities or sensitive security details in a public issue.
 
-Use GitHub private vulnerability reporting for this repository when available. If private reporting is unavailable, open a minimal public issue requesting a secure contact channel without including exploit details, secrets, personal data, host information, or proof-of-concept payloads.
+Use GitHub Private Vulnerability Reporting:
+
+`https://github.com/GLOBAL-AI-GOVERNANCE/governed-systems-administration/security/advisories/new`
+
+Include the affected commit or artifact, impact, bounded reproduction steps, expected and observed behavior, and suggested remediation when available.
+
+Do not include real credentials, personal data, host information, regulated data, third-party secrets, or unnecessary proof-of-concept payloads.
 
 ## High-Priority Report Categories
 
