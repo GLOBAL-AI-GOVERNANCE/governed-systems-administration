@@ -18,6 +18,7 @@ No product parser, classifier, resolver, authority adapter, policy engine, artif
 ## Start Here
 
 - [Current status and hard gate](STATUS.md)
+- [Local verification setup](CONTRIBUTING.md#local-verification-setup)
 - [Baseline review status](docs/BASELINE_STATUS.md)
 - [Mobile review guide](docs/MOBILE_REVIEW_GUIDE.md)
 - [Governance](GOVERNANCE.md)
