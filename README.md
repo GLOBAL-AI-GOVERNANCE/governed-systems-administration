@@ -2,6 +2,8 @@
 
 Human-governed, evidence-driven reference tooling for AI-assisted systems administration across commands, identities, storage, services, networks, validation, and recovery.
 
+This repository does not execute administrative commands or modify systems.
+
 ## Status
 
 **Pre-alpha preimplementation candidate under independent semantic review**
