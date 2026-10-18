@@ -103,6 +103,8 @@ No product implementation source may be introduced until:
 4. the independent baseline audit reports zero open high findings and zero local failures; and
 5. ADR-0001 is explicitly accepted.
 
+The procedure, manifest, and templates for the independent audit are in [docs/independent-audit/](docs/independent-audit/README.md).
+
 Verification tooling may exist before acceptance only when it cannot execute submitted administrative command text or access live administrative state.
 
 ## Relationship to Agentic AI Governance

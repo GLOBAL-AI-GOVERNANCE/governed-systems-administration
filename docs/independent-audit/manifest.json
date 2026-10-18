@@ -1,0 +1,347 @@
+{
+  "manifest_version": "1.0.0",
+  "baseline": "baseline-r5.2",
+  "audit_commit": "f90587b2d63d40e0f97037d70354a5ddc4036bc6",
+  "audit_tree": "1714379a1e3bd98fe442b92d68eb57b028d468f0",
+  "publication_commit": "2205beffeaa14999027fce8f389f58b2ab6e14dd",
+  "hash_algorithm": "sha256 over file bytes at audit_commit",
+  "normative_artifacts": [
+    {
+      "path": "GOVERNANCE.md",
+      "sha256": "e7d58dfc0a161207e4d63b1f2add8f049acf9bde3332932424f85b5d93ad59d5",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "STATUS.md",
+      "sha256": "8f22419b340d351a95d40936613236e6d6dcf2cda33b6a80dc8316124a352351",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "catalog/excluded-constructs.json",
+      "sha256": "bf505f67c81ed0f8335a3e17fdb68cacc7d8a99efd01a77562462f3cff8e9237",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "catalog/redirection.json",
+      "sha256": "627cb18a44bc6364faa6c11cf8e7191686f13e54e1361ab79d4b19347664cccd",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "catalog/tier-a.json",
+      "sha256": "8c01b774e24664f24ed8ac3d7504f01cc61df698a904f7537b5e6ff507f57d62",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "catalog/tier-b.json",
+      "sha256": "4e7aaccff529507a55a3b3e882e01a7ee375c5041fc5cceb27cf885933f03bed",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "coverage/README.md",
+      "sha256": "a1b9c49b3be05c76e318f5a8b6b6390e156f4f0e715977139fcf52e6cc205a0e",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "coverage/obligations.json",
+      "sha256": "84b6c133e11e2fb57f6f6082bdb384bfd74c3e085a5caf6796d3acc7ebd1b860",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "decisions/ADR-0001-command-governance-alpha1.md",
+      "sha256": "60ede7506f57f186ddc5a5e3e7f7f18af3dba1e1984c6c1d3f6d3d35ccdd1178",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "docs/ACCEPTANCE_TEST_PLAN.md",
+      "sha256": "986bfd32f39f0f0d1d9144bd168cab605807b9ceb3cb16ec34469d6a0fc820c7",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "docs/BASELINE_STATUS.md",
+      "sha256": "0f02cb3a897f0aba4d32664cd1c93abda7fc776ad0615721760fc4cbdf3c9920",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "docs/CANONICAL_JSON.md",
+      "sha256": "6ca68783a6f44d695218b57532624dab12daa52466b69488177c12e7beb6266d",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "docs/CLAIMS_REGISTER.md",
+      "sha256": "0043c199866cb86a72ee49e155017150937e482d4d191b41960789cb66cc62b1",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "docs/CLI_CONTRACT.md",
+      "sha256": "4a2184eb478ca98e32c8c28a6a6680da8dc9626153e827bd7461b7a6869f6fe9",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "docs/ENGINEERING_DOSSIER.md",
+      "sha256": "444229b856cc5e484939a90c369b618c4d162833103e88a20dd3c66622c56823",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "docs/PUBLIC_PRIVATE_BOUNDARY.md",
+      "sha256": "0490097095ee4f14e4bea599c7fbd622445c997b0b1c17df1658c17bc4adbddb",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "docs/REFERENCE_POLICY.md",
+      "sha256": "60155b2b2b6d54ffcd019b6e065f8de9c5e6d654bd444c4d066f985b3db153d4",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "docs/SUPPORTED_SYNTAX.md",
+      "sha256": "322ed5c3dc6f62d361032695836cdca7ba53fc3ee30097ae147e3c2da300c96d",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "docs/THREAT_MODEL.md",
+      "sha256": "a06abdc4e7b055d859130a1448387f610d028cf94a36f8573a568b99a1c5df11",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "docs/UPSTREAM_COMPATIBILITY.md",
+      "sha256": "aba1dfbe2b25e9a84a23fc3248718c50ab87ae7295e3491811953699b37f15ea",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "policy/reachability.json",
+      "sha256": "ff56907734534812bb506337bcedfcabbdb01f80f0532e3df64389d51550333f",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "policy/rules.json",
+      "sha256": "4462891c552907babded975818f0c13a9640f03fe087ada7262b7881d08c7c21",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "schemas/README.md",
+      "sha256": "363c5c51f41b530e8d16169cd340a931c988da27b36cb43d589a85807a591def",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "schemas/acceptance-case.schema.json",
+      "sha256": "a2f364cf24ce2f1c2fd749905ca089d4b440676d77c8b9223e4c7b433cd67240",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "schemas/acceptance-suite.schema.json",
+      "sha256": "3404613881b165d24d3665b95bece82c174c33841e0386146763a2d9da5c19c2",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "schemas/action-analysis.schema.json",
+      "sha256": "c37228b43eaf2f90d01787bebd2e43d958b8aa494c00d734e193872f9086ca77",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "schemas/administration-evidence-record.schema.json",
+      "sha256": "93547eeffaa181c359d4532e226a0816bb558208e1e294debd0152b2c0f1b0a7",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "schemas/administrative-action-request.schema.json",
+      "sha256": "078529bad4cb11665daaba607626f82786d0357e69f9b8b1c7f5ceed8f768b70",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "schemas/analysis-outcome.schema.json",
+      "sha256": "89f2cdeb6fe01746eb9193d622eae0a970f93e535b269147ac03bd9fff7649f3",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "schemas/analysis-succeeded.schema.json",
+      "sha256": "aa447395886fc0592e684c68107fe70d49051acac0a98f17c7e610fa6a52d3ca",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "schemas/authority-adapter-input.schema.json",
+      "sha256": "acd93f32b3dae85eb88b9b436835c25785c085e4c1f5e9cc0123996b7ebbf7cb",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "schemas/authority-adapter-output.schema.json",
+      "sha256": "c09ed1ad79dbca78de534eec25cf4bb0acead7c9ed8c810584577f4483dd6453",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "schemas/cli-error.schema.json",
+      "sha256": "4265b4ed78d240a8dcd90cf0f17a9836e0de25d29bc4599db86bf952911e9b0c",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "schemas/cli-result.schema.json",
+      "sha256": "130e8fd37031dc7c034881b6c8fa48b8d8e6e167bab2ada6ea1a6262358b2241",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "schemas/common.schema.json",
+      "sha256": "01476b64c81775975859247398bf66f3e519a6dad1296f542bb73f32f55fc303",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "schemas/indeterminate-analysis.schema.json",
+      "sha256": "fb260c3881896b737c5d73dd0361d4b333cc4c23e7e579eb3ae19f29284604bd",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "schemas/input-rejected.schema.json",
+      "sha256": "8f8d2a3f38818ce3a24bef501313b04965439429256035146d583b3b74a6ffee",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "schemas/internal-failure.schema.json",
+      "sha256": "3cb69fc6455c3674d421b2e7c4dde2c0a0a379b4f464ab78246a80ddfa98ddf6",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "schemas/profiles.schema.json",
+      "sha256": "70f137913f4d36296f4d9e99f33fe18d6c71922def86ad65dff885defb5256ef",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "schemas/repository-case.schema.json",
+      "sha256": "602ea67eecec537fb9e2aeeb8721c85114b727b337d7aca94810f3bda56be070",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "schemas/repository-suite.schema.json",
+      "sha256": "1b3b9ce02514844bb4d58241ff0b2a5c40da29ec581ad0a5396b575a8c1d2a06",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "schemas/review-requirement.schema.json",
+      "sha256": "f352bfbb23efa839f173d30d69917be6407b83ebf2328e1b4217bb4734c115a5",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "schemas/system-context.schema.json",
+      "sha256": "51de99041853ca4703a7224d18ba63eff7f153838c1bfa1dab3ccfb5a089dc13",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "schemas/unsupported-input.schema.json",
+      "sha256": "d64e02fe8da5a811bf5f8390f3ae45eadc3df2179649b0a13b9d59fe6d955aaa",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "schemas/validation-plan.schema.json",
+      "sha256": "d1762a8808b1daf1a3ea307bad39220349959a01bfbe90081bff163be220e951",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "tests/conformance/authority-adapter-vectors.json",
+      "sha256": "6d8ffabafa0fd7e2948e8277a635082795c8191ca6c1e982c603a42568556218",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "tests/conformance/canonical-json-vectors.json",
+      "sha256": "6a7e995d3ab296e73c4aae88f1b33d2a40ba71278358d68291ff4b80bf7ee768",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "tests/fixtures/acceptance-cases.json",
+      "sha256": "9b694a5ebecae8cd0afae41f1da19db9c6d6659b6a098302d3d0cb18bd08339c",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "tests/fixtures/profiles.json",
+      "sha256": "706d42976b23c0348050c7913cd0623b7f5e890b8028ebcbb33dadd7c958070b",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "tests/fixtures/repository-cases.json",
+      "sha256": "6ca99924c620e7c7919df91c91b3d1cede2f679695bdec983af8cde637d09502",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "tests/golden/action-analysis.json",
+      "sha256": "0fea0b3e894b14601c2d56a15ed34c1190fd720d09e43115831e8cd7a1efc4ea",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "tests/golden/administration-evidence-record.json",
+      "sha256": "28b577cef9f1717ff61865c3c6f26c7258076cbbd20841171dd662d95412b360",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "tests/golden/administrative-action-request.json",
+      "sha256": "2d6d698d15d424bae2c144810eb9ef7fbe56fe23a1b743ef1852826e37db97ad",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "tests/golden/hashes.json",
+      "sha256": "f93962985f2204ddb5200f20147a772dc3cd7d211167c465ed95c66f920d864c",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "tests/golden/review-requirement.json",
+      "sha256": "9ece4ca0670af4d1b3246ab73ac6ff85f1fdf90d2ad1cdbf7c025d5ea06bd416",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "tests/golden/system-context.json",
+      "sha256": "041347adc7d8aa68b12743da80e8099dfce89ba20410d6e5faa9863c71b5f88a",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "tests/golden/validation-plan.json",
+      "sha256": "e9304211f9c3057461c09559c685164c091f501a528ca86675733f12c4ec0b85",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "traceability/README.md",
+      "sha256": "aea2065c838211394463a73e652ea0f35195223c364acbbaa7421d724ad47613",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "traceability/matrix.csv",
+      "sha256": "92133a18f3e2e25a569d996033bf4db96baeb973673277f0aac155b994268987",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "traceability/matrix.json",
+      "sha256": "25009d79efac8f0392571fcdcde72cf585fd9c56efbc047999ca8b80d583865a",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "traceability/requirements.json",
+      "sha256": "bfa8a41e473c8e613cc9ba637195cc128c8b0c43a8333cf91d467cd68fbac825",
+      "unchanged_since_publication": true
+    },
+    {
+      "path": "traceability/threats.json",
+      "sha256": "5f0f8ab3a6490d685f1c031e649219d1e881984506814b26c188bdbef47a640a",
+      "unchanged_since_publication": true
+    }
+  ],
+  "verification_tooling": [
+    {
+      "path": ".github/workflows/verify.yml",
+      "sha256": "c7034f38c38a5ea2564e642509779c2c1cdc9abf2a1e38005c94f01b904f69dd",
+      "unchanged_since_publication": false
+    },
+    {
+      "path": "requirements-dev.lock",
+      "sha256": "a385944356124f5668fc3dac64e4a3f50c5d68d3ce766c803470fd4feff5593c",
+      "unchanged_since_publication": false
+    },
+    {
+      "path": "tests/test_portfolio_interop.py",
+      "sha256": "986d5dc9244bdf4deb46be6868be90f8f31dfc4dd5fd682eb19cb4cddce552fe",
+      "unchanged_since_publication": false
+    },
+    {
+      "path": "tests/test_repository_contracts.py",
+      "sha256": "c153b717f90fc83f722c0ea01c507834f9d9282ebf7643713d7386978ad8f456",
+      "unchanged_since_publication": false
+    },
+    {
+      "path": "tools/verify_repository.py",
+      "sha256": "6e2a0ced86dcccf2dcb9f0a9a421718b103aba9a47f528fd5ccc7701afa26bb1",
+      "unchanged_since_publication": false
+    }
+  ]
+}

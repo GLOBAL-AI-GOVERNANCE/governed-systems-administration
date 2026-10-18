@@ -1,0 +1,42 @@
+{
+  "receipt_version": "1.0.0",
+  "baseline": "baseline-r5.2",
+  "result": "NOT_RUN",
+  "result_values": ["NOT_RUN", "PASS_NO_OPEN_HIGH", "FINDINGS_OPEN_HIGH", "INCOMPLETE"],
+  "audit_commit": "f90587b2d63d40e0f97037d70354a5ddc4036bc6",
+  "audit_tree": "1714379a1e3bd98fe442b92d68eb57b028d468f0",
+  "manifest_sha256": "",
+  "manifest_hashes_matched": false,
+  "auditor": {
+    "name_or_organization": "",
+    "public_attribution": "",
+    "separate_from_project": false,
+    "relationship_to_project": ""
+  },
+  "method": {
+    "summary": "",
+    "own_tooling": false,
+    "project_decision_logic_reused": true
+  },
+  "environment": {
+    "operating_system": "",
+    "python_version": "",
+    "tool_versions": [],
+    "executed_at_utc": ""
+  },
+  "local_checks": {
+    "verify_repository_passed": false,
+    "pytest_passed": false
+  },
+  "criteria": [
+    {"criterion": 1, "status": "NOT_ASSESSED", "notes": ""}
+  ],
+  "criterion_status_values": ["NOT_ASSESSED", "NO_FINDINGS", "FINDINGS"],
+  "findings": {"high_open": 0, "medium_open": 0, "low_open": 0, "informational": 0, "records": []},
+  "attestation": {
+    "all_findings_reported": false,
+    "results_unmodified": false,
+    "limitations_acknowledged": false
+  },
+  "limitations": ""
+}
