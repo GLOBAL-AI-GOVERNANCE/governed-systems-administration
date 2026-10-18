@@ -1,40 +1,22 @@
-# Contributing
+# Development
 
-Thank you for helping build Governed Systems Administration.
+This repository uses an evidence-first, fail-closed engineering model. Safety boundaries, public claims, and supported syntax are part of the engineering system, not optional documentation.
 
-This repository uses an evidence-first, fail-closed contribution model. Safety boundaries, public claims, and supported syntax are part of the engineering system, not optional documentation.
+## Reference Documents
 
-## Start Before You Contribute
+- [Project status](../STATUS.md)
+- [Governance](../GOVERNANCE.md)
+- [Engineering dossier](ENGINEERING_DOSSIER.md)
+- [Supported syntax](SUPPORTED_SYNTAX.md)
+- [Reference policy](REFERENCE_POLICY.md)
+- [Acceptance-test plan](ACCEPTANCE_TEST_PLAN.md)
+- [Threat model](THREAT_MODEL.md)
+- [Public/private boundary](PUBLIC_PRIVATE_BOUNDARY.md)
+- [Claims Register](CLAIMS_REGISTER.md)
 
-Review:
+## Prohibited Repository Content
 
-- [Project status](STATUS.md)
-- [Governance](GOVERNANCE.md)
-- [Engineering dossier](docs/ENGINEERING_DOSSIER.md)
-- [Supported syntax](docs/SUPPORTED_SYNTAX.md)
-- [Reference policy](docs/REFERENCE_POLICY.md)
-- [Acceptance-test plan](docs/ACCEPTANCE_TEST_PLAN.md)
-- [Threat model](docs/THREAT_MODEL.md)
-- [Public/private boundary](docs/PUBLIC_PRIVATE_BOUNDARY.md)
-- [Claims Register](docs/CLAIMS_REGISTER.md)
-
-## Current Contribution Scope
-
-During pre-alpha planning, welcome contributions include:
-
-- documentation corrections;
-- threat-model improvements;
-- synthetic test cases;
-- schema proposals;
-- parser test vectors;
-- effect-taxonomy refinements;
-- evidence and canonicalization test designs;
-- interoperability fixtures; and
-- bounded non-executing analyzer proposals after the Alpha.1 gate is accepted.
-
-## Prohibited Contributions
-
-Do not submit:
+Repository content must not include:
 
 - real credentials, tokens, keys, cookies, or secrets;
 - personal data or private organizational information;
@@ -48,7 +30,7 @@ Do not submit:
 
 ## Engineering Requirements
 
-A contribution that changes behavior must:
+A change that alters behavior must:
 
 1. identify the supported syntax or artifact version affected;
 2. identify the coverage tier and exact grammar rule;
@@ -105,7 +87,7 @@ On POSIX shells outside Windows Git Bash, activate with `source .venv/bin/activa
 
 These commands validate repository contracts and fixtures only. They do not execute submitted administrative command text, access live administrative state, use credentials, elevate privilege, or modify a managed system.
 
-## Pull Request Checklist
+## Change Checklist
 
 - [ ] The change is within the current authorized scope.
 - [ ] No personal, private, proprietary, or operational data is included.
@@ -118,11 +100,8 @@ These commands validate repository contracts and fixtures only. They do not exec
 - [ ] Documentation avoids unsupported safety, novelty, performance, or compliance claims.
 - [ ] Required governance and ADR review is complete.
 
-## License
-
-By contributing, you agree that your contribution is licensed under the repository's Apache License 2.0 unless a later documented license policy states otherwise.
-
-
 ## baseline-r5.2 Hard Gate
 
 No product implementation source may be introduced until baseline-r5.2 passes independent semantic V&V and ADR-0001 is explicitly accepted. Verification tooling must not execute submitted administrative command text or access live administrative state.
+
+See [GOVERNANCE.md](../GOVERNANCE.md#baseline-r52-hard-gate).

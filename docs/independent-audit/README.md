@@ -81,9 +81,9 @@ An audit qualifies only when all of these hold:
 
 Project-authored or otherwise same-control-boundary audits do not qualify.
 
-## Submitting results
+## Required audit evidence
 
-Submit one receipt based on [`AUDIT_RECEIPT_TEMPLATE.json`](AUDIT_RECEIPT_TEMPLATE.json) and one record per finding based on [`FINDING_TEMPLATE.md`](FINDING_TEMPLATE.md). Use only synthetic, public-safe content. Do not include credentials, personal data, or private system details.
+The audit evidence consists of one receipt based on [`AUDIT_RECEIPT_TEMPLATE.json`](AUDIT_RECEIPT_TEMPLATE.json) and one record per finding based on [`FINDING_TEMPLATE.md`](FINDING_TEMPLATE.md). Use only synthetic, public-safe content. Do not include credentials, personal data, or private system details.
 
 ## Boundary
 

@@ -17,7 +17,7 @@ This boundary protects source integrity, privacy, security, confidentiality, tra
 - compatibility tests using public synthetic upstream artifacts;
 - threat models;
 - claims and limitations;
-- public contribution and security policies; and
+- public security policy; and
 - generated evidence records based only on synthetic inputs.
 
 ## 3. Prohibited in the Public Repository
