@@ -79,7 +79,7 @@ An audit qualifies only when all of these hold:
 - the method and any tooling are the auditor's own and reuse no project decision logic, verifier code, or expected outputs as the source of truth;
 - the auditor reports every finding, including findings unfavorable to the project.
 
-Project-authored, Codex-authored, Grok-authored, or otherwise same-control-boundary audits do not qualify.
+Project-authored or otherwise same-control-boundary audits do not qualify.
 
 ## Submitting results
 
