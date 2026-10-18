@@ -1,26 +1,16 @@
 # Security Policy
 
+This repository does not operate an external security-report intake. Do not place secrets, credentials, personal data, sensitive operational information, or vulnerability material in public GitHub surfaces.
+
 ## Project Security Boundary
 
 Governed Systems Administration is in pre-alpha planning and has no authorized command-execution, privilege-elevation, credential-use, production-connection, or autonomous-remediation capability.
 
 A code path that unexpectedly executes commands, opens a shell, connects to a host, mutates a system, or handles real credentials is a security defect and a release-blocking boundary violation.
 
-## Reporting a Security Issue
+## Security-Relevant Failure Classes
 
-Do not disclose suspected vulnerabilities or sensitive security details in a public issue.
-
-Use GitHub Private Vulnerability Reporting:
-
-`https://github.com/GLOBAL-AI-GOVERNANCE/governed-systems-administration/security/advisories/new`
-
-Include the affected commit or artifact, impact, bounded reproduction steps, expected and observed behavior, and suggested remediation when available.
-
-Do not include real credentials, personal data, host information, regulated data, third-party secrets, or unnecessary proof-of-concept payloads.
-
-## High-Priority Report Categories
-
-Reports are especially valuable when they concern:
+The following are treated as security defects:
 
 - an unexpected execution path;
 - a reference-policy disposition that can be mistaken for authorization;
@@ -34,20 +24,10 @@ Reports are especially valuable when they concern:
 - dependency or build-system compromise; or
 - a public/private boundary violation.
 
-## Safe Research Expectations
-
-Security research must:
-
-- use synthetic fixtures or systems you are authorized to test;
-- avoid real credentials and operational data;
-- avoid testing against third-party systems without permission;
-- minimize collection and retention of sensitive information; and
-- provide enough detail for reproducible, bounded validation.
-
 ## Supported Versions
 
 There is no software release. Security fixes apply to the active default branch and any explicitly identified pre-release tags.
 
 ## No Guarantee
 
-This policy does not create a service-level agreement, bug bounty, certification, warranty, or guaranteed response time. Reports will be assessed according to severity, reproducibility, and project scope.
+This policy does not create a service-level agreement, bug bounty, certification, warranty, or guaranteed response time.
