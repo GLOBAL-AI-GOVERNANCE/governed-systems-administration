@@ -1,7 +1,7 @@
 # Governed Systems Administration
 
 <!-- gaig:nav -->
-**[Global AI Governance](https://ai-governance.solutions/)** · `pre-alpha · design only` · `authority_effect: NONE`
+**[Global AI Governance](https://ai-governance.solutions/)** · `specification · review open` · `authority_effect: NONE`
 
 [Connect your agent](https://ai-governance.solutions/connect.html#agents) · [Specifications](https://ai-governance.solutions/connect.html#spec) · [All products](https://ai-governance.solutions/#products)
 <!-- /gaig:nav -->
@@ -12,7 +12,7 @@ This repository does not execute administrative commands or modify systems.
 
 ## Status
 
-**Pre-alpha preimplementation candidate under independent semantic review**
+**Specification under independent semantic review. Implementation follows that review.**
 
 - **Repository baseline revision:** `baseline-r5.2`
 - **Active engineering increment:** `v0.1.0-alpha.1 — Command Governance Foundation`
