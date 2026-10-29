@@ -48,5 +48,10 @@ jobs:
         run: python -m pip install --require-hashes -r requirements-dev.lock
       - name: Verify repository
         run: python tools/verify_repository.py
+      - name: Check schema $id offline
+        run: python tools/check_schema_ids.py
+      - name: Check schema $id live resolution
+        if: github.event_name == 'push' || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: bash tools/check_schema_ids_online.sh
       - name: Run contract tests
         run: python -m pytest

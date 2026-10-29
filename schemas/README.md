@@ -34,6 +34,11 @@
 Schemas use Draft 2020-12, reject duplicate JSON keys through the verifier, enforce declared formats, and include cross-field invariants. A structurally valid artifact is not proof that its claims are true.
 
 
+
+## Schema `$id`
+
+Each schema `$id` is the raw GitHub URL of the file on `main` (`https://raw.githubusercontent.com/GLOBAL-AI-GOVERNANCE/governed-systems-administration/main/schemas/...`). While the specification remains under review and has no release tag, `main` is the allowed resolution branch. `tools/check_schema_ids.py` checks the form offline. `tools/check_schema_ids_online.sh` fetches each `$id` and requires the published document to match the local file (used on push/schedule/workflow_dispatch).
+
 ## Portable date-time enforcement
 
 The `date_time` definition uses two layers:
