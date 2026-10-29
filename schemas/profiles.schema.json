@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.invalid/gsa/schemas/0.1.0-alpha.1/profiles.schema.json",
+  "$id": "https://raw.githubusercontent.com/GLOBAL-AI-GOVERNANCE/governed-systems-administration/main/schemas/profiles.schema.json",
   "title": "GSA Acceptance Profiles",
   "type": "object",
   "additionalProperties": false,

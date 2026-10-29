@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.invalid/gsa/schemas/0.1.0-alpha.1/review-requirement.schema.json",
+  "$id": "https://raw.githubusercontent.com/GLOBAL-AI-GOVERNANCE/governed-systems-administration/main/schemas/review-requirement.schema.json",
   "title": "ReviewRequirement",
   "type": "object",
   "additionalProperties": false,
@@ -74,7 +74,7 @@
     "expires_at": {
       "anyOf": [
         {
-          "$ref": "https://example.invalid/gsa/schemas/0.1.0-alpha.1/common.schema.json#/$defs/date_time"
+          "$ref": "https://raw.githubusercontent.com/GLOBAL-AI-GOVERNANCE/governed-systems-administration/main/schemas/common.schema.json#/$defs/date_time"
         },
         {
           "type": "null"
