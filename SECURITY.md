@@ -4,7 +4,7 @@ This repository does not operate an external security-report intake. Do not plac
 
 ## Project Security Boundary
 
-Governed Systems Administration is in pre-alpha planning and has no authorized command-execution, privilege-elevation, credential-use, production-connection, or autonomous-remediation capability.
+Governed Systems Administration is a reference design under independent review and has no authorized command-execution, privilege-elevation, credential-use, production-connection, or autonomous-remediation capability.
 
 A code path that unexpectedly executes commands, opens a shell, connects to a host, mutates a system, or handles real credentials is a security defect and a release-blocking boundary violation.
 

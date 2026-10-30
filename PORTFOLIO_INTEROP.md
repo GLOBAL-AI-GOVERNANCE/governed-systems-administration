@@ -1,6 +1,6 @@
 # Portfolio Interoperability
 
-Governed Systems Administration remains a **pre-alpha preimplementation** repository with **no execution capability**.
+Governed Systems Administration remains a **reference design (preimplementation)** repository with **no execution capability**.
 
 Its portfolio integration is intentionally reference-only.
 

@@ -19,7 +19,7 @@ class PortfolioInteropTests(unittest.TestCase):
     def test_document_preserves_nonexecution_and_foreign_semantics(self) -> None:
         text = (ROOT / "PORTFOLIO_INTEROP.md").read_text(encoding="utf-8")
         required = (
-            "pre-alpha preimplementation",
+            "reference design (preimplementation)",
             "no execution capability",
             "does not embed, reinterpret, or redefine the Agent Trust Passport",
             "does not authorize execution",
