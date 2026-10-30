@@ -1,6 +1,6 @@
 # Proposed CLI Contract
 
-**Document version:** `alpha1-cli-0.2-draft`  
+**Document version:** `alpha1-cli-0.2-rev`  
 **Approval status:** Under review  
 **Normative status:** Proposed normative  
 **Implementation status:** Not started

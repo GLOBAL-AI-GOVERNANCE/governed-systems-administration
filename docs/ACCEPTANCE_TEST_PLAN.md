@@ -1,6 +1,6 @@
 # Alpha.1 Acceptance-Test Plan
 
-**Document version:** `alpha1-tests-0.3-draft`  
+**Document version:** `alpha1-tests-0.3-rev`  
 **Approval status:** Under review  
 **Normative status:** Proposed normative  
 **Implementation status:** Product not started; verification fixtures implemented

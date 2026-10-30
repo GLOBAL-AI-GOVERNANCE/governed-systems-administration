@@ -152,4 +152,4 @@ Before making strong differentiation claims, the project needs:
 
 ## 5. Current Position
 
-The project is a pre-alpha design. Its differentiation remains a hypothesis until implemented and evaluated.
+The project is a reference design. Its differentiation remains a hypothesis until implemented and evaluated.

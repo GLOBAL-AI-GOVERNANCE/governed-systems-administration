@@ -1,6 +1,6 @@
 # Threat Model
 
-**Status:** Pre-alpha draft  
+**Status:** Under independent review  
 **Scope:** Public reference repository and bounded non-executing analyzer  
 **Method:** Structured threat analysis; not a claim of exhaustive formal verification
 

@@ -1,6 +1,6 @@
 # Architecture
 
-**Status:** Pre-alpha design  
+**Status:** Reference design (non-executing)  
 **Active increment:** `v0.1.0-alpha.1 — Command Governance Foundation`  
 **Execution capability:** None
 
