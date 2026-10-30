@@ -2,7 +2,7 @@
 
 ## Active Increment Non-Goals
 
-The pre-alpha Command Governance Foundation is not intended to:
+The Command Governance Foundation (reference) is not intended to:
 
 1. execute Bash, PowerShell, Command Prompt, or any other command;
 2. open a shell, terminal, remote session, or subprocess;

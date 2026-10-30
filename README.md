@@ -118,7 +118,7 @@ This project may consume supported trust references from `GLOBAL-AI-GOVERNANCE/a
 <!-- gaig:footer -->
 ## Part of Global AI Governance
 
-This repository is the **DESIGN ENFORCEMENT** layer. It is a pre-alpha design with no execution capability.
+This repository is the **DESIGN ENFORCEMENT** layer. It is a reference design with no execution capability.
 
 **[ai-governance.solutions](https://ai-governance.solutions/)** · [Connect your agent](https://ai-governance.solutions/connect.html#agents) · [Specifications](https://ai-governance.solutions/connect.html#spec) · [All products](https://ai-governance.solutions/#products)
 

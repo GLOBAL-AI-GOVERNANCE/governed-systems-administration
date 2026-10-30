@@ -1,6 +1,6 @@
 # Governed Systems Administration Engineering Dossier
 
-**Document version:** `0.2-draft`  
+**Document version:** `0.2-rev`  
 **Approval status:** Under review  
 **Normative status:** Proposed normative  
 **Baseline:** `baseline-r5.2`  

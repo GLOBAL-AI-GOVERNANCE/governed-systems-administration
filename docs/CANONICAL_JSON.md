@@ -1,6 +1,6 @@
 # GSA-CJSON-1 Canonical JSON Profile
 
-**Document version:** `gsa-cjson-1-draft`  
+**Document version:** `gsa-cjson-1-rev`  
 **Approval status:** Under review  
 **Normative status:** Proposed normative  
 **Implementation status:** Verification tooling implemented; product not started

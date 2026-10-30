@@ -1,6 +1,6 @@
 # Supported Syntax and Analysis Limitations
 
-**Document version:** `alpha1-syntax-0.3-draft`  
+**Document version:** `alpha1-syntax-0.3-rev`  
 **Approval status:** Under review  
 **Normative status:** Proposed normative  
 **Implementation status:** Not started
